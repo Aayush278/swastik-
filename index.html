@@ -811,15 +811,22 @@
             font-weight: 300;
         }
 
+        .hero-buttons {
+            display: flex;
+            gap: var(--space-3);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         .hero-cta {
             display: inline-flex;
             align-items: center;
             gap: var(--space-2);
             background: linear-gradient(135deg, #fb641b 0%, #ff9f00 100%);
             color: var(--white);
-            padding: var(--space-3) var(--space-6);
+            padding: var(--space-3) var(--space-5);
             border-radius: var(--radius-sm);
-            font-size: var(--font-base);
+            font-size: var(--font-sm);
             font-weight: 600;
             text-decoration: none;
             box-shadow: var(--shadow-lg);
@@ -834,9 +841,23 @@
             background: linear-gradient(135deg, #ff7b2e 0%, #ffb347 100%);
         }
 
+        .hero-cta-secondary {
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--accent-primary);
+        }
+
+        .hero-cta-secondary:hover {
+            background: var(--white);
+            color: var(--primary-dark);
+        }
+
+        .hero-cta-secondary svg {
+            fill: var(--accent-primary);
+        }
+
         .hero-cta svg {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             fill: currentColor;
         }
 
@@ -920,21 +941,18 @@
             transform: scale(0.98) translateY(-4px);
         }
 
-        .category-icon {
-            width: 56px;
-            height: 56px;
+        .category-img {
+            width: 60px;
+            height: 60px;
             margin: 0 auto var(--space-3);
-            padding: var(--space-3);
-            background: linear-gradient(135deg, rgba(40, 116, 240, 0.1) 0%, rgba(26, 93, 199, 0.1) 100%);
             border-radius: var(--radius-md);
-            fill: var(--accent-primary);
+            object-fit: cover;
             transition: var(--transition-base);
         }
 
-        .category-card:hover .category-icon {
+        .category-card:hover .category-img {
             transform: scale(1.1);
-            background: var(--accent-gradient);
-            fill: var(--white);
+            box-shadow: var(--shadow-md);
         }
 
         .category-name {
@@ -1145,6 +1163,7 @@
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 2;
+            line-clamp: 2;
             -webkit-box-orient: vertical;
             line-height: 1.3;
         }
@@ -1723,88 +1742,144 @@
             background: #1a7029;
         }
 
-        /* Coupon Code Section */
-        .coupon-section {
+        /* Order Notes Section */
+        .order-notes-section {
             margin-bottom: 16px;
         }
 
-        .coupon-input-wrapper {
+        .order-notes-section label {
             display: flex;
+            align-items: center;
             gap: 8px;
-        }
-
-        .coupon-input {
-            flex: 1;
-            padding: 10px 12px;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .coupon-input:focus {
-            outline: none;
-            border-color: var(--accent-primary);
-        }
-
-        .coupon-apply-btn {
-            padding: 10px 16px;
-            background: linear-gradient(135deg, #fb641b 0%, #ff9f00 100%);
-            color: var(--white);
-            border: none;
-            border-radius: var(--radius-sm);
             font-size: 13px;
             font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .order-notes-section label svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--accent-primary);
+        }
+
+        .order-notes-textarea {
+            width: 100%;
+            min-height: 80px;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-family: inherit;
+            resize: vertical;
+            line-height: 1.5;
+        }
+
+        .order-notes-textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(40, 116, 240, 0.1);
+        }
+
+        .order-notes-textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        /* Custom Grocery List Section - Standalone */
+        .custom-list-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: var(--space-8) var(--space-4);
+        }
+
+        .custom-list-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+        }
+
+        .custom-list-header {
+            background: var(--accent-gradient);
+            padding: var(--space-6) var(--space-5);
+            text-align: center;
+            color: var(--white);
+        }
+
+        .custom-list-header svg {
+            width: 48px;
+            height: 48px;
+            fill: var(--white);
+            margin-bottom: var(--space-3);
+            opacity: 0.9;
+        }
+
+        .custom-list-header h2 {
+            font-size: var(--font-2xl);
+            font-weight: 700;
+            margin-bottom: var(--space-2);
+        }
+
+        .custom-list-header p {
+            font-size: var(--font-base);
+            opacity: 0.9;
+        }
+
+        .custom-list-form {
+            padding: var(--space-5);
+        }
+
+        .custom-list-textarea {
+            width: 100%;
+            min-height: 180px;
+            padding: var(--space-4);
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            font-size: var(--font-base);
+            font-family: inherit;
+            resize: vertical;
+            line-height: 1.6;
+            margin-bottom: var(--space-4);
+            transition: var(--transition-base);
+        }
+
+        .custom-list-textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 4px rgba(40, 116, 240, 0.1);
+        }
+
+        .custom-list-textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        .custom-list-submit {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: var(--white);
+            border: none;
+            padding: var(--space-4);
+            border-radius: var(--radius-md);
+            font-size: var(--font-lg);
+            font-weight: 700;
             cursor: pointer;
             transition: var(--transition-base);
         }
 
-        .coupon-apply-btn:hover {
-            opacity: 0.9;
-            transform: scale(1.02);
+        .custom-list-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .coupon-applied {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: var(--success-light);
-            padding: 10px 12px;
-            border-radius: var(--radius-sm);
-            margin-top: 8px;
-        }
-
-        .coupon-applied-text {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--success);
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-        .coupon-applied-text svg {
-            width: 16px;
-            height: 16px;
-            fill: var(--success);
-        }
-
-        .coupon-remove-btn {
-            background: transparent;
-            border: none;
-            color: var(--error);
-            font-size: 12px;
-            cursor: pointer;
-            text-decoration: underline;
-        }
-
-        .discount-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            font-size: 14px;
-            color: var(--success);
+        .custom-list-submit svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
         }
 
         /* Custom Grocery List Section - Cart */
@@ -2453,12 +2528,7 @@
         </div>
     </header>
 
-    <!-- Promo Banner -->
-    <div class="promo-banner">
-        <span class="promo-icon">🎉</span>
-        <span><strong>NEW YEAR SPECIAL!</strong> Get 10% OFF on orders above ₹500</span>
-        <span class="promo-code">NEWYEAR2025</span>
-    </div>
+
 
     <!-- Trust Badges -->
     <div class="trust-badges">
@@ -2498,13 +2568,22 @@
         <div class="hero-content">
             <h2>Fresh Groceries,<br>Delivered to Your Door</h2>
             <p>Quality products at the best prices. Serving families since 2004.</p>
-            <a href="#categoriesSection" class="hero-cta">
-                <svg viewBox="0 0 24 24">
-                    <path
-                        d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
-                </svg>
-                Shop Now
-            </a>
+            <div class="hero-buttons">
+                <a href="#categoriesSection" class="hero-cta">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                    </svg>
+                    Shop Now
+                </a>
+                <a href="#customListSection" class="hero-cta hero-cta-secondary">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6zm2-6h8v2H8v-2zm0-3h8v2H8v-2z" />
+                    </svg>
+                    Write Your List
+                </a>
+            </div>
         </div>
     </section>
 
@@ -2594,58 +2673,52 @@
         </div>
         <div class="category-grid">
             <a href="#cat-1" class="category-card">
-                <svg class="category-icon" viewBox="0 0 24 24">
-                    <path d="M4 9h4v11H4V9zm6 0h4v11h-4V9zm6 0h4v11h-4V9zM4 4h16v3H4V4z" />
-                </svg>
+                <img class="category-img"
+                    src="https://imgs.search.brave.com/-C-VQD4vA94IpdWx_SpkQURfGdNaZy6xDDioBOu8V5I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z2Zmb29kc2Vydmlj/ZS5jb20uYXUvd3At/Y29udGVudC91cGxv/YWRzLzIwMTkvMTIv/bG9tZy1ncmFpbkAx/eC5qcGc"
+                    alt="Rice">
                 <div class="category-name">Rice</div>
             </a>
             <a href="#cat-2" class="category-card">
-                <svg class="category-icon" viewBox="0 0 24 24">
-                    <path
-                        d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h2v5l-1-.75L9 9V4zm9 16H6V4h1v9l3-2.25L13 13V4h5v16z" />
-                </svg>
+                <img class="category-img"
+                    src="https://imgs.search.brave.com/-hFy-0Yxkyu_8eGX3AqYGpE9HGtvblsxoAJJVZLhVUY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oZWFs/dGh5c3RhcnRzLmlu/L2Nkbi9zaG9wL2Zp/bGVzL2dwc19nZW5l/cmF0ZWRfNjQ4OGZk/MGYtYjVhOC00YmQ2/LTg0NDYtMWRhZGNl/NDFjMDQzLnBuZz92/PTE3MzQ3NjQ3NzEm/d2lkdGg9MTQ0NQ"
+                    alt="Aata & Flour">
                 <div class="category-name">Aata & Flour</div>
             </a>
             <a href="#cat-3" class="category-card">
-                <svg class="category-icon" viewBox="0 0 24 24">
-                    <path
-                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
+                <img class="category-img"
+                    src="https://imgs.search.brave.com/VDWzLKU-4sAbLCQqZGJMqW9cxUddVzkLcTkhmDK-5IY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzY5Lzdh/LzY5LzY5N2E2OWMw/ZDhkZWI2ZjU1N2Yw/NDRiOTM4YmYxNGRi/LmpwZw"
+                    alt="Spices">
                 <div class="category-name">Spices</div>
             </a>
             <a href="#cat-4" class="category-card">
-                <svg class="category-icon" viewBox="0 0 24 24">
-                    <path
-                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
-                </svg>
+                <img class="category-img"
+                    src="https://imgs.search.brave.com/tG4WQMSa4lt6w6MiapGd5F7sC8GE9Gkc4ceR79fZ8Xk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9kYWwt/bW9vbmctZGh1bGkt/aW5zaWRlLXBsYXN0/aWMtcGFja2V0LTk5/ODc1MDAxLmpwZw"
+                    alt="Dal & Pulses">
                 <div class="category-name">Dal & Pulses</div>
             </a>
             <a href="#cat-5" class="category-card">
-                <svg class="category-icon" viewBox="0 0 24 24">
-                    <path
-                        d="M12 2l-5.5 9h11L12 2zm0 3.84L13.93 9h-3.87L12 5.84zM17.5 13c-2.49 0-4.5 2.01-4.5 4.5s2.01 4.5 4.5 4.5 4.5-2.01 4.5-4.5-2.01-4.5-4.5-4.5zm0 7c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5zM3 21.5h8v-8H3v8zm2-6h4v4H5v-4z" />
-                </svg>
+                <img class="category-img"
+                    src="https://imgs.search.brave.com/550dTmKQ3uwzxPJ-yLfdlK8X2lWK_mtQ-7TYD0WFIHA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dGlydW1hbGFtaWxr/LmNvbS9pbWFnZXMv/cHJvZGN1dHMvZ2hl/ZS9HaGVlX1BvdWNo/XzFsLndlYnA"
+                    alt="Oil & Ghee">
+
                 <div class="category-name">Oil & Ghee</div>
             </a>
             <a href="#cat-6" class="category-card">
-                <svg class="category-icon" viewBox="0 0 24 24">
-                    <path
-                        d="M12 2C8.43 2 5.23 3.54 3.01 6L12 22l8.99-16C18.78 3.55 15.57 2 12 2zM7 7c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm5 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
-                </svg>
+                <img class="category-img"
+                    src="https://imgs.search.brave.com/40IXdrRfRDcBz3YZXmPG5WDMNTeF_JY8r0w_DLKl3F4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTF1SGV1NFVnREwu/anBn"
+                    alt="Snacks">
                 <div class="category-name">Snacks</div>
             </a>
             <a href="#cat-7" class="category-card">
-                <svg class="category-icon" viewBox="0 0 24 24">
-                    <path
-                        d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z" />
-                </svg>
+                <img class="category-img"
+                    src="https://imgs.search.brave.com/zxTLTlV9RqUAok4Ra60LCQLJF5MNsnMctlmXxX94dJI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNDU5/Mzk2OTExL3Bob3Rv/L3BlcHNpLWNhbi13/aXRoLXdhdGVyLWRy/b3BsZXRzLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1TNzBT/UnRQUS1iSUZiZjVs/cE5GOFJXcmtYMEot/bTIzTWRFWk9BVjZo/bXlBPQ"
+                    alt="Beverages">
                 <div class="category-name">Beverages</div>
             </a>
             <a href="#cat-8" class="category-card">
-                <svg class="category-icon" viewBox="0 0 24 24">
-                    <path
-                        d="M9.17 6l2 2H20v10H4V6h5.17M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
-                </svg>
+                <img class="category-img"
+                    src="https://imgs.search.brave.com/u64N-mobCjy5LjTtjGQ4mh_jeKZog-Z0Y9HjmqGs1k0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9SQy9GWC9NWS00/NTczNTk4L2N1c3Rv/bWl6ZWQtcGVyc29u/YWwtY2FyZS1wcm9k/dWN0cy0yNTB4MjUw/LmpwZw"
+                    alt="Personal Care">
                 <div class="category-name">Personal Care</div>
             </a>
         </div>
@@ -2678,33 +2751,31 @@
 
     <!-- Products Section -->
     <section class="products-section" id="productsSection"></section>
-
     <!-- Custom Grocery List Section -->
-    <section class="custom-order-main-section" id="customOrderSection">
-        <h2>📝 अपनी Grocery List भेजें</h2>
-        <p class="subtitle">कोई भी सामान जो आपको चाहिए, बस लिखें और WhatsApp पर भेजें!</p>
-        <div class="custom-order-card">
-            <textarea id="customGroceryList"
-                placeholder="अपनी पूरी grocery list यहाँ लिखें...&#10;&#10;उदाहरण:&#10;1.5 kg Tuar Dal&#10;4 Parle-G Biscuit Packets&#10;2 kg Basmati Rice&#10;500g Sugar&#10;1 liter Sunflower Oil&#10;200g MDH Garam Masala"></textarea>
-            <button class="submit-btn" onclick="submitCustomGroceryList()">
+    <section class="custom-list-section" id="customListSection">
+        <div class="custom-list-container">
+            <div class="custom-list-header">
                 <svg viewBox="0 0 24 24">
                     <path
-                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6zm2-6h8v2H8v-2zm0-3h8v2H8v-2z" />
                 </svg>
-                WhatsApp पर List भेजें
-            </button>
-            <div class="custom-order-examples">
-                <h5>✍️ ऐसे लिखें अपनी list:</h5>
-                <ul>
-                    <li>1.5 kg Tuar Dal</li>
-                    <li>4 Parle-G Biscuit Packets</li>
-                    <li>2 kg India Gate Basmati Rice</li>
-                    <li>Fortune Sunflower Oil 1 liter</li>
-                    <li>Amul Butter 500g</li>
-                </ul>
+                <h2>📝 Write Your Grocery List</h2>
+                <p>Don't see what you need? Just write your list and we'll deliver!</p>
+            </div>
+            <div class="custom-list-form">
+                <textarea id="customGroceryList" class="custom-list-textarea"
+                    placeholder="Write your grocery items here...&#10;&#10;Example:&#10;- 2 kg Toor Dal&#10;- 1 packet Parle-G Biscuits&#10;- 500g Sugar&#10;- 1 liter Mustard Oil&#10;- 5 kg Wheat Flour (Aata)&#10;&#10;You can also add special instructions!"></textarea>
+                <button class="custom-list-submit" onclick="submitCustomList()">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    Send via WhatsApp
+                </button>
             </div>
         </div>
     </section>
+
 
     <!-- About Us Section -->
     <section class="about-section">
@@ -2807,6 +2878,8 @@
         </div>
     </section>
 
+
+
     <!-- Footer -->
 
     <footer class="footer">
@@ -2895,52 +2968,23 @@
             </div>
         </div>
         <div class="cart-footer" id="cartFooter" style="display: none;">
-            <!-- Coupon Code Section -->
-            <div class="coupon-section">
-                <div class="coupon-input-wrapper">
-                    <input type="text" class="coupon-input" id="couponInput" placeholder="Enter coupon code">
-                    <button class="coupon-apply-btn" onclick="applyCoupon()">Apply</button>
-                </div>
-                <div class="coupon-applied" id="couponApplied" style="display: none;">
-                    <span class="coupon-applied-text">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                        </svg>
-                        <span id="couponCodeText">NEWYEAR2025</span> applied!
-                    </span>
-                    <button class="coupon-remove-btn" onclick="removeCoupon()">Remove</button>
-                </div>
-            </div>
-            <!-- Discount Row -->
-            <div class="discount-row" id="discountRow" style="display: none;">
-                <span>Discount (10%)</span>
-                <span id="discountAmount">-₹0</span>
+            <!-- Order Notes Section -->
+            <div class="order-notes-section">
+                <label for="orderNotes">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6zm2-6h8v2H8v-2zm0-3h8v2H8v-2z" />
+                    </svg>
+                    Additional Items / Notes
+                </label>
+                <textarea class="order-notes-textarea" id="orderNotes"
+                    placeholder="Write any additional items you need or special instructions...&#10;Example:&#10;- 2kg Toor Dal&#10;- 1 packet Parle-G&#10;- Please deliver after 5 PM"></textarea>
             </div>
             <div class="cart-total">
                 <span>Total Amount</span>
                 <span id="cartTotal">₹0</span>
             </div>
-            <button class="checkout-btn" onclick="placeOrder()">Place Order</button>
-        </div>
-        <!-- Custom Order Section in Cart -->
-        <div class="custom-order-section">
-            <h4>
-                <svg viewBox="0 0 24 24">
-                    <path
-                        d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6zm2-6h8v2H8v-2zm0-3h8v2H8v-2zm0 6h5v2H8v-2z" />
-                </svg>
-                अपनी सूची लिखें (Write Your List)
-            </h4>
-            <textarea class="custom-order-textarea" id="cartCustomList"
-                placeholder="अपनी grocery list यहाँ लिखें...&#10;Example:&#10;1.5 kg Tuar Dal&#10;4 Parle-G Biscuit&#10;2 kg Basmati Rice&#10;500g Sugar"></textarea>
-            <button class="custom-order-submit" onclick="submitCartCustomList()">
-                <svg viewBox="0 0 24 24">
-                    <path
-                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                </svg>
-                WhatsApp पर भेजें
-            </button>
+            <button class="checkout-btn" onclick="placeOrder()">Place Order via WhatsApp</button>
         </div>
     </div>
 
@@ -3320,20 +3364,7 @@
 
                 cartItems.innerHTML = cartHTML;
 
-                const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-                let discount = 0;
-                let total = subtotal;
-
-                // Apply coupon discount
-                if (appliedCoupon) {
-                    discount = Math.round(subtotal * 0.10); // 10% discount
-                    total = subtotal - discount;
-                    discountRow.style.display = 'flex';
-                    discountAmount.textContent = `-₹${discount}`;
-                } else {
-                    discountRow.style.display = 'none';
-                }
-
+                const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
                 cartTotal.textContent = `₹${total}`;
                 cartFooter.style.display = 'block';
             }
@@ -3378,40 +3409,8 @@
             document.getElementById('cartOverlay').classList.toggle('active');
         }
 
-        // Apply Coupon
-        function applyCoupon() {
-            const couponInput = document.getElementById('couponInput');
-            const code = couponInput.value.trim().toUpperCase();
+        // Apply Coupon - REMOVED (feature disabled)
 
-            if (!code) {
-                showToast('Please enter a coupon code');
-                return;
-            }
-
-            if (validCoupons.includes(code)) {
-                appliedCoupon = code;
-                document.getElementById('couponApplied').style.display = 'flex';
-                document.getElementById('couponCodeText').textContent = code;
-                document.getElementById('couponInput').style.display = 'none';
-                document.querySelector('.coupon-apply-btn').style.display = 'none';
-                updateCart();
-                showToast('Coupon applied! 10% discount');
-            } else {
-                showToast('Invalid coupon code');
-                couponInput.value = '';
-            }
-        }
-
-        // Remove Coupon
-        function removeCoupon() {
-            appliedCoupon = null;
-            document.getElementById('couponApplied').style.display = 'none';
-            document.getElementById('couponInput').style.display = 'block';
-            document.getElementById('couponInput').value = '';
-            document.querySelector('.coupon-apply-btn').style.display = 'block';
-            updateCart();
-            showToast('Coupon removed');
-        }
 
         // Buy Now
         function buyNow(productId) {
@@ -3422,15 +3421,33 @@
 
         // Place Order
         function placeOrder() {
-            if (cart.length === 0) return;
+            const orderNotes = document.getElementById('orderNotes').value.trim();
+
+            // Allow order even if cart is empty but has notes
+            if (cart.length === 0 && !orderNotes) {
+                showToast('Please add items or write your order');
+                return;
+            }
 
             let message = `Hello! I want to order from Swastik Mart:\n\n`;
-            cart.forEach((item, i) => {
-                message += `${i + 1}. ${item.name} (${item.brand})\n   ${item.weight} × ${item.quantity} = ₹${item.price * item.quantity}\n\n`;
-            });
 
-            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            message += `Total Amount: ₹${total}\n\nPlease confirm my order and delivery details.`;
+            // Add cart items if any
+            if (cart.length > 0) {
+                message += `📦 CART ITEMS:\n`;
+                cart.forEach((item, i) => {
+                    message += `${i + 1}. ${item.name} (${item.brand})\n   ${item.weight} × ${item.quantity} = ₹${item.price * item.quantity}\n\n`;
+                });
+
+                const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                message += `💰 Cart Total: ₹${total}\n\n`;
+            }
+
+            // Add order notes if any
+            if (orderNotes) {
+                message += `📝 ADDITIONAL ITEMS/NOTES:\n${orderNotes}\n\n`;
+            }
+
+            message += `Please confirm my order and delivery details. Thank you!`;
 
             window.open(`https://wa.me/917751903836?text=${encodeURIComponent(message)}`, '_blank');
         }
@@ -3441,6 +3458,20 @@
             toast.textContent = message;
             toast.classList.add('show');
             setTimeout(() => toast.classList.remove('show'), 2000);
+        }
+
+        // Submit Custom Grocery List
+        function submitCustomList() {
+            const customList = document.getElementById('customGroceryList').value.trim();
+
+            if (!customList) {
+                showToast('Please write your grocery list first');
+                return;
+            }
+
+            const message = `Hello! I want to order from Swastik Mart:\n\n📝 MY GROCERY LIST:\n${customList}\n\nPlease confirm prices and availability. Thank you!`;
+
+            window.open(`https://wa.me/917751903836?text=${encodeURIComponent(message)}`, '_blank');
         }
 
         // Smooth Scroll for Category Cards
