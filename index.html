@@ -7,9 +7,11 @@
     <title>Swastik Mart - Online Grocery Store</title>
     <meta name="description"
         content="Shop quality groceries online at Swastik Mart. Best prices, fresh products, home delivery.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
     <style>
         * {
             margin: 0;
@@ -268,25 +270,12 @@
 
         /* Call to Order Banner */
         .call-banner {
-            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ff6b35 100%);
-            background-size: 200% 200%;
-            animation: gradient-shift 3s ease infinite;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
             padding: 16px;
             text-align: center;
             color: var(--white);
             position: relative;
             overflow: hidden;
-        }
-
-        .call-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            animation: shimmer 2s infinite;
         }
 
         @keyframes gradient-shift {
@@ -331,7 +320,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            animation: ring 1s ease-in-out infinite;
         }
 
         @keyframes ring {
@@ -421,12 +409,11 @@
             box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
             z-index: 997;
             text-decoration: none;
-            animation: float 3s ease-in-out infinite;
-            transition: all 0.3s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .floating-call-btn:hover {
-            transform: scale(1.1);
+            transform: scale(1.1) translateY(-3px);
             box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
         }
 
@@ -437,12 +424,8 @@
         }
 
         .floating-call-btn .pulse-ring {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: rgba(37, 211, 102, 0.4);
-            animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+            display: none;
+            /* Disabled for performance */
         }
 
         @keyframes float {
@@ -506,13 +489,11 @@
             box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
             z-index: 997;
             text-decoration: none;
-            animation: float 3s ease-in-out infinite;
-            animation-delay: 0.5s;
-            transition: all 0.3s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .floating-whatsapp-btn:hover {
-            transform: scale(1.1);
+            transform: scale(1.1) translateY(-3px);
             box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
         }
 
@@ -524,9 +505,7 @@
 
         /* Promo Banner - Flipkart Style */
         .promo-banner {
-            background: linear-gradient(90deg, #388e3c 0%, #2e7d32 50%, #388e3c 100%);
-            background-size: 200% 100%;
-            animation: promo-shift 3s ease infinite;
+            background: linear-gradient(90deg, #388e3c 0%, #2e7d32 100%);
             padding: 10px 16px;
             text-align: center;
             color: var(--white);
@@ -1522,20 +1501,25 @@
         .cart-sidebar {
             position: fixed;
             top: 0;
-            right: -100%;
+            right: 0;
             width: 100%;
             max-width: 400px;
             height: 100vh;
             background: var(--white);
             z-index: 2000;
-            transition: right 0.3s ease;
             display: flex;
             flex-direction: column;
             box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+            /* GPU acceleration for smooth animation */
+            transform: translateX(100%);
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
         }
 
         .cart-sidebar.active {
-            right: 0;
+            transform: translateX(0);
         }
 
         .cart-header {
@@ -1723,7 +1707,12 @@
             cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            transition: all 0.2s;
+            transition: background-color 0.15s ease;
+            will-change: background-color;
+            transform: translateZ(0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            contain: layout style paint;
         }
 
         .checkout-btn:hover {
@@ -1816,6 +1805,220 @@
             margin-bottom: 8px;
             font-size: 14px;
             color: var(--success);
+        }
+
+        /* Custom Grocery List Section - Cart */
+        .custom-order-section {
+            padding: 16px;
+            border-top: 1px solid var(--border);
+            background: var(--bg);
+        }
+
+        .custom-order-section h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .custom-order-section h4 svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--accent-primary);
+        }
+
+        .custom-order-textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-family: inherit;
+            resize: vertical;
+            margin-bottom: 12px;
+            transition: border-color 0.2s ease;
+        }
+
+        .custom-order-textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+
+        .custom-order-textarea::placeholder {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .custom-order-submit {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .custom-order-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .custom-order-submit svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--white);
+        }
+
+        /* Custom Order Section - Main Website */
+        .custom-order-main-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 32px 16px;
+            margin: 24px 0;
+            border-radius: var(--radius-lg);
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .custom-order-main-section h2 {
+            color: var(--white);
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .custom-order-main-section .subtitle {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .custom-order-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .custom-order-card textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 14px;
+            border: 2px solid var(--bg-secondary);
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-family: inherit;
+            resize: vertical;
+            margin-bottom: 16px;
+            transition: border-color 0.2s ease;
+        }
+
+        .custom-order-card textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+
+        .custom-order-card .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .custom-order-card .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .custom-order-card .submit-btn svg {
+            width: 22px;
+            height: 22px;
+            fill: var(--white);
+        }
+
+        .custom-order-examples {
+            margin-top: 16px;
+            padding: 12px;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-sm);
+        }
+
+        .custom-order-examples h5 {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .custom-order-examples ul {
+            list-style: none;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .custom-order-examples li {
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .custom-order-examples li::before {
+            content: '•';
+            position: absolute;
+            left: 6px;
+            color: var(--accent-primary);
+        }
+
+        @media (min-width: 768px) {
+            .custom-order-main-section {
+                padding: 48px 32px;
+                margin: 32px 16px;
+            }
+
+            .custom-order-main-section h2 {
+                font-size: 32px;
+            }
+
+            .custom-order-main-section .subtitle {
+                font-size: 16px;
+            }
+
+            .custom-order-card {
+                padding: 32px;
+            }
+
+            .custom-order-card textarea {
+                min-height: 150px;
+                font-size: 15px;
+            }
         }
 
         /* Notification Toast */
@@ -2476,6 +2679,33 @@
     <!-- Products Section -->
     <section class="products-section" id="productsSection"></section>
 
+    <!-- Custom Grocery List Section -->
+    <section class="custom-order-main-section" id="customOrderSection">
+        <h2>📝 अपनी Grocery List भेजें</h2>
+        <p class="subtitle">कोई भी सामान जो आपको चाहिए, बस लिखें और WhatsApp पर भेजें!</p>
+        <div class="custom-order-card">
+            <textarea id="customGroceryList"
+                placeholder="अपनी पूरी grocery list यहाँ लिखें...&#10;&#10;उदाहरण:&#10;1.5 kg Tuar Dal&#10;4 Parle-G Biscuit Packets&#10;2 kg Basmati Rice&#10;500g Sugar&#10;1 liter Sunflower Oil&#10;200g MDH Garam Masala"></textarea>
+            <button class="submit-btn" onclick="submitCustomGroceryList()">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                WhatsApp पर List भेजें
+            </button>
+            <div class="custom-order-examples">
+                <h5>✍️ ऐसे लिखें अपनी list:</h5>
+                <ul>
+                    <li>1.5 kg Tuar Dal</li>
+                    <li>4 Parle-G Biscuit Packets</li>
+                    <li>2 kg India Gate Basmati Rice</li>
+                    <li>Fortune Sunflower Oil 1 liter</li>
+                    <li>Amul Butter 500g</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- About Us Section -->
     <section class="about-section">
         <h2>About Swastik Mart</h2>
@@ -2693,6 +2923,25 @@
             </div>
             <button class="checkout-btn" onclick="placeOrder()">Place Order</button>
         </div>
+        <!-- Custom Order Section in Cart -->
+        <div class="custom-order-section">
+            <h4>
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6zm2-6h8v2H8v-2zm0-3h8v2H8v-2zm0 6h5v2H8v-2z" />
+                </svg>
+                अपनी सूची लिखें (Write Your List)
+            </h4>
+            <textarea class="custom-order-textarea" id="cartCustomList"
+                placeholder="अपनी grocery list यहाँ लिखें...&#10;Example:&#10;1.5 kg Tuar Dal&#10;4 Parle-G Biscuit&#10;2 kg Basmati Rice&#10;500g Sugar"></textarea>
+            <button class="custom-order-submit" onclick="submitCartCustomList()">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                WhatsApp पर भेजें
+            </button>
+        </div>
     </div>
 
     <!-- Toast Notification -->
@@ -2814,7 +3063,32 @@
         // Valid coupon codes (10% discount)
         const validCoupons = ['NEWYEAR2025', 'SWASTIK10', 'WELCOME10'];
 
+        // Cache DOM elements for faster access
+        const domCache = {
+            cartItems: null,
+            cartBadge: null,
+            cartTotal: null,
+            cartFooter: null,
+            discountRow: null,
+            discountAmount: null,
+            productsSection: null,
+            toast: null
+        };
+
+        // Initialize DOM cache after DOM is ready
+        function initDOMCache() {
+            domCache.cartItems = document.getElementById('cartItems');
+            domCache.cartBadge = document.getElementById('cartBadge');
+            domCache.cartTotal = document.getElementById('cartTotal');
+            domCache.cartFooter = document.getElementById('cartFooter');
+            domCache.discountRow = document.getElementById('discountRow');
+            domCache.discountAmount = document.getElementById('discountAmount');
+            domCache.productsSection = document.getElementById('productsSection');
+            domCache.toast = document.getElementById('toast');
+        }
+
         // Initialize
+        initDOMCache();
         renderProducts();
         setupSmoothScroll();
         setupSearch();
@@ -2834,7 +3108,7 @@
             `).join('');
         }
 
-        // Render Product Card
+        // Render Product Card - Optimized with lazy loading
         function renderProductCard(product) {
             const cartItem = cart.find(item => item.id === product.id);
             const isInCart = cartItem && cartItem.quantity > 0;
@@ -2843,7 +3117,7 @@
                 <div class="product-card">
                     <div class="product-image-container">
                         ${product.image ?
-                    `<img src="${product.image}" alt="${product.name}" class="product-image">` :
+                    `<img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy" decoding="async">` :
                     `<div class="no-image-placeholder">
                                 <svg viewBox="0 0 24 24">
                                     <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
@@ -3000,12 +3274,9 @@
             }
         }
 
-        // Update Cart
+        // Update Cart - Optimized with cached DOM elements
         function updateCart() {
-            const cartItems = document.getElementById('cartItems');
-            const cartBadge = document.getElementById('cartBadge');
-            const cartTotal = document.getElementById('cartTotal');
-            const cartFooter = document.getElementById('cartFooter');
+            const { cartItems, cartBadge, cartTotal, cartFooter, discountRow, discountAmount } = domCache;
 
             const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
             cartBadge.textContent = totalItems;
@@ -3024,10 +3295,11 @@
                 `;
                 cartFooter.style.display = 'none';
             } else {
-                cartItems.innerHTML = cart.map(item => `
+                // Build HTML string once, then set innerHTML
+                const cartHTML = cart.map(item => `
                     <div class="cart-item">
                         <div class="cart-item-image">
-                            ${item.image ? `<img src="${item.image}" alt="${item.name}">` : ''}
+                            ${item.image ? `<img src="${item.image}" alt="${item.name}" loading="lazy">` : ''}
                         </div>
                         <div class="cart-item-details">
                             <div class="cart-item-name">${item.name}</div>
@@ -3046,6 +3318,8 @@
                     </div>
                 `).join('');
 
+                cartItems.innerHTML = cartHTML;
+
                 const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
                 let discount = 0;
                 let total = subtotal;
@@ -3054,10 +3328,10 @@
                 if (appliedCoupon) {
                     discount = Math.round(subtotal * 0.10); // 10% discount
                     total = subtotal - discount;
-                    document.getElementById('discountRow').style.display = 'flex';
-                    document.getElementById('discountAmount').textContent = `-₹${discount}`;
+                    discountRow.style.display = 'flex';
+                    discountAmount.textContent = `-₹${discount}`;
                 } else {
-                    document.getElementById('discountRow').style.display = 'none';
+                    discountRow.style.display = 'none';
                 }
 
                 cartTotal.textContent = `₹${total}`;
@@ -3161,9 +3435,9 @@
             window.open(`https://wa.me/917751903836?text=${encodeURIComponent(message)}`, '_blank');
         }
 
-        // Show Toast
+        // Show Toast - Optimized with cached DOM element
         function showToast(message) {
-            const toast = document.getElementById('toast');
+            const toast = domCache.toast;
             toast.textContent = message;
             toast.classList.add('show');
             setTimeout(() => toast.classList.remove('show'), 2000);
@@ -3196,14 +3470,13 @@
 
         // Hide preloader after page loads
         window.addEventListener('load', function () {
+            // Fast preloader - hide immediately when content is ready
+            const preloader = document.getElementById('preloader');
+            preloader.classList.add('hidden');
+            // Remove preloader from DOM after animation completes
             setTimeout(function () {
-                const preloader = document.getElementById('preloader');
-                preloader.classList.add('hidden');
-                // Remove preloader from DOM after animation completes
-                setTimeout(function () {
-                    preloader.style.display = 'none';
-                }, 500);
-            }, 1500); // Show preloader for 1.5 seconds
+                preloader.style.display = 'none';
+            }, 300);
         });
     </script>
 </body>
