@@ -1346,6 +1346,95 @@
             color: var(--text-secondary);
         }
 
+        /* Founders Section */
+        .founders-section {
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+
+        .founders-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .founder-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(40, 116, 240, 0.1);
+        }
+
+        .founder-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(40, 116, 240, 0.3);
+        }
+
+        .founder-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 16px;
+            border: 4px solid var(--white);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        .founder-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .founder-role {
+            font-size: 13px;
+            color: var(--accent-primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        @media (min-width: 768px) {
+            .founders-title {
+                font-size: 24px;
+            }
+
+            .founder-card {
+                padding: 32px;
+            }
+
+            .founder-image {
+                width: 140px;
+                height: 140px;
+            }
+
+            .founder-name {
+                font-size: 20px;
+            }
+        }
+
         /* Visit Our Store Section */
         .store-section {
             background: var(--white);
@@ -2656,7 +2745,7 @@
                 <h3>📞 Want to Order Directly?</h3>
                 <p>Call us now and place your order instantly!</p>
             </div>
-            <a href="tel:+917751903836" class="call-banner-btn">
+            <a href="tel:+918085111110" class="call-banner-btn">
                 <svg viewBox="0 0 24 24">
                     <path
                         d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
@@ -2717,62 +2806,62 @@
             <!-- Category 7: Chocolate & Kids Items -->
             <a href="#cat-7" class="category-card">
                 <img class="category-img"
-                    src="https://imgs.search.brave.com/qD8K_U7P3MKz2NhT-GrFbqYQV0pD9T3VvYlKj6L5XaY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFJelpQM1VtTEwu/anBn"
+                    src="https://imgs.search.brave.com/osUFgXeyqDTPOBZlcaMrziM_6QKfgBdRNIWAk0dCCSE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zaG9w/LnBlZXBhbGZhcm0u/b3JnL2Nkbi9zaG9w/L2ZpbGVzL2Nob2Nv/bGF0ZS1iYXIyLmpw/Zz92PTE3MDUwNTE2/OTgmd2lkdGg9MTQ0/NQ"
                     alt="Chocolate & Kids Items">
                 <div class="category-name">🍫 Chocolate & Kids</div>
             </a>
             <!-- Category 8: Chai, Coffee & Beverages -->
             <a href="#cat-8" class="category-card">
                 <img class="category-img"
-                    src="https://imgs.search.brave.com/zxTLTlV9RqUAok4Ra60LCQLJF5MNsnMctlmXxX94dJI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNDU5/Mzk2OTExL3Bob3Rv/L3BlcHNpLWNhbi13/aXRoLXdhdGVyLWRy/b3BsZXRzLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1TNzBT/UnRQUS1iSUZiZjVs/cE5GOFJXcmtYMEot/bTIzTWRFWk9BVjZo/bXlBPQ"
+                    src="https://imgs.search.brave.com/4KmruUOZyyPK1hnHN2GGw43NF3UBU8Sx3P6kcXeEzrE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9mcmVzaC1taWxr/LXRlYS1pbmRpYW4t/a2FyYWstY2hhaV8x/MTg1ODA5LTEwLmpw/Zz9zZW10PWFpc19o/eWJyaWQmdz03NDAm/cT04MA"
                     alt="Chai, Coffee & Beverages">
                 <div class="category-name">☕ Chai & Beverages</div>
             </a>
             <!-- Category 9: Namak, Sugar & Essentials -->
             <a href="#cat-9" class="category-card">
                 <img class="category-img"
-                    src="https://imgs.search.brave.com/7D-zH8O8k5g3tqMpR3T9DlqU2vF0m_4X4j5K6L7M8N0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFGNjBJNjJqekwu/anBn"
+                    src="https://imgs.search.brave.com/1sLvrKf7uvNGg0mNhORo0D0hzMlx12AANzFSDnBK0uk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cXVpY2twYW50cnku/aW4vY2RuL3Nob3Av/cHJvZHVjdHMvdGF0/YS1pb2Rpc2VkLXNh/bHQtMS1rZy1xdWlj/ay1wYW50cnkuanBn/P3Y9MTcxMDUzNzk0/OCZ3aWR0aD0xMjE0"
                     alt="Namak, Sugar & Essentials">
                 <div class="category-name">🧂 Namak & Sugar</div>
             </a>
             <!-- Category 10: Personal Care -->
             <a href="#cat-10" class="category-card">
                 <img class="category-img"
-                    src="https://imgs.search.brave.com/u64N-mobCjy5LjTtjGQ4mh_jeKZog-Z0Y9HjmqGs1k0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9SQy9GWC9NWS00/NTczNTk4L2N1c3Rv/bWl6ZWQtcGVyc29u/YWwtY2FyZS1wcm9k/dWN0cy0yNTB4MjUw/LmpwZw"
+                    src="https://imgs.search.brave.com/7kH7thhtNZluMOdrKs2YBYTx37EhQYq5GDDWHqEI6iQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9wbGFz/dGljLWZyZWUtcGVy/c29uYWwtY2FyZS1w/cm9kdWN0cy1ncmV5/LWJhY2tncm91bmQt/emVyby13YXN0ZS1z/aG9wcGluZy1ob21l/LWVjby1mcmllbmRs/eS1jaG9pY2UtbGl2/aW5nLTE0Nzg5MzY4/MS5qcGc"
                     alt="Personal Care">
                 <div class="category-name">💄 Personal Care</div>
             </a>
             <!-- Category 11: Baby Care -->
             <a href="#cat-11" class="category-card">
                 <img class="category-img"
-                    src="https://imgs.search.brave.com/Xx8P8K3MNL4jQ5R6S7T8U9V0W1X2Y3Z4A5B6C7D8E9/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFKSk0yMzQ1Nkwu/anBn"
+                    src="https://imgs.search.brave.com/ZmXBZmRc92sVAt-DJmPePsRdIx8-Wn1KeSeO83DaorI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9iYWJ5/LWNhcmUtb2JqZWN0/cy1vbGl2ZS1zaGFt/cG9vLWRpYXBlcnMt/b3JhbmdlLWJhY2tn/cm91bmQtMzU0NDk5/MzcuanBn"
                     alt="Baby Care">
                 <div class="category-name">👶 Baby Care</div>
             </a>
             <!-- Category 12: Home Cleaning & Laundry -->
             <a href="#cat-12" class="category-card">
                 <img class="category-img"
-                    src="https://imgs.search.brave.com/Yy9Q9L4NOM5kR6S7T8U9V0W1X2Y3Z4A5B6C7D8E9F0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFLSzEyMzQ1Nkwu/anBn"
+                    src="https://imgs.search.brave.com/bwDL-p4BDJzEk1Prdo9BK8KKovsD18eO78hl7IYLCb8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFJanBwLUJmWEwu/anBn"
                     alt="Home Cleaning">
                 <div class="category-name">🧹 Home Cleaning</div>
             </a>
             <!-- Category 13: Puja Samagri -->
             <a href="#cat-13" class="category-card">
                 <img class="category-img"
-                    src="https://imgs.search.brave.com/Zz0R0M5NPN6lS7T8U9V0W1X2Y3Z4A5B6C7D8E9F0G1/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFMTDEyMzQ1Nkwu/anBn"
+                    src="https://imgs.search.brave.com/P3YJidz1UyZUs76EBMp0Y_1Rd_lkQXPejHnID4IYF_8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wdWph/aG9tZS5jb20vY2Ru/L3Nob3AvZmlsZXMv/cHVqYWhvbWVfMy5w/bmc_dj0xNzE0NTgw/ODk2JndpZHRoPTUz/Mw"
                     alt="Puja Samagri">
                 <div class="category-name">🪔 Puja Samagri</div>
             </a>
             <!-- Category 14: Kitchen & Household -->
             <a href="#cat-14" class="category-card">
                 <img class="category-img"
-                    src="https://imgs.search.brave.com/Aa1S1N6OQO7mT8U9V0W1X2Y3Z4A5B6C7D8E9F0G1H2/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/OTFNTTEyMzQ1Nkwu/anBn"
+                    src="https://imgs.search.brave.com/_5u03xp_fNG8u1ZqnsMbagv-SZMrGUpaqpfrht0cWdM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzMwMC8zMDAveGlm/MHEva2l0Y2hlbi1y/YWNrL2Yvci9vL2tp/dGNoZW4tc2hlbGYt/c3RhaW5sZXNzLXN0/ZWVsLXdhbGwtbW91/bnQta25pZmUtaG9s/ZGVyLWtpdGNoZW4t/b3JpZ2luYWwtaW1h/aGhreXlnemtwZm0z/cy5qcGVnP3E9OTA"
                     alt="Kitchen & Household">
                 <div class="category-name">🏠 Kitchen & Household</div>
             </a>
         </div>
     </section>
-
+    https
     <!-- Search Results Section -->
     <section class="search-results-section" id="searchResultsSection">
         <div class="search-results-header">
@@ -2832,14 +2921,17 @@
         <div class="about-content">
             <div class="about-text">
                 <p>Welcome to <strong>Swastik Mart</strong> - your trusted neighborhood grocery store since 2004. For
-                    over 20 years, we have been proudly serving the Airoli community with quality products at honest
+                    over 20 years, we have been proudly serving the Indore community with quality products at honest
                     prices.</p>
-                <p>Founded by Aayush with a vision to provide fresh groceries and daily essentials to local families,
-                    Swastik Mart has grown to become a household name in the area. We believe in building lasting
-                    relationships with our customers through exceptional service and quality products.</p>
+                <p>Located at <strong>Kanak Smart City, Front of Aurobindo Hospital, 382, Shankheshwar Crossroad, nearby
+                        Hanuman Mandir, Bhawrasla, Indore, Madhya Pradesh 452001</strong>, we are committed to providing
+                    fresh groceries and daily essentials to local families. Swastik Mart has grown to become a household
+                    name in the area.</p>
                 <p>From premium rice and fresh spices to daily household needs, we carefully select every product to
                     ensure the best quality for your family. Our commitment to freshness, quality, and affordability has
                     made us the preferred choice for thousands of families.</p>
+                <p>📞 <strong>Call us: <a href="tel:+918085111110"
+                            style="color: var(--accent-primary); text-decoration: none;">8085111110</a></strong></p>
             </div>
             <div class="about-highlights">
                 <div class="highlight-item">
@@ -2875,6 +2967,23 @@
                     <p>Affordable without compromise</p>
                 </div>
             </div>
+
+            <!-- Founders Section -->
+            <div class="founders-section">
+                <h3 class="founders-title">👨‍💼 Meet Our Founders</h3>
+                <div class="founders-grid">
+                    <div class="founder-card">
+                        <img src="IMG-20251231-WA0002.jpg" alt="Founder" class="founder-image">
+                        <h4 class="founder-name">Founder Name</h4>
+                        <p class="founder-role">Co-Founder</p>
+                    </div>
+                    <div class="founder-card">
+                        <img src="IMG-20251231-WA0003.jpg" alt="Founder" class="founder-image">
+                        <h4 class="founder-name">Founder Name</h4>
+                        <p class="founder-role">Co-Founder</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2896,7 +3005,8 @@
                             d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                     </svg>
                     <h3>Store Address</h3>
-                    <p>Shop No. 15, Mahalaxmi Market<br>Airoli, Navi Mumbai - 400708</p>
+                    <p>Kanak Smart City, Front of Aurobindo Hospital,<br>382, Shankheshwar Crossroad, nearby Hanuman
+                        Mandir,<br>Bhawrasla, Indore, MP 452001</p>
                 </div>
                 <div class="store-info-card hours">
                     <svg viewBox="0 0 24 24">
@@ -2912,7 +3022,7 @@
                             d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
                     </svg>
                     <h3>Call Us</h3>
-                    <p><a href="tel:+917751903836">+91 77519 03836</a><br>We're here to help!</p>
+                    <p><a href="tel:+918085111110">+91 80851 11110</a><br>We're here to help!</p>
                 </div>
                 <div class="store-info-card directions">
                     <svg viewBox="0 0 24 24">
@@ -2937,7 +3047,7 @@
                 <div class="footer-section">
                     <h3>About</h3>
                     <a href="#about">About Us</a>
-                    <a href="tel:+917751903836">Contact Us</a>
+                    <a href="tel:+918085111110">Contact Us</a>
                     <a href="#careers">Careers</a>
                 </div>
                 <div class="footer-section">
@@ -2954,7 +3064,8 @@
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
-                    <p>Shop No. 15, Mahalaxmi Market<br>Airoli, Navi Mumbai - 400708<br>Phone: +91 77519 03836</p>
+                    <p>Kanak Smart City, Shankheshwar Crossroad,<br>Bhawrasla, Indore, MP 452001<br>Phone: +91 80851
+                        11110</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -2989,7 +3100,7 @@
             </svg>
             <span>Cart</span>
         </button>
-        <a href="tel:+917751903836" class="nav-item">
+        <a href="tel:+918085111110" class="nav-item">
             <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path
                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
@@ -3052,7 +3163,7 @@
                 name: '🍚 Chawal (Rice)',
                 products: [
                     { id: 1, name: 'Basmati Rice', price: 210, weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/k1iVRlPKiNr37EpRUs5iaGpAvGSvFiX1yp5R3iRHuHk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFxeGlLeG04ekwu/anBn' },
-                    { id: 2, name: 'Dubar Basmati Rice', price: 155, weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/Fj27Wy1_36QDyXj6ozIOv6jnOxqQ-tQ3bru4bnb56ws/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFreithZUgySkwu/anBn' },
+                    { id: 2, name: 'Dubar Basmati Rice', price: 155, weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/yUR5yuZ856_cHO3TfjaDzH-Xe1brVX9MqtBajp886e0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jcGlt/Zy50aXN0YXRpYy5j/b20vMDg3NDY2NzMv/Yi80LzFrZy1EdWJh/ci1CYXNtYXRpLVJp/Y2UuanBn' },
                     { id: 3, name: 'Sona Masoori Rice', price: 78, weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/X_QwIn_iu59W667mFu5a6rFgwb9f6Vc4lt73AE4TGCA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFzVE9Vam9mckwu/anBn' },
                     { id: 4, name: 'Kolam Rice', price: 70, weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/uw4Dw59ix6n-eEAw52HzbVULkI0SggyfGjgPmS0CtNQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFFaXZ0TCtiYkwu/anBn' },
                     { id: 5, name: 'Indrayani Rice', price: 82, weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/G6bC398xA49NF9Jx8nfON91oqVSTUluwatjKrFekafs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFuZXdQcTJzekwu/anBn' },
@@ -3573,7 +3684,7 @@
         function buyNow(productId) {
             const product = getAllProducts().find(p => p.id === productId);
             const message = `Hello! I want to order:\n\n${product.name} (${product.brand})\nQty: 1\nPrice: ₹${product.price}\n\nPlease confirm availability.`;
-            window.open(`https://wa.me/917751903836?text=${encodeURIComponent(message)}`, '_blank');
+            window.open(`https://wa.me/918085111110?text=${encodeURIComponent(message)}`, '_blank');
         }
 
         // Place Order
@@ -3606,7 +3717,7 @@
 
             message += `Please confirm my order and delivery details. Thank you!`;
 
-            window.open(`https://wa.me/917751903836?text=${encodeURIComponent(message)}`, '_blank');
+            window.open(`https://wa.me/918085111110?text=${encodeURIComponent(message)}`, '_blank');
         }
 
         // Show Toast - Optimized with cached DOM element
@@ -3628,7 +3739,7 @@
 
             const message = `Hello! I want to order from Swastik Mart:\n\n📝 MY GROCERY LIST:\n${customList}\n\nPlease confirm prices and availability. Thank you!`;
 
-            window.open(`https://wa.me/917751903836?text=${encodeURIComponent(message)}`, '_blank');
+            window.open(`https://wa.me/918085111110?text=${encodeURIComponent(message)}`, '_blank');
         }
 
         // Smooth Scroll for Category Cards
