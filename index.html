@@ -21,29 +21,36 @@
         }
 
         :root {
+            /* Flipkart Color Scheme */
+            /* 60% - Dominant: Clean whites and light grays */
             --bg-primary: #ffffff;
             --bg-secondary: #f1f3f6;
             --white: #ffffff;
 
+            /* 30% - Secondary: Dark text */
             --text-primary: #212121;
             --text-secondary: #878787;
             --text-muted: #9e9e9e;
 
+            /* 10% - Accent: Flipkart Blue & Orange */
             --accent-primary: #2874f0;
             --accent-secondary: #fb641b;
             --accent-gradient: linear-gradient(135deg, #2874f0 0%, #1a5dc7 100%);
             --flipkart-yellow: #ffe500;
             --flipkart-orange: #fb641b;
 
+            /* Semantic Colors */
             --success: #388e3c;
             --success-light: #e8f5e9;
             --error: #ff6161;
             --info: #2874f0;
 
+            /* Glassmorphism */
             --glass-bg: rgba(255, 255, 255, 0.7);
             --glass-border: rgba(255, 255, 255, 0.3);
             --glass-blur: blur(20px);
 
+            /* Layered Shadows (Depth) */
             --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
             --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.08);
             --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -51,36 +58,58 @@
             --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.15);
             --shadow-glow: 0 0 40px rgba(40, 116, 240, 0.3);
 
+            /* Typography Scale (1.25 ratio) */
             --font-xs: 0.75rem;
+            /* 12px */
             --font-sm: 0.875rem;
+            /* 14px */
             --font-base: 1rem;
+            /* 16px */
             --font-lg: 1.125rem;
+            /* 18px */
             --font-xl: 1.25rem;
+            /* 20px */
             --font-2xl: 1.5rem;
+            /* 24px */
             --font-3xl: 1.875rem;
+            /* 30px */
             --font-4xl: 2.25rem;
+            /* 36px */
             --font-5xl: 3rem;
+            /* 48px */
 
+            /* Spacing Scale (8px base) */
             --space-1: 0.25rem;
+            /* 4px */
             --space-2: 0.5rem;
+            /* 8px */
             --space-3: 0.75rem;
+            /* 12px */
             --space-4: 1rem;
+            /* 16px */
             --space-5: 1.5rem;
+            /* 24px */
             --space-6: 2rem;
+            /* 32px */
             --space-8: 3rem;
+            /* 48px */
             --space-10: 4rem;
+            /* 64px */
 
+            /* Border Radius */
             --radius-sm: 6px;
             --radius-md: 10px;
             --radius-lg: 16px;
             --radius-xl: 24px;
             --radius-full: 9999px;
 
+            /* Transitions */
             --transition-fast: 150ms ease;
             --transition-base: 250ms ease;
             --transition-slow: 400ms ease;
             --transition-bounce: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
+            /* Legacy support - Flipkart colors */
             --primary: #2874f0;
             --primary-dark: #1a5dc7;
             --bg: #f1f3f6;
@@ -88,7 +117,7 @@
             --text: #212121;
         }
 
-
+        /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
@@ -104,19 +133,19 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-
+        /* Focus states for accessibility */
         *:focus-visible {
             outline: 3px solid var(--accent-primary);
             outline-offset: 2px;
         }
 
-
+        /* Selection styling */
         ::selection {
             background: var(--accent-primary);
             color: var(--white);
         }
 
-
+        /* Preloader Styles */
         .preloader {
             position: fixed;
             top: 0;
@@ -239,7 +268,7 @@
             }
         }
 
-
+        /* Call to Order Banner */
         .call-banner {
             background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
             padding: 16px;
@@ -365,7 +394,7 @@
             fill: #ff6b35;
         }
 
-
+        /* Floating Call Button */
         .floating-call-btn {
             position: fixed;
             bottom: 80px;
@@ -396,7 +425,7 @@
 
         .floating-call-btn .pulse-ring {
             display: none;
-
+            /* Disabled for performance */
         }
 
         @keyframes float {
@@ -445,7 +474,7 @@
             }
         }
 
-
+        /* WhatsApp Floating Button */
         .floating-whatsapp-btn {
             position: fixed;
             bottom: 150px;
@@ -474,7 +503,7 @@
             fill: var(--white);
         }
 
-
+        /* Promo Banner - Flipkart Style */
         .promo-banner {
             background: linear-gradient(90deg, #388e3c 0%, #2e7d32 100%);
             padding: 10px 16px;
@@ -519,13 +548,13 @@
             letter-spacing: 0.5px;
         }
 
-
+        /* Trust Badges - Hidden on mobile, visible on desktop */
         .trust-badges {
             background: var(--white);
             padding: 12px 16px;
             border-bottom: 1px solid var(--border);
             display: none;
-
+            /* Hidden on mobile */
         }
 
         .trust-badges-container {
@@ -553,12 +582,12 @@
 
         @media (min-width: 768px) {
 
-
+            /* Show trust badges on desktop */
             .trust-badges {
                 display: block;
             }
 
-
+            /* Fix parallax on desktop only */
             .hero {
                 background-attachment: fixed;
             }
@@ -590,13 +619,13 @@
             }
         }
 
-
+        /* Container for Desktop */
         .container {
             max-width: 1400px;
             margin: 0 auto;
         }
 
-
+        /* Header */
         .header {
             background: var(--primary);
             color: var(--white);
@@ -733,12 +762,12 @@
             fill: var(--text-secondary);
         }
 
-
+        /* Hero Section - Enhanced with Glassmorphism */
         .hero {
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('img.png');
             background-size: cover;
             background-position: center;
-
+            /* background-attachment: fixed - moved to desktop media query */
             min-height: 280px;
             display: flex;
             align-items: center;
@@ -2016,7 +2045,7 @@
             fill: var(--white);
         }
 
-
+        /* Custom Order Section - Main Website */
         .custom-order-main-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 32px 16px;
@@ -2156,7 +2185,7 @@
             }
         }
 
-
+        /* Notification Toast */
         .toast {
             position: fixed;
             bottom: 80px;
@@ -2179,7 +2208,7 @@
             transform: translateX(-50%) translateY(0);
         }
 
-
+        /* Footer */
         .footer {
             background: var(--text);
             color: var(--white);
@@ -2234,12 +2263,12 @@
             color: rgba(255, 255, 255, 0.5);
         }
 
-
+        /* Hide/Show Sections */
         .hide {
             display: none !important;
         }
 
-
+        /* Responsive - Tablet (768px and up) */
         @media (min-width: 768px) {
             body {
                 padding-bottom: 0;
@@ -2333,7 +2362,7 @@
                 bottom: 20px;
             }
 
-
+            /* Store Section - Tablet */
             .store-section {
                 padding: 48px 32px;
             }
@@ -2351,7 +2380,7 @@
             }
         }
 
-
+        /* Responsive - Desktop (1024px and up) */
         @media (min-width: 1024px) {
             .hero {
                 min-height: 350px;
@@ -2382,7 +2411,7 @@
                 padding: 48px 16px 32px;
             }
 
-
+            /* Store Section - Desktop */
             .store-content {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -2399,14 +2428,14 @@
             }
         }
 
-
+        /* Large Desktop (1400px and up) */
         @media (min-width: 1400px) {
             .products-grid {
                 grid-template-columns: repeat(5, 1fr);
             }
         }
 
-
+        /* Features Highlights Strip */
         .features-strip {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             padding: 20px 16px;
@@ -2514,7 +2543,7 @@
 </head>
 
 <body>
-
+    <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="preloader-logo">
             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -2541,7 +2570,7 @@
         </div>
     </div>
 
-
+    <!-- Header -->
     <header class="header">
         <div class="header-top">
             <div class="logo">
@@ -2590,7 +2619,7 @@
 
 
 
-
+    <!-- Trust Badges -->
     <div class="trust-badges">
         <div class="trust-badges-container">
             <div class="trust-badge">
@@ -2623,7 +2652,7 @@
         </div>
     </div>
 
-
+    <!-- Hero Section -->
     <section class="hero" id="heroSection">
         <div class="hero-content">
             <h2>Fresh Groceries,<br>Delivered to Your Door</h2>
@@ -2647,7 +2676,7 @@
         </div>
     </section>
 
-
+    <!-- Features Highlights Strip -->
     <section class="features-strip">
         <div class="features-container">
             <div class="feature-item">
@@ -2703,7 +2732,7 @@
         </div>
     </section>
 
-
+    <!-- Call to Order Banner -->
     <section class="call-banner">
         <div class="call-banner-content">
             <div class="call-banner-icon">
@@ -2726,104 +2755,104 @@
         </div>
     </section>
 
-
+    <!-- Category Cards -->
     <section class="categories-section" id="categoriesSection">
         <div class="section-header">
             <h2 class="section-title">Shop by Category</h2>
         </div>
         <div class="category-grid">
-
+            <!-- Category 1: Chawal (Rice) -->
             <a href="#cat-1" class="category-card">
                 <img class="category-img"
                     src="https://imgs.search.brave.com/-C-VQD4vA94IpdWx_SpkQURfGdNaZy6xDDioBOu8V5I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z2Zmb29kc2Vydmlj/ZS5jb20uYXUvd3At/Y29udGVudC91cGxv/YWRzLzIwMTkvMTIv/bG9tZy1ncmFpbkAx/eC5qcGc"
                     alt="Chawal (Rice)">
                 <div class="category-name">🍚 Chawal (Rice)</div>
             </a>
-
+            <!-- Category 2: Aata, Maida & Suji -->
             <a href="#cat-2" class="category-card">
                 <img class="category-img"
                     src="https://imgs.search.brave.com/-hFy-0Yxkyu_8eGX3AqYGpE9HGtvblsxoAJJVZLhVUY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oZWFs/dGh5c3RhcnRzLmlu/L2Nkbi9zaG9wL2Zp/bGVzL2dwc19nZW5l/cmF0ZWRfNjQ4OGZk/MGYtYjVhOC00YmQ2/LTg0NDYtMWRhZGNl/NDFjMDQzLnBuZz92/PTE3MzQ3NjQ3NzEm/d2lkdGg9MTQ0NQ"
                     alt="Aata, Maida & Suji">
                 <div class="category-name">🌾 Aata, Maida & Suji</div>
             </a>
-
+            <!-- Category 3: Masale (Spices) -->
             <a href="#cat-3" class="category-card">
                 <img class="category-img"
                     src="https://imgs.search.brave.com/VDWzLKU-4sAbLCQqZGJMqW9cxUddVzkLcTkhmDK-5IY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzY5Lzdh/LzY5LzY5N2E2OWMw/ZDhkZWI2ZjU1N2Yw/NDRiOTM4YmYxNGRi/LmpwZw"
                     alt="Masale (Spices)">
                 <div class="category-name">🌶️ Masale (Spices)</div>
             </a>
-
+            <!-- Category 4: Daal & Pulses -->
             <a href="#cat-4" class="category-card">
                 <img class="category-img"
                     src="https://imgs.search.brave.com/tG4WQMSa4lt6w6MiapGd5F7sC8GE9Gkc4ceR79fZ8Xk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9kYWwt/bW9vbmctZGh1bGkt/aW5zaWRlLXBsYXN0/aWMtcGFja2V0LTk5/ODc1MDAxLmpwZw"
                     alt="Daal & Pulses">
                 <div class="category-name">🫘 Daal & Pulses</div>
             </a>
-
+            <!-- Category 5: Tel, Ghee & Butter -->
             <a href="#cat-5" class="category-card">
                 <img class="category-img"
                     src="https://imgs.search.brave.com/550dTmKQ3uwzxPJ-yLfdlK8X2lWK_mtQ-7TYD0WFIHA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dGlydW1hbGFtaWxr/LmNvbS9pbWFnZXMv/cHJvZGN1dHMvZ2hl/ZS9HaGVlX1BvdWNo/XzFsLndlYnA"
                     alt="Tel, Ghee & Butter">
                 <div class="category-name">🧈 Tel, Ghee & Butter</div>
             </a>
-
+            <!-- Category 6: Biscuit, Namkeen & Snacks -->
             <a href="#cat-6" class="category-card">
                 <img class="category-img"
                     src="https://imgs.search.brave.com/40IXdrRfRDcBz3YZXmPG5WDMNTeF_JY8r0w_DLKl3F4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTF1SGV1NFVnREwu/anBn"
                     alt="Biscuit, Namkeen & Snacks">
                 <div class="category-name">🍪 Biscuits & Snacks</div>
             </a>
-
+            <!-- Category 7: Chocolate & Kids Items -->
             <a href="#cat-7" class="category-card">
                 <img class="category-img"
                     src="https://imgs.search.brave.com/osUFgXeyqDTPOBZlcaMrziM_6QKfgBdRNIWAk0dCCSE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zaG9w/LnBlZXBhbGZhcm0u/b3JnL2Nkbi9zaG9w/L2ZpbGVzL2Nob2Nv/bGF0ZS1iYXIyLmpw/Zz92PTE3MDUwNTE2/OTgmd2lkdGg9MTQ0/NQ"
                     alt="Chocolate & Kids Items">
                 <div class="category-name">🍫 Chocolate & Kids</div>
             </a>
-
+            <!-- Category 8: Chai, Coffee & Beverages -->
             <a href="#cat-8" class="category-card">
                 <img class="category-img"
                     src="https://imgs.search.brave.com/4KmruUOZyyPK1hnHN2GGw43NF3UBU8Sx3P6kcXeEzrE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9mcmVzaC1taWxr/LXRlYS1pbmRpYW4t/a2FyYWstY2hhaV8x/MTg1ODA5LTEwLmpw/Zz9zZW10PWFpc19o/eWJyaWQmdz03NDAm/cT04MA"
                     alt="Chai, Coffee & Beverages">
                 <div class="category-name">☕ Chai & Beverages</div>
             </a>
-
+            <!-- Category 9: Namak, Sugar & Essentials -->
             <a href="#cat-9" class="category-card">
                 <img class="category-img"
                     src="https://imgs.search.brave.com/1sLvrKf7uvNGg0mNhORo0D0hzMlx12AANzFSDnBK0uk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cXVpY2twYW50cnku/aW4vY2RuL3Nob3Av/cHJvZHVjdHMvdGF0/YS1pb2Rpc2VkLXNh/bHQtMS1rZy1xdWlj/ay1wYW50cnkuanBn/P3Y9MTcxMDUzNzk0/OCZ3aWR0aD0xMjE0"
                     alt="Namak, Sugar & Essentials">
                 <div class="category-name">🧂 Namak & Sugar</div>
             </a>
-
+            <!-- Category 10: Personal Care -->
             <a href="#cat-10" class="category-card">
                 <img class="category-img"
                     src="https://imgs.search.brave.com/7kH7thhtNZluMOdrKs2YBYTx37EhQYq5GDDWHqEI6iQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9wbGFz/dGljLWZyZWUtcGVy/c29uYWwtY2FyZS1w/cm9kdWN0cy1ncmV5/LWJhY2tncm91bmQt/emVyby13YXN0ZS1z/aG9wcGluZy1ob21l/LWVjby1mcmllbmRs/eS1jaG9pY2UtbGl2/aW5nLTE0Nzg5MzY4/MS5qcGc"
                     alt="Personal Care">
                 <div class="category-name">💄 Personal Care</div>
             </a>
-
+            <!-- Category 11: Baby Care -->
             <a href="#cat-11" class="category-card">
                 <img class="category-img"
                     src="https://imgs.search.brave.com/ZmXBZmRc92sVAt-DJmPePsRdIx8-Wn1KeSeO83DaorI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9iYWJ5/LWNhcmUtb2JqZWN0/cy1vbGl2ZS1zaGFt/cG9vLWRpYXBlcnMt/b3JhbmdlLWJhY2tn/cm91bmQtMzU0NDk5/MzcuanBn"
                     alt="Baby Care">
                 <div class="category-name">👶 Baby Care</div>
             </a>
-
+            <!-- Category 12: Home Cleaning & Laundry -->
             <a href="#cat-12" class="category-card">
                 <img class="category-img"
                     src="https://imgs.search.brave.com/bwDL-p4BDJzEk1Prdo9BK8KKovsD18eO78hl7IYLCb8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFJanBwLUJmWEwu/anBn"
                     alt="Home Cleaning">
                 <div class="category-name">🧹 Home Cleaning</div>
             </a>
-
+            <!-- Category 13: Puja Samagri -->
             <a href="#cat-13" class="category-card">
                 <img class="category-img"
                     src="https://imgs.search.brave.com/P3YJidz1UyZUs76EBMp0Y_1Rd_lkQXPejHnID4IYF_8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wdWph/aG9tZS5jb20vY2Ru/L3Nob3AvZmlsZXMv/cHVqYWhvbWVfMy5w/bmc_dj0xNzE0NTgw/ODk2JndpZHRoPTUz/Mw"
                     alt="Puja Samagri">
                 <div class="category-name">🪔 Puja Samagri</div>
             </a>
-
+            <!-- Category 14: Kitchen & Household -->
             <a href="#cat-14" class="category-card">
                 <img class="category-img"
                     src="https://imgs.search.brave.com/_5u03xp_fNG8u1ZqnsMbagv-SZMrGUpaqpfrht0cWdM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzMwMC8zMDAveGlm/MHEva2l0Y2hlbi1y/YWNrL2Yvci9vL2tp/dGNoZW4tc2hlbGYt/c3RhaW5sZXNzLXN0/ZWVsLXdhbGwtbW91/bnQta25pZmUtaG9s/ZGVyLWtpdGNoZW4t/b3JpZ2luYWwtaW1h/aGhreXlnemtwZm0z/cy5qcGVnP3E9OTA"
@@ -2832,7 +2861,8 @@
             </a>
         </div>
     </section>
-
+    https
+    <!-- Search Results Section -->
     <section class="search-results-section" id="searchResultsSection">
         <div class="search-results-header">
             <div class="search-results-info">
@@ -2857,9 +2887,9 @@
         </div>
     </section>
 
-
+    <!-- Products Section -->
     <section class="products-section" id="productsSection"></section>
-
+    <!-- Custom Grocery List Section -->
     <section class="custom-list-section" id="customListSection">
         <div class="custom-list-container">
             <div class="custom-list-header">
@@ -2885,7 +2915,7 @@
     </section>
 
 
-
+    <!-- About Us Section -->
     <section class="about-section">
         <h2>About Swastik Mart</h2>
         <div class="about-content">
@@ -2938,7 +2968,7 @@
                 </div>
             </div>
 
-
+            <!-- Founders Section -->
             <div class="founders-section">
                 <h3 class="founders-title">👨‍💼 Meet Our Founders</h3>
                 <div class="founders-grid">
@@ -2957,8 +2987,8 @@
         </div>
     </section>
 
-
-
+    <!-- Footer -->
+    <!-- Visit Our Store Section -->
     <section class="store-section" id="storeSection">
         <h2>📍 Visit Our Store</h2>
         <p class="subtitle">Come visit us and experience the warmth of Swastik Mart in person!</p>
@@ -3009,7 +3039,7 @@
 
 
 
-
+    <!-- Footer -->
 
     <footer class="footer">
         <div class="footer-container">
@@ -3044,7 +3074,7 @@
         </div>
     </footer>
 
-
+    <!-- Bottom Navigation (Mobile Only) -->
     <nav class="bottom-nav">
         <button class="nav-item active" onclick="scrollToTop()">
             <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -3079,7 +3109,7 @@
         </a>
     </nav>
 
-
+    <!-- Cart Sidebar -->
     <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
     <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
@@ -3118,16 +3148,16 @@
         </div>
     </div>
 
-
+    <!-- Toast Notification -->
     <div class="toast" id="toast"></div>
 
     <script>
         // ============================================
-
+        // PRODUCTS DATABASE - EDIT HERE TO UPDATE PRODUCTS
 
 
         const categories = [
-
+            // CATEGORY 1: CHAWAL (RICE) - Brand: Fortune
             {
                 id: 1,
                 name: '🍚 Chawal (Rice)',
@@ -3142,7 +3172,7 @@
                     { id: 8, name: 'Poha Rice (Thick)', price: 65, weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/WiEzEkP9Ez6WBm-18vxtHAnJ1lvlV2jwVuN7yXE_0oM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kcmVh/bWJhemFhci5pbi9p/bWFnZXMvMTY5Mzk4/OTY4Ny5qcGc' }
                 ]
             },
-
+            // CATEGORY 2: AATA, MAIDA & SUJI - Brand: Aashirvaad
             {
                 id: 2,
                 name: '🌾 Aata, Maida & Suji',
@@ -3156,7 +3186,7 @@
                     { id: 15, name: 'Bajra Aata', price: 105, weight: '1 kg', brand: 'Aashirvaad', image: 'https://imgs.search.brave.com/Km3XbyZY2tIiZ7lLm1XB31DZXva7TfMXj0tP_GetOXo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzE4d0dzRzNmbUwu/anBn' }
                 ]
             },
-
+            // CATEGORY 3: MASALE (SPICES) - Brand: MDH
             {
                 id: 3,
                 name: '🌶️ Masale (Spices)',
@@ -3175,7 +3205,7 @@
                     { id: 27, name: 'Elaichi', price: 360, weight: '50 g', brand: 'MDH', image: 'https://imgs.search.brave.com/P0Hefx1jNDPdVFuFyzsSE-TjpScebupyiFgnmKn6wHk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFsS002U1ZBZkwu/anBn' }
                 ]
             },
-
+            // CATEGORY 4: DAAL & PULSES - Brand: Tata Sampann
             {
                 id: 4,
                 name: '🫘 Daal & Pulses',
@@ -3191,7 +3221,7 @@
                     { id: 36, name: 'Lobhiya', price: 132, weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/ROsG4tWxIyQH1zkCUN-RfFy6YEMbEW633O-rM7bdIDw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFLQUF1cjVVVUwu/anBn' }
                 ]
             },
-
+            // CATEGORY 5: TEL, GHEE & BUTTER - Brand: Amul
             {
                 id: 5,
                 name: '🧈 Tel, Ghee & Butter',
@@ -3205,7 +3235,7 @@
                     { id: 43, name: 'Butter', price: 62, weight: '100 g', brand: 'Amul', image: 'https://imgs.search.brave.com/nkbOmDyxwilXhCkODbfGkZzwsvRYuhjz-uKRX5b6Y7A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFvV0duWE50RUwu/anBn' }
                 ]
             },
-
+            // CATEGORY 6: BISCUIT, NAMKEEN & SNACKS - Brand: Britannia
             {
                 id: 6,
                 name: '🍪 Biscuits & Snacks',
@@ -3221,7 +3251,7 @@
                     { id: 52, name: 'Toast / Rusk', price: 36, weight: '200 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/Aw8Hmh2EiFYpORvxSS8U4Dve2wDjtfj6nJhQr5Y0isQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTE4d1V3UnlpNkwu/anBn' }
                 ]
             },
-
+            // CATEGORY 7: CHOCOLATE & KIDS ITEMS - Brand: Cadbury
             {
                 id: 7,
                 name: '🍫 Chocolate & Kids',
@@ -3234,7 +3264,7 @@
                     { id: 58, name: 'Lollipop', price: 75, weight: '10 pcs', brand: 'Cadbury', image: 'https://imgs.search.brave.com/h7A7t91ipZIHaa5MV08IDhmdcFcdc2PHI5yzBQ2q3uw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFZZTB5ejhiaUwu/anBn' }
                 ]
             },
-
+            // CATEGORY 8: CHAI, COFFEE & BEVERAGES - Brand: Tata Consumer Products
             {
                 id: 8,
                 name: '☕ Chai & Beverages',
@@ -3248,7 +3278,7 @@
                     { id: 65, name: 'Energy Drink', price: 195, weight: '250 ml', brand: 'Tata Consumer Products', image: 'https://imgs.search.brave.com/5fkfFQf29dGCIU9CX24nstyGTy5V0vw53s-UYp7nYC0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFlNEV3dGFEYkwu/anBn' }
                 ]
             },
-
+            // CATEGORY 9: NAMAK, SUGAR & DAILY ESSENTIALS - Brand: Tata Salt
             {
                 id: 9,
                 name: '🧂 Namak & Sugar',
@@ -3260,7 +3290,7 @@
                     { id: 70, name: 'Mishri', price: 58, weight: '500 g', brand: 'Tata Salt', image: 'https://imgs.search.brave.com/06MDKOLksMwPxlio_Kw4RTbkrJKD3bHBatQQsMe4_7w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF3LUN3WHV2T0wu/anBn' }
                 ]
             },
-
+            // CATEGORY 10: PERSONAL CARE (MEN & WOMEN) - Brand: Hindustan Unilever
             {
                 id: 10,
                 name: '💄 Personal Care',
@@ -3278,7 +3308,7 @@
                     { id: 81, name: 'Deodorant', price: 230, weight: '150 ml', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/_D_9vJvSN6QOVlUBy3YrYYOnNL0jZM4OI7lXfh3leDI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjExK09meHpRUkwu/anBn' }
                 ]
             },
-
+            // CATEGORY 11: BABY CARE - Brand: Johnson & Johnson
             {
                 id: 11,
                 name: '👶 Baby Care',
@@ -3290,7 +3320,7 @@
                     { id: 86, name: 'Baby Diapers', price: 580, weight: 'Pack', brand: 'Johnson & Johnson', image: 'https://imgs.search.brave.com/ypgbk4c784bFys7P8rc185CWIx27JudcFY_ZQPyotU0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuaGViLmNvbS9p/cy9pbWFnZS9IRUJH/cm9jZXJ5LzAwNTU2/NDA3NC0yP2hlaT0z/NjAmd2lkPTM2MA' }
                 ]
             },
-
+            // CATEGORY 12: HOME CLEANING & LAUNDRY - Brand: Reckitt
             {
                 id: 12,
                 name: '🧹 Home Cleaning',
@@ -3304,7 +3334,7 @@
                     { id: 93, name: 'Toilet Cleaner', price: 105, weight: '500 ml', brand: 'Reckitt', image: 'https://imgs.search.brave.com/T3q7es-zcjfZDejnngRbIg3Ttxmn9pLXkjNkFbCRjjk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDIzLzgv/MzMyMzYxNTExL1BF/L01EL0FLLzEzMTAy/NTgzOS9mZWNkZmJl/Yy1hMzY1LTQ3ZjMt/ODZmZi02ZWI2M2Y0/M2RhYjAtMjUweDI1/MC5qcGc' }
                 ]
             },
-
+            // CATEGORY 13: PUJA SAMAGRI - Brand: Cycle Pure Agarbathi
             {
                 id: 13,
                 name: '🪔 Puja Samagri',
@@ -3319,7 +3349,7 @@
                     { id: 101, name: 'Camphor Tablets', price: 52, weight: '50 g', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/HdZ4kT_d4V-5i7G477E_rygFkTWFLkp5qzZcmpZcifg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jeWNs/ZS5pbi9jZG4vc2hv/cC9maWxlcy9BaXIt/S2FycHVyZS1CaGlt/c2VuaS1LYXJwdXIt/NTAwZ20uanBnP3Y9/MTcxMzk0OTQ1NiZ3/aWR0aD00ODA' }
                 ]
             },
-
+            // CATEGORY 14: KITCHEN & HOUSEHOLD ITEMS - Brand: Milton
             {
                 id: 14,
                 name: '🏠 Kitchen & Household',
@@ -3334,9 +3364,9 @@
             }
         ];
 
-
-
-
+        // ============================================
+        // END OF PRODUCTS DATABASE
+        // ============================================
 
         let cart = [];
         let currentSearchTerm = '';
@@ -3357,7 +3387,7 @@
             toast: null
         };
 
-
+        // Initialize DOM cache after DOM is ready
         function initDOMCache() {
             domCache.cartItems = document.getElementById('cartItems');
             domCache.cartBadge = document.getElementById('cartBadge');
@@ -3375,7 +3405,7 @@
         setupSmoothScroll();
         setupSearch();
 
-
+        // Render Products
         function renderProducts() {
             const container = document.getElementById('productsSection');
             container.innerHTML = categories.map(cat => `
@@ -3390,7 +3420,7 @@
             `).join('');
         }
 
-
+        // Render Product Card - Optimized with lazy loading
         function renderProductCard(product) {
             const cartItem = cart.find(item => item.id === product.id);
             const isInCart = cartItem && cartItem.quantity > 0;
@@ -3431,12 +3461,12 @@
             `;
         }
 
-
+        // Get All Products
         function getAllProducts() {
             return categories.flatMap(cat => cat.products);
         }
 
-
+        // Setup Search
         function setupSearch() {
             const searchInput = document.getElementById('searchInput');
             let searchTimeout;
@@ -3467,7 +3497,7 @@
             });
         }
 
-
+        // Perform Search
         function performSearch(term) {
             currentSearchTerm = term;
             const products = getAllProducts().filter(p =>
@@ -3500,7 +3530,7 @@
             resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-
+        // Clear Search
         function clearSearch() {
             document.getElementById('searchInput').value = '';
             document.getElementById('clearSearch').classList.remove('show');
@@ -3515,7 +3545,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-
+        // Add to Cart
         function addToCart(productId) {
             const product = getAllProducts().find(p => p.id === productId);
             const existingItem = cart.find(item => item.id === productId);
@@ -3537,7 +3567,7 @@
             showToast('Added to cart');
         }
 
-
+        // Update Product Quantity from Product Card
         function updateProductQuantity(productId, change) {
             const item = cart.find(i => i.id === productId);
             if (item) {
@@ -3556,7 +3586,7 @@
             }
         }
 
-
+        // Update Cart - Optimized with cached DOM elements
         function updateCart() {
             const { cartItems, cartBadge, cartTotal, cartFooter, discountRow, discountAmount } = domCache;
 
@@ -3608,7 +3638,7 @@
             }
         }
 
-
+        // Update Quantity in Cart Sidebar
         function updateCartQuantity(productId, change) {
             const item = cart.find(i => i.id === productId);
             if (item) {
@@ -3627,7 +3657,7 @@
             }
         }
 
-
+        // Remove from Cart
         function removeFromCart(productId) {
             cart = cart.filter(item => item.id !== productId);
             updateCart();
@@ -3641,27 +3671,27 @@
             showToast('Removed from cart');
         }
 
-
+        // Toggle Cart
         function toggleCart() {
             document.getElementById('cartSidebar').classList.toggle('active');
             document.getElementById('cartOverlay').classList.toggle('active');
         }
 
+        // Apply Coupon - REMOVED (feature disabled)
 
 
-
-
+        // Buy Now
         function buyNow(productId) {
             const product = getAllProducts().find(p => p.id === productId);
             const message = `Hello! I want to order:\n\n${product.name} (${product.brand})\nQty: 1\nPrice: ₹${product.price}\n\nPlease confirm availability.`;
             window.open(`https://wa.me/918085111110?text=${encodeURIComponent(message)}`, '_blank');
         }
 
-
+        // Place Order
         function placeOrder() {
             const orderNotes = document.getElementById('orderNotes').value.trim();
 
-
+            // Allow order even if cart is empty but has notes
             if (cart.length === 0 && !orderNotes) {
                 showToast('Please add items or write your order');
                 return;
@@ -3669,7 +3699,7 @@
 
             let message = `Hello! I want to order from Swastik Mart:\n\n`;
 
-
+            // Add cart items if any
             if (cart.length > 0) {
                 message += `📦 CART ITEMS:\n`;
                 cart.forEach((item, i) => {
@@ -3680,7 +3710,7 @@
                 message += `💰 Cart Total: ₹${total}\n\n`;
             }
 
-
+            // Add order notes if any
             if (orderNotes) {
                 message += `📝 ADDITIONAL ITEMS/NOTES:\n${orderNotes}\n\n`;
             }
@@ -3690,7 +3720,7 @@
             window.open(`https://wa.me/918085111110?text=${encodeURIComponent(message)}`, '_blank');
         }
 
-
+        // Show Toast - Optimized with cached DOM element
         function showToast(message) {
             const toast = domCache.toast;
             toast.textContent = message;
@@ -3698,7 +3728,7 @@
             setTimeout(() => toast.classList.remove('show'), 2000);
         }
 
-
+        // Submit Custom Grocery List
         function submitCustomList() {
             const customList = document.getElementById('customGroceryList').value.trim();
 
@@ -3712,7 +3742,7 @@
             window.open(`https://wa.me/918085111110?text=${encodeURIComponent(message)}`, '_blank');
         }
 
-
+        // Smooth Scroll for Category Cards
         function setupSmoothScroll() {
             document.querySelectorAll('a[href^="#cat-"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -3726,7 +3756,7 @@
             });
         }
 
-
+        // Navigation Functions
         function scrollToTop() {
             clearSearch();
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -3737,12 +3767,12 @@
             document.querySelector('.categories-section').scrollIntoView({ behavior: 'smooth' });
         }
 
-
+        // Hide preloader after page loads
         window.addEventListener('load', function () {
-
+            // Fast preloader - hide immediately when content is ready
             const preloader = document.getElementById('preloader');
             preloader.classList.add('hidden');
-
+            // Remove preloader from DOM after animation completes
             setTimeout(function () {
                 preloader.style.display = 'none';
             }, 300);
