@@ -4069,12 +4069,12 @@
             document.querySelector('.categories-section').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Hide preloader after page loads
+       
         window.addEventListener('load', function () {
-            // Fast preloader - hide immediately when content is ready
+            
             const preloader = document.getElementById('preloader');
             preloader.classList.add('hidden');
-            // Remove preloader from DOM after animation completes
+           
             setTimeout(function () {
                 preloader.style.display = 'none';
             }, 300);
@@ -4083,6 +4083,7 @@
 </body>
 
 </html>
+
 
 
 
