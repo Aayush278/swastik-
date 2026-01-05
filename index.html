@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +19,7 @@
             box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
         }
+
         :root {
             --bg-primary: #ffffff;
             --bg-secondary: #f1f3f6;
@@ -75,9 +77,11 @@
             --border: #e0e0e0;
             --text: #212121;
         }
+
         html {
             scroll-behavior: smooth;
         }
+
         body {
             font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg-secondary);
@@ -88,14 +92,17 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+
         *:focus-visible {
             outline: 3px solid var(--accent-primary);
             outline-offset: 2px;
         }
+
         ::selection {
             background: var(--accent-primary);
             color: var(--white);
         }
+
         .preloader {
             position: fixed;
             top: 0;
@@ -110,10 +117,12 @@
             z-index: 9999;
             transition: opacity 0.5s ease, visibility 0.5s ease;
         }
+
         .preloader.hidden {
             opacity: 0;
             visibility: hidden;
         }
+
         .preloader-logo {
             width: 100px;
             height: 100px;
@@ -127,10 +136,12 @@
             align-items: center;
             justify-content: center;
         }
+
         .preloader-logo svg {
             width: 100%;
             height: 100%;
         }
+
         .logo-svg {
             display: flex;
             align-items: center;
@@ -142,11 +153,13 @@
             padding: 6px;
             flex-shrink: 0;
         }
+
         .logo-svg svg {
             width: 100%;
             height: 100%;
             fill: white;
         }
+
         .preloader-title {
             color: var(--white);
             font-size: 28px;
@@ -154,16 +167,19 @@
             margin-bottom: 8px;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
+
         .preloader-subtitle {
             color: rgba(255, 255, 255, 0.8);
             font-size: 14px;
             font-style: italic;
             margin-bottom: 32px;
         }
+
         .loader-dots {
             display: flex;
             gap: 8px;
         }
+
         .loader-dots span {
             width: 12px;
             height: 12px;
@@ -171,34 +187,44 @@
             border-radius: 50%;
             animation: bounce-dot 1.4s infinite ease-in-out both;
         }
+
         .loader-dots span:nth-child(1) {
             animation-delay: -0.32s;
         }
+
         .loader-dots span:nth-child(2) {
             animation-delay: -0.16s;
         }
+
         .loader-dots span:nth-child(3) {
             animation-delay: 0s;
         }
+
         @keyframes bounce-dot {
+
             0%,
             80%,
             100% {
                 transform: scale(0);
             }
+
             40% {
                 transform: scale(1);
             }
         }
+
         @keyframes pulse-logo {
+
             0%,
             100% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.05);
             }
         }
+
         .call-banner {
             background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
             padding: 16px;
@@ -207,25 +233,31 @@
             position: relative;
             overflow: hidden;
         }
+
         @keyframes gradient-shift {
             0% {
                 background-position: 0% 50%;
             }
+
             50% {
                 background-position: 100% 50%;
             }
+
             100% {
                 background-position: 0% 50%;
             }
         }
+
         @keyframes shimmer {
             0% {
                 left: -100%;
             }
+
             100% {
                 left: 100%;
             }
         }
+
         .call-banner-content {
             display: flex;
             align-items: center;
@@ -235,6 +267,7 @@
             position: relative;
             z-index: 1;
         }
+
         .call-banner-icon {
             width: 40px;
             height: 40px;
@@ -244,42 +277,53 @@
             align-items: center;
             justify-content: center;
         }
+
         @keyframes ring {
+
             0%,
             100% {
                 transform: rotate(0deg);
             }
+
             10% {
                 transform: rotate(15deg);
             }
+
             20% {
                 transform: rotate(-13deg);
             }
+
             30% {
                 transform: rotate(10deg);
             }
+
             40% {
                 transform: rotate(-8deg);
             }
+
             50%,
             100% {
                 transform: rotate(0deg);
             }
         }
+
         .call-banner-icon svg {
             width: 22px;
             height: 22px;
             fill: var(--white);
         }
+
         .call-banner-text h3 {
             font-size: 16px;
             font-weight: 700;
             margin-bottom: 2px;
         }
+
         .call-banner-text p {
             font-size: 13px;
             opacity: 0.95;
         }
+
         .call-banner-btn {
             background: var(--white);
             color: #ff6b35;
@@ -294,15 +338,18 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
         }
+
         .call-banner-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
+
         .call-banner-btn svg {
             width: 18px;
             height: 18px;
             fill: #ff6b35;
         }
+
         .floating-call-btn {
             position: fixed;
             bottom: 80px;
@@ -319,37 +366,46 @@
             text-decoration: none;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
+
         .floating-call-btn:hover {
             transform: scale(1.1) translateY(-3px);
             box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
         }
+
         .floating-call-btn svg {
             width: 26px;
             height: 26px;
             fill: var(--white);
         }
+
         .floating-call-btn .pulse-ring {
             display: none;
         }
+
         @keyframes float {
+
             0%,
             100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-5px);
             }
         }
+
         @keyframes pulse-ring {
             0% {
                 transform: scale(0.8);
                 opacity: 1;
             }
+
             100% {
                 transform: scale(1.8);
                 opacity: 0;
             }
         }
+
         @media (min-width: 768px) {
             .floating-call-btn {
                 bottom: 24px;
@@ -357,17 +413,21 @@
                 width: 64px;
                 height: 64px;
             }
+
             .floating-call-btn svg {
                 width: 30px;
                 height: 30px;
             }
+
             .call-banner-text h3 {
                 font-size: 18px;
             }
+
             .call-banner-text p {
                 font-size: 14px;
             }
         }
+
         .floating-whatsapp-btn {
             position: fixed;
             bottom: 150px;
@@ -384,15 +444,18 @@
             text-decoration: none;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
+
         .floating-whatsapp-btn:hover {
             transform: scale(1.1) translateY(-3px);
             box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
         }
+
         .floating-whatsapp-btn svg {
             width: 30px;
             height: 30px;
             fill: var(--white);
         }
+
         .promo-banner {
             background: linear-gradient(90deg, #388e3c 0%, #2e7d32 100%);
             padding: 10px 16px;
@@ -406,23 +469,29 @@
             gap: 8px;
             flex-wrap: wrap;
         }
+
         @keyframes promo-shift {
             0% {
                 background-position: 0% 50%;
             }
+
             50% {
                 background-position: 100% 50%;
             }
+
             100% {
                 background-position: 0% 50%;
             }
         }
+
         .promo-banner .promo-icon {
             font-size: 16px;
         }
+
         .promo-banner strong {
             font-weight: 700;
         }
+
         .promo-banner .promo-code {
             background: rgba(255, 255, 255, 0.2);
             padding: 3px 10px;
@@ -430,12 +499,14 @@
             font-weight: 700;
             letter-spacing: 0.5px;
         }
+
         .trust-badges {
             background: var(--white);
             padding: 12px 16px;
             border-bottom: 1px solid var(--border);
             display: none;
         }
+
         .trust-badges-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -444,6 +515,7 @@
             gap: 24px;
             flex-wrap: wrap;
         }
+
         .trust-badge {
             display: flex;
             align-items: center;
@@ -451,44 +523,54 @@
             font-size: 12px;
             color: var(--text-secondary);
         }
+
         .trust-badge svg {
             width: 16px;
             height: 16px;
             fill: var(--success);
         }
+
         @media (min-width: 768px) {
             .trust-badges {
                 display: block;
             }
+
             .hero {
                 background-attachment: fixed;
             }
+
             .floating-whatsapp-btn {
                 bottom: 100px;
                 right: 24px;
                 width: 64px;
                 height: 64px;
             }
+
             .floating-whatsapp-btn svg {
                 width: 34px;
                 height: 34px;
             }
+
             .promo-banner {
                 font-size: 14px;
                 padding: 12px 16px;
             }
+
             .trust-badge {
                 font-size: 13px;
             }
+
             .trust-badge svg {
                 width: 18px;
                 height: 18px;
             }
         }
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
         }
+
         .header {
             background: var(--primary);
             color: var(--white);
@@ -497,6 +579,7 @@
             z-index: 999;
             box-shadow: var(--shadow-md);
         }
+
         .header-top {
             padding: 8px 16px;
             display: flex;
@@ -505,12 +588,14 @@
             max-width: 1400px;
             margin: 0 auto;
         }
+
         .logo {
             display: flex;
             align-items: center;
             gap: 10px;
             flex: 1;
         }
+
         .logo-img {
             width: 45px;
             height: 45px;
@@ -519,20 +604,24 @@
             background: var(--white);
             padding: 3px;
         }
+
         .logo-text h1 {
             font-size: 17px;
             font-weight: 700;
             letter-spacing: -0.2px;
         }
+
         .logo-text p {
             font-size: 10px;
             opacity: 0.85;
             font-style: italic;
         }
+
         .header-icons {
             display: flex;
             gap: 16px;
         }
+
         .icon-btn {
             background: transparent;
             border: none;
@@ -540,12 +629,14 @@
             cursor: pointer;
             position: relative;
         }
+
         .icon-btn svg {
             width: 22px;
             height: 22px;
             stroke: var(--white);
             fill: none;
         }
+
         .cart-badge {
             position: absolute;
             top: 4px;
@@ -562,11 +653,13 @@
             justify-content: center;
             padding: 0 4px;
         }
+
         .search-bar {
             padding: 8px 16px 12px;
             max-width: 1400px;
             margin: 0 auto;
         }
+
         .search-input-wrapper {
             position: relative;
             background: var(--white);
@@ -577,11 +670,13 @@
             max-width: 800px;
             margin: 0 auto;
         }
+
         .search-icon {
             width: 18px;
             height: 18px;
             fill: var(--text-secondary);
         }
+
         .search-input {
             border: none;
             padding: 10px 12px;
@@ -589,9 +684,11 @@
             flex: 1;
             background: transparent;
         }
+
         .search-input:focus {
             outline: none;
         }
+
         .clear-search {
             background: transparent;
             border: none;
@@ -599,14 +696,17 @@
             cursor: pointer;
             display: none;
         }
+
         .clear-search.show {
             display: block;
         }
+
         .clear-search svg {
             width: 18px;
             height: 18px;
             fill: var(--text-secondary);
         }
+
         .hero {
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('img.png');
             background-size: cover;
@@ -620,6 +720,7 @@
             color: var(--white);
             position: relative;
         }
+
         .hero::before {
             content: '';
             position: absolute;
@@ -629,11 +730,13 @@
             bottom: 0;
             background: transparent;
         }
+
         .hero-content {
             position: relative;
             z-index: 1;
             max-width: 600px;
         }
+
         .hero-content h2 {
             font-size: var(--font-3xl);
             font-weight: 900;
@@ -642,6 +745,7 @@
             letter-spacing: -0.5px;
             line-height: 1.2;
         }
+
         .hero-content p {
             font-size: var(--font-lg);
             opacity: 0.95;
@@ -649,12 +753,14 @@
             margin-bottom: var(--space-5);
             font-weight: 300;
         }
+
         .hero-buttons {
             display: flex;
             gap: var(--space-3);
             flex-wrap: wrap;
             justify-content: center;
         }
+
         .hero-cta {
             display: inline-flex;
             align-items: center;
@@ -671,38 +777,46 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
         .hero-cta:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-xl);
             background: linear-gradient(135deg, #ff7b2e 0%, #ffb347 100%);
         }
+
         .hero-cta-secondary {
             background: rgba(255, 255, 255, 0.95);
             color: var(--accent-primary);
         }
+
         .hero-cta-secondary:hover {
             background: var(--white);
             color: var(--primary-dark);
         }
+
         .hero-cta-secondary svg {
             fill: var(--accent-primary);
         }
+
         .hero-cta svg {
             width: 18px;
             height: 18px;
             fill: currentColor;
         }
+
         .categories-section {
             padding: var(--space-6) var(--space-4);
             max-width: 1400px;
             margin: 0 auto;
         }
+
         .section-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: var(--space-5);
         }
+
         .section-title {
             font-size: var(--font-2xl);
             font-weight: 800;
@@ -710,6 +824,7 @@
             position: relative;
             display: inline-block;
         }
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -720,11 +835,13 @@
             background: var(--accent-gradient);
             border-radius: var(--radius-full);
         }
+
         .category-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: var(--space-4);
         }
+
         .category-card {
             background: var(--white);
             border-radius: var(--radius-lg);
@@ -739,6 +856,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .category-card::before {
             content: '';
             position: absolute;
@@ -750,17 +868,21 @@
             transform: scaleX(0);
             transition: var(--transition-base);
         }
+
         .category-card:hover {
             box-shadow: var(--shadow-lg);
             transform: translateY(-6px);
             border-color: rgba(40, 116, 240, 0.2);
         }
+
         .category-card:hover::before {
             transform: scaleX(1);
         }
+
         .category-card:active {
             transform: scale(0.98) translateY(-4px);
         }
+
         .category-img {
             width: 60px;
             height: 60px;
@@ -769,25 +891,30 @@
             object-fit: cover;
             transition: var(--transition-base);
         }
+
         .category-card:hover .category-img {
             transform: scale(1.1);
             box-shadow: var(--shadow-md);
         }
+
         .category-name {
             font-size: var(--font-sm);
             font-weight: 600;
             line-height: 1.4;
             color: var(--text-primary);
         }
+
         .search-results-section {
             padding: 16px;
             display: none;
             max-width: 1400px;
             margin: 0 auto;
         }
+
         .search-results-section.show {
             display: block;
         }
+
         .search-results-header {
             background: var(--white);
             padding: 16px;
@@ -800,19 +927,23 @@
             flex-wrap: wrap;
             gap: 12px;
         }
+
         .search-results-info {
             flex: 1;
         }
+
         .search-results-title {
             font-size: 18px;
             font-weight: 700;
             color: var(--text);
             margin-bottom: 4px;
         }
+
         .search-results-count {
             font-size: 13px;
             color: var(--text-secondary);
         }
+
         .back-btn {
             background: var(--white);
             border: 1px solid var(--primary);
@@ -829,18 +960,22 @@
             letter-spacing: 0.3px;
             transition: all 0.2s;
         }
+
         .back-btn:hover {
             background: var(--primary);
             color: var(--white);
         }
+
         .back-btn:active {
             background: var(--primary-dark);
         }
+
         .back-btn svg {
             width: 16px;
             height: 16px;
             fill: currentColor;
         }
+
         .no-results {
             background: var(--white);
             padding: 48px 16px;
@@ -848,6 +983,7 @@
             box-shadow: var(--shadow);
             text-align: center;
         }
+
         .no-results svg {
             width: 80px;
             height: 80px;
@@ -855,23 +991,28 @@
             opacity: 0.3;
             margin-bottom: 16px;
         }
+
         .no-results h3 {
             font-size: 18px;
             color: var(--text);
             margin-bottom: 8px;
         }
+
         .no-results p {
             font-size: 14px;
             color: var(--text-secondary);
         }
+
         .products-section {
             padding: 0 16px 16px;
             max-width: 1400px;
             margin: 0 auto;
         }
+
         .category-products {
             margin-bottom: 24px;
         }
+
         .category-products-header {
             background: var(--white);
             padding: 12px 16px;
@@ -879,16 +1020,19 @@
             box-shadow: var(--shadow);
             margin-bottom: 1px;
         }
+
         .category-products-title {
             font-size: 16px;
             font-weight: 700;
             color: var(--text);
         }
+
         .products-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 8px;
         }
+
         .product-card {
             background: var(--white);
             border-radius: 4px;
@@ -898,9 +1042,11 @@
             flex-direction: column;
             transition: all 0.2s;
         }
+
         .product-card:hover {
             box-shadow: var(--shadow-md);
         }
+
         .product-image-container {
             width: 100%;
             height: 160px;
@@ -908,15 +1054,18 @@
             position: relative;
             overflow: hidden;
         }
+
         .product-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s;
         }
+
         .product-card:hover .product-image {
             transform: scale(1.05);
         }
+
         .no-image-placeholder {
             width: 100%;
             height: 100%;
@@ -925,22 +1074,26 @@
             justify-content: center;
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
+
         .no-image-placeholder svg {
             width: 56px;
             height: 56px;
             fill: #dee2e6;
         }
+
         .product-info {
             padding: 12px;
             flex: 1;
             display: flex;
             flex-direction: column;
         }
+
         .product-brand {
             font-size: 11px;
             color: var(--text-secondary);
             margin-bottom: 4px;
         }
+
         .product-name {
             font-size: 13px;
             font-weight: 500;
@@ -954,27 +1107,32 @@
             -webkit-box-orient: vertical;
             line-height: 1.3;
         }
+
         .product-weight {
             font-size: 11px;
             color: var(--text-secondary);
             margin-bottom: 8px;
         }
+
         .product-price-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 10px;
         }
+
         .product-price {
             font-size: 18px;
             font-weight: 700;
             color: var(--text);
         }
+
         .product-actions {
             display: flex;
             gap: 6px;
             margin-top: auto;
         }
+
         .btn {
             flex: 1;
             padding: 10px;
@@ -987,25 +1145,31 @@
             text-transform: uppercase;
             letter-spacing: 0.3px;
         }
+
         .btn:active {
             transform: scale(0.98);
         }
+
         .btn-add {
             background: var(--white);
             color: var(--primary);
             border: 1px solid var(--primary);
         }
+
         .btn-add:hover {
             background: var(--primary);
             color: var(--white);
         }
+
         .btn-buy {
             background: var(--primary);
             color: var(--white);
         }
+
         .btn-buy:hover {
             background: var(--primary-dark);
         }
+
         .product-qty-controls {
             display: flex;
             align-items: center;
@@ -1015,6 +1179,7 @@
             padding: 0;
             overflow: hidden;
         }
+
         .product-qty-btn {
             background: transparent;
             border: none;
@@ -1029,12 +1194,15 @@
             justify-content: center;
             transition: all 0.2s;
         }
+
         .product-qty-btn:hover {
             background: rgba(0, 0, 0, 0.1);
         }
+
         .product-qty-btn:active {
             background: rgba(0, 0, 0, 0.2);
         }
+
         .product-qty-display {
             color: var(--white);
             font-size: 14px;
@@ -1042,6 +1210,7 @@
             min-width: 30px;
             text-align: center;
         }
+
         .about-section {
             background: var(--white);
             padding: 32px 16px;
@@ -1052,6 +1221,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         .about-section h2 {
             font-size: 24px;
             font-weight: 700;
@@ -1059,24 +1229,29 @@
             margin-bottom: 16px;
             text-align: center;
         }
+
         .about-content {
             display: grid;
             gap: 24px;
         }
+
         .about-text {
             line-height: 1.7;
             color: var(--text-secondary);
             font-size: 14px;
         }
+
         .about-text p {
             margin-bottom: 12px;
         }
+
         .about-highlights {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 16px;
             margin-top: 24px;
         }
+
         .highlight-item {
             background: var(--bg);
             padding: 16px;
@@ -1084,31 +1259,37 @@
             text-align: center;
             transition: all 0.2s;
         }
+
         .highlight-item:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-md);
         }
+
         .highlight-item svg {
             width: 40px;
             height: 40px;
             fill: var(--primary);
             margin-bottom: 8px;
         }
+
         .highlight-item h3 {
             font-size: 14px;
             font-weight: 700;
             color: var(--text);
             margin-bottom: 4px;
         }
+
         .highlight-item p {
             font-size: 12px;
             color: var(--text-secondary);
         }
+
         .founders-section {
             margin-top: 32px;
             padding-top: 32px;
             border-top: 1px solid var(--border);
         }
+
         .founders-title {
             font-size: 20px;
             font-weight: 700;
@@ -1116,6 +1297,7 @@
             text-align: center;
             margin-bottom: 24px;
         }
+
         .founders-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -1123,6 +1305,7 @@
             max-width: 600px;
             margin: 0 auto;
         }
+
         .founder-card {
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             border-radius: var(--radius-lg);
@@ -1131,11 +1314,13 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(40, 116, 240, 0.1);
         }
+
         .founder-card:hover {
             transform: translateY(-6px);
             box-shadow: var(--shadow-lg);
             border-color: rgba(40, 116, 240, 0.3);
         }
+
         .founder-image {
             width: 120px;
             height: 120px;
@@ -1152,12 +1337,14 @@
             font-size: 48px;
             font-weight: 700;
         }
+
         .founder-name {
             font-size: 18px;
             font-weight: 700;
             color: var(--text);
             margin-bottom: 4px;
         }
+
         .founder-role {
             font-size: 13px;
             color: var(--accent-primary);
@@ -1165,21 +1352,26 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
         @media (min-width: 768px) {
             .founders-title {
                 font-size: 24px;
             }
+
             .founder-card {
                 padding: 32px;
             }
+
             .founder-image {
                 width: 140px;
                 height: 140px;
             }
+
             .founder-name {
                 font-size: 20px;
             }
         }
+
         .store-section {
             background: var(--white);
             padding: 32px 16px;
@@ -1190,6 +1382,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         .store-section h2 {
             font-size: 24px;
             font-weight: 700;
@@ -1197,32 +1390,38 @@
             margin-bottom: 8px;
             text-align: center;
         }
+
         .store-section .subtitle {
             font-size: 14px;
             color: var(--text-secondary);
             text-align: center;
             margin-bottom: 24px;
         }
+
         .store-content {
             display: grid;
             gap: 24px;
         }
+
         .map-container {
             border-radius: 8px;
             overflow: hidden;
             box-shadow: var(--shadow-md);
             position: relative;
         }
+
         .map-container iframe {
             width: 100%;
             height: 350px;
             border: 0;
         }
+
         .store-info-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 16px;
         }
+
         .store-info-card {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
@@ -1231,43 +1430,53 @@
             text-align: center;
             transition: all 0.3s ease;
         }
+
         .store-info-card:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-lg);
         }
+
         .store-info-card.hours {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         }
+
         .store-info-card.phone {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         }
+
         .store-info-card.directions {
             background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
         }
+
         .store-info-card svg {
             width: 36px;
             height: 36px;
             fill: currentColor;
             margin-bottom: 12px;
         }
+
         .store-info-card h3 {
             font-size: 15px;
             font-weight: 700;
             margin-bottom: 8px;
         }
+
         .store-info-card p {
             font-size: 13px;
             opacity: 0.95;
             line-height: 1.5;
         }
+
         .store-info-card a {
             color: var(--white);
             text-decoration: none;
             font-weight: 500;
         }
+
         .store-info-card a:hover {
             text-decoration: underline;
         }
+
         .bottom-nav {
             position: fixed;
             bottom: 0;
@@ -1279,6 +1488,7 @@
             z-index: 998;
             box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
         }
+
         .nav-item {
             flex: 1;
             display: flex;
@@ -1292,13 +1502,16 @@
             border: none;
             background: transparent;
         }
+
         .nav-item.active {
             color: var(--primary);
         }
+
         .nav-item:hover {
             color: var(--primary);
             background: var(--bg);
         }
+
         .nav-item svg {
             width: 22px;
             height: 22px;
@@ -1306,10 +1519,12 @@
             fill: none;
             stroke: currentColor;
         }
+
         .nav-item span {
             font-size: 11px;
             font-weight: 500;
         }
+
         .cart-overlay {
             position: fixed;
             top: 0;
@@ -1320,9 +1535,11 @@
             z-index: 1999;
             display: none;
         }
+
         .cart-overlay.active {
             display: block;
         }
+
         .cart-sidebar {
             position: fixed;
             top: 0;
@@ -1341,9 +1558,11 @@
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
         }
+
         .cart-sidebar.active {
             transform: translateX(0);
         }
+
         .cart-header {
             padding: 16px;
             background: var(--primary);
@@ -1352,10 +1571,12 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .cart-header h2 {
             font-size: 18px;
             font-weight: 700;
         }
+
         .close-btn {
             background: transparent;
             border: none;
@@ -1366,14 +1587,17 @@
             line-height: 1;
             transition: transform 0.2s;
         }
+
         .close-btn:hover {
             transform: rotate(90deg);
         }
+
         .cart-items {
             flex: 1;
             overflow-y: auto;
             padding: 16px;
         }
+
         .cart-item {
             display: flex;
             gap: 12px;
@@ -1382,6 +1606,7 @@
             border-radius: 4px;
             margin-bottom: 12px;
         }
+
         .cart-item-image {
             width: 70px;
             height: 70px;
@@ -1390,16 +1615,19 @@
             overflow: hidden;
             flex-shrink: 0;
         }
+
         .cart-item-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         .cart-item-details {
             flex: 1;
             display: flex;
             flex-direction: column;
         }
+
         .cart-item-name {
             font-size: 14px;
             font-weight: 500;
@@ -1408,17 +1636,20 @@
             text-overflow: ellipsis;
             white-space: nowrap;
         }
+
         .cart-item-price {
             font-size: 16px;
             font-weight: 700;
             color: var(--text);
             margin-bottom: 8px;
         }
+
         .cart-item-controls {
             display: flex;
             align-items: center;
             gap: 12px;
         }
+
         .qty-btn {
             width: 28px;
             height: 28px;
@@ -1434,19 +1665,23 @@
             color: var(--text);
             transition: all 0.2s;
         }
+
         .qty-btn:hover {
             border-color: var(--primary);
             color: var(--primary);
         }
+
         .qty-btn:active {
             background: var(--bg);
         }
+
         .qty-display {
             font-size: 14px;
             font-weight: 500;
             min-width: 20px;
             text-align: center;
         }
+
         .remove-btn {
             background: transparent;
             border: none;
@@ -1456,19 +1691,23 @@
             margin-left: auto;
             transition: all 0.2s;
         }
+
         .remove-btn:hover {
             color: #e74c3c;
         }
+
         .remove-btn svg {
             width: 20px;
             height: 20px;
             fill: currentColor;
         }
+
         .cart-empty {
             text-align: center;
             padding: 48px 24px;
             color: var(--text-secondary);
         }
+
         .cart-empty svg {
             width: 80px;
             height: 80px;
@@ -1476,16 +1715,19 @@
             stroke: var(--text-secondary);
             fill: none;
         }
+
         .cart-empty h3 {
             font-size: 18px;
             color: var(--text);
             margin-bottom: 8px;
         }
+
         .cart-footer {
             padding: 16px;
             border-top: 1px solid var(--border);
             background: var(--bg);
         }
+
         .cart-total {
             display: flex;
             justify-content: space-between;
@@ -1493,6 +1735,7 @@
             font-size: 18px;
             font-weight: 700;
         }
+
         .checkout-btn {
             width: 100%;
             padding: 14px;
@@ -1512,15 +1755,19 @@
             backface-visibility: hidden;
             contain: layout style paint;
         }
+
         .checkout-btn:hover {
             background: #1f8835;
         }
+
         .checkout-btn:active {
             background: #1a7029;
         }
+
         .order-notes-section {
             margin-bottom: 16px;
         }
+
         .order-notes-section label {
             display: flex;
             align-items: center;
@@ -1530,11 +1777,13 @@
             color: var(--text-primary);
             margin-bottom: 8px;
         }
+
         .order-notes-section label svg {
             width: 18px;
             height: 18px;
             fill: var(--accent-primary);
         }
+
         .order-notes-textarea {
             width: 100%;
             min-height: 80px;
@@ -1546,18 +1795,22 @@
             resize: vertical;
             line-height: 1.5;
         }
+
         .order-notes-textarea:focus {
             outline: none;
             border-color: var(--accent-primary);
             box-shadow: 0 0 0 3px rgba(40, 116, 240, 0.1);
         }
+
         .order-notes-textarea::placeholder {
             color: var(--text-muted);
         }
+
         .custom-list-section {
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             padding: var(--space-8) var(--space-4);
         }
+
         .custom-list-container {
             max-width: 700px;
             margin: 0 auto;
@@ -1566,12 +1819,14 @@
             box-shadow: var(--shadow-xl);
             overflow: hidden;
         }
+
         .custom-list-header {
             background: var(--accent-gradient);
             padding: var(--space-6) var(--space-5);
             text-align: center;
             color: var(--white);
         }
+
         .custom-list-header svg {
             width: 48px;
             height: 48px;
@@ -1579,18 +1834,22 @@
             margin-bottom: var(--space-3);
             opacity: 0.9;
         }
+
         .custom-list-header h2 {
             font-size: var(--font-2xl);
             font-weight: 700;
             margin-bottom: var(--space-2);
         }
+
         .custom-list-header p {
             font-size: var(--font-base);
             opacity: 0.9;
         }
+
         .custom-list-form {
             padding: var(--space-5);
         }
+
         .custom-list-textarea {
             width: 100%;
             min-height: 180px;
@@ -1604,14 +1863,17 @@
             margin-bottom: var(--space-4);
             transition: var(--transition-base);
         }
+
         .custom-list-textarea:focus {
             outline: none;
             border-color: var(--accent-primary);
             box-shadow: 0 0 0 4px rgba(40, 116, 240, 0.1);
         }
+
         .custom-list-textarea::placeholder {
             color: var(--text-muted);
         }
+
         .custom-list-submit {
             width: 100%;
             display: flex;
@@ -1628,20 +1890,24 @@
             cursor: pointer;
             transition: var(--transition-base);
         }
+
         .custom-list-submit:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
         }
+
         .custom-list-submit svg {
             width: 24px;
             height: 24px;
             fill: currentColor;
         }
+
         .custom-order-section {
             padding: 16px;
             border-top: 1px solid var(--border);
             background: var(--bg);
         }
+
         .custom-order-section h4 {
             font-size: 14px;
             font-weight: 600;
@@ -1651,11 +1917,13 @@
             align-items: center;
             gap: 8px;
         }
+
         .custom-order-section h4 svg {
             width: 18px;
             height: 18px;
             fill: var(--accent-primary);
         }
+
         .custom-order-textarea {
             width: 100%;
             min-height: 100px;
@@ -1668,14 +1936,17 @@
             margin-bottom: 12px;
             transition: border-color 0.2s ease;
         }
+
         .custom-order-textarea:focus {
             outline: none;
             border-color: var(--accent-primary);
         }
+
         .custom-order-textarea::placeholder {
             color: var(--text-muted);
             font-size: 13px;
         }
+
         .custom-order-submit {
             width: 100%;
             padding: 12px;
@@ -1692,15 +1963,18 @@
             gap: 8px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
+
         .custom-order-submit:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
         }
+
         .custom-order-submit svg {
             width: 20px;
             height: 20px;
             fill: var(--white);
         }
+
         .custom-order-main-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 32px 16px;
@@ -1710,6 +1984,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         .custom-order-main-section h2 {
             color: var(--white);
             font-size: 24px;
@@ -1717,12 +1992,14 @@
             text-align: center;
             margin-bottom: 8px;
         }
+
         .custom-order-main-section .subtitle {
             color: rgba(255, 255, 255, 0.85);
             font-size: 14px;
             text-align: center;
             margin-bottom: 20px;
         }
+
         .custom-order-card {
             background: var(--white);
             border-radius: var(--radius-md);
@@ -1731,6 +2008,7 @@
             margin: 0 auto;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
         }
+
         .custom-order-card textarea {
             width: 100%;
             min-height: 120px;
@@ -1743,10 +2021,12 @@
             margin-bottom: 16px;
             transition: border-color 0.2s ease;
         }
+
         .custom-order-card textarea:focus {
             outline: none;
             border-color: var(--accent-primary);
         }
+
         .custom-order-card .submit-btn {
             width: 100%;
             padding: 14px;
@@ -1763,21 +2043,25 @@
             gap: 10px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
+
         .custom-order-card .submit-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
+
         .custom-order-card .submit-btn svg {
             width: 22px;
             height: 22px;
             fill: var(--white);
         }
+
         .custom-order-examples {
             margin-top: 16px;
             padding: 12px;
             background: var(--bg-secondary);
             border-radius: var(--radius-sm);
         }
+
         .custom-order-examples h5 {
             font-size: 12px;
             font-weight: 600;
@@ -1786,41 +2070,50 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
         .custom-order-examples ul {
             list-style: none;
             font-size: 13px;
             color: var(--text-secondary);
         }
+
         .custom-order-examples li {
             padding: 4px 0;
             padding-left: 20px;
             position: relative;
         }
+
         .custom-order-examples li::before {
             content: '•';
             position: absolute;
             left: 6px;
             color: var(--accent-primary);
         }
+
         @media (min-width: 768px) {
             .custom-order-main-section {
                 padding: 48px 32px;
                 margin: 32px 16px;
             }
+
             .custom-order-main-section h2 {
                 font-size: 32px;
             }
+
             .custom-order-main-section .subtitle {
                 font-size: 16px;
             }
+
             .custom-order-card {
                 padding: 32px;
             }
+
             .custom-order-card textarea {
                 min-height: 150px;
                 font-size: 15px;
             }
         }
+
         .toast {
             position: fixed;
             bottom: 80px;
@@ -1837,26 +2130,31 @@
             opacity: 0;
             transition: all 0.3s ease;
         }
+
         .toast.show {
             opacity: 1;
             transform: translateX(-50%) translateY(0);
         }
+
         .footer {
             background: var(--text);
             color: var(--white);
             padding: 24px 16px 80px;
             margin-top: 24px;
         }
+
         .footer-container {
             max-width: 1400px;
             margin: 0 auto;
         }
+
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 24px;
             margin-bottom: 24px;
         }
+
         .footer-section h3 {
             font-size: 13px;
             font-weight: 700;
@@ -1864,6 +2162,7 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
         .footer-section a,
         .footer-section p {
             font-size: 12px;
@@ -1874,12 +2173,15 @@
             line-height: 1.5;
             transition: color 0.2s;
         }
+
         .footer-section a:hover {
             color: var(--white);
         }
+
         .footer-section a:active {
             color: var(--white);
         }
+
         .footer-bottom {
             text-align: center;
             padding-top: 16px;
@@ -1887,139 +2189,179 @@
             font-size: 11px;
             color: rgba(255, 255, 255, 0.5);
         }
+
         .hide {
             display: none !important;
         }
+
         @media (min-width: 768px) {
             body {
                 padding-bottom: 0;
             }
+
             .logo-text h1 {
                 font-size: 20px;
             }
+
             .logo-text p {
                 font-size: 11px;
             }
+
             .hero {
                 min-height: 300px;
             }
+
             .hero-content h2 {
                 font-size: 36px;
             }
+
             .hero-content p {
                 font-size: 18px;
             }
+
             .category-grid {
                 grid-template-columns: repeat(4, 1fr);
                 gap: 16px;
             }
+
             .category-icon {
                 width: 56px;
                 height: 56px;
             }
+
             .category-name {
                 font-size: 14px;
             }
+
             .products-grid {
                 grid-template-columns: repeat(3, 1fr);
                 gap: 12px;
             }
+
             .product-image-container {
                 height: 200px;
             }
+
             .product-name {
                 font-size: 14px;
             }
+
             .about-section {
                 padding: 48px 32px;
             }
+
             .about-section h2 {
                 font-size: 32px;
             }
+
             .about-text {
                 font-size: 15px;
             }
+
             .about-highlights {
                 grid-template-columns: repeat(4, 1fr);
             }
+
             .highlight-item svg {
                 width: 48px;
                 height: 48px;
             }
+
             .highlight-item h3 {
                 font-size: 15px;
             }
+
             .highlight-item p {
                 font-size: 13px;
             }
+
             .footer-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
+
             .bottom-nav {
                 display: none;
             }
+
             .toast {
                 bottom: 20px;
             }
+
             .store-section {
                 padding: 48px 32px;
             }
+
             .store-section h2 {
                 font-size: 32px;
             }
+
             .map-container iframe {
                 height: 400px;
             }
+
             .store-info-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
         }
+
         @media (min-width: 1024px) {
             .hero {
                 min-height: 350px;
             }
+
             .hero-content h2 {
                 font-size: 42px;
             }
+
             .hero-content p {
                 font-size: 20px;
             }
+
             .category-grid {
                 grid-template-columns: repeat(6, 1fr);
             }
+
             .products-grid {
                 grid-template-columns: repeat(4, 1fr);
                 gap: 16px;
             }
+
             .product-image-container {
                 height: 220px;
             }
+
             .footer {
                 padding: 48px 16px 32px;
             }
+
             .store-content {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 32px;
             }
+
             .map-container iframe {
                 height: 100%;
                 min-height: 400px;
             }
+
             .store-info-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
         @media (min-width: 1400px) {
             .products-grid {
                 grid-template-columns: repeat(5, 1fr);
             }
         }
+
         .features-strip {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             padding: 20px 16px;
             overflow: hidden;
         }
+
         .features-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -2027,6 +2369,7 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 12px;
         }
+
         .feature-item {
             display: flex;
             align-items: center;
@@ -2037,10 +2380,12 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
+
         .feature-item:hover {
             background: rgba(255, 255, 255, 0.1);
             transform: translateY(-2px);
         }
+
         .feature-icon {
             width: 42px;
             height: 42px;
@@ -2050,289 +2395,370 @@
             justify-content: center;
             flex-shrink: 0;
         }
+
         .feature-icon.delivery {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
+
         .feature-icon.fresh {
             background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
         }
+
         .feature-icon.price {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         }
+
         .feature-icon.service {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         }
+
         .feature-icon svg {
             width: 22px;
             height: 22px;
             fill: white;
         }
+
         .feature-text h4 {
             font-size: 13px;
             font-weight: 700;
             color: var(--white);
             margin-bottom: 2px;
         }
+
         .feature-text p {
             font-size: 11px;
             color: rgba(255, 255, 255, 0.7);
             line-height: 1.3;
         }
+
         @media (min-width: 768px) {
             .features-container {
                 grid-template-columns: repeat(4, 1fr);
                 gap: 16px;
             }
+
             .feature-item {
                 padding: 16px;
             }
+
             .feature-icon {
                 width: 50px;
                 height: 50px;
             }
+
             .feature-icon svg {
                 width: 26px;
                 height: 26px;
             }
+
             .feature-text h4 {
                 font-size: 14px;
             }
+
             .feature-text p {
                 font-size: 12px;
             }
         }
+
         @media (max-width: 480px) {
+
             html,
             body {
                 overflow-x: hidden;
                 width: 100%;
                 max-width: 100vw;
             }
+
             .header-top {
                 padding: 10px 14px;
             }
+
             .logo-img,
             .logo-svg {
                 width: 42px;
                 height: 42px;
             }
+
             .logo-text h1 {
                 font-size: 18px;
             }
+
             .logo-text p {
                 font-size: 11px;
             }
+
             .search-bar {
                 padding: 8px 14px 12px;
             }
+
             .search-input {
                 font-size: 16px;
                 padding: 12px;
             }
+
             .hero {
                 min-height: 240px;
                 padding: 32px 16px;
             }
+
             .hero-content h2 {
                 font-size: 28px;
             }
+
             .hero-content p {
                 font-size: 16px;
             }
+
             .hero-cta {
                 padding: 14px 24px;
                 font-size: 14px;
             }
+
             .categories-section {
                 padding: 24px 14px;
             }
+
             .section-title {
                 font-size: 22px;
             }
+
             .category-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 14px;
             }
+
             .category-card {
                 padding: 18px 14px;
             }
+
             .category-img {
                 width: 60px;
                 height: 60px;
             }
+
             .category-name {
                 font-size: 15px;
             }
+
             .products-section {
                 padding: 0 14px 14px;
             }
+
             .products-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 12px;
             }
+
             .product-image-container {
                 height: 160px;
             }
+
             .product-info {
                 padding: 14px;
             }
+
             .product-name {
                 font-size: 15px;
             }
+
             .product-price {
                 font-size: 20px;
             }
+
             .btn {
                 padding: 12px;
                 font-size: 14px;
             }
+
             .features-strip {
                 padding: 18px 14px;
             }
+
             .feature-item {
                 padding: 14px;
             }
+
             .feature-icon {
                 width: 44px;
                 height: 44px;
             }
+
             .feature-icon svg {
                 width: 22px;
                 height: 22px;
             }
+
             .feature-text h4 {
                 font-size: 14px;
             }
+
             .feature-text p {
                 font-size: 12px;
             }
+
             .promo-banner {
                 padding: 12px 14px;
                 font-size: 14px;
             }
+
             .call-banner {
                 padding: 16px 14px;
             }
+
             .call-banner-text h3 {
                 font-size: 16px;
             }
+
             .call-banner-text p {
                 font-size: 14px;
             }
+
             .call-banner-btn {
                 padding: 12px 24px;
                 font-size: 15px;
             }
+
             .about-section,
             .store-section {
                 margin: 20px 14px;
                 padding: 28px 20px;
             }
+
             .about-section h2,
             .store-section h2 {
                 font-size: 24px;
             }
+
             .about-text {
                 font-size: 16px;
             }
+
             .about-highlights {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 14px;
             }
+
             .highlight-item {
                 padding: 18px;
             }
+
             .highlight-item svg {
                 width: 42px;
                 height: 42px;
             }
+
             .highlight-item h3 {
                 font-size: 15px;
             }
+
             .highlight-item p {
                 font-size: 13px;
             }
+
             .founders-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
+
             .founder-card {
                 padding: 24px;
             }
+
             .founder-image {
                 width: 110px;
                 height: 110px;
                 font-size: 44px;
             }
+
             .founder-name {
                 font-size: 20px;
             }
+
             .store-info-grid {
                 grid-template-columns: 1fr;
                 gap: 14px;
             }
+
             .store-info-card {
                 padding: 20px;
             }
+
             .store-info-card h3 {
                 font-size: 17px;
             }
+
             .store-info-card p {
                 font-size: 15px;
             }
+
             .map-container iframe {
                 height: 300px;
             }
+
             .cart-sidebar {
                 max-width: 100%;
             }
+
             .cart-item-image {
                 width: 70px;
                 height: 70px;
             }
+
             .cart-item-name {
                 font-size: 15px;
             }
+
             .cart-item-price {
                 font-size: 18px;
             }
+
             .footer {
                 padding: 28px 16px 80px;
             }
+
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 24px;
             }
+
             .footer-section h3 {
                 font-size: 16px;
             }
+
             .footer-section a,
             .footer-section p {
                 font-size: 15px;
             }
+
             .floating-call-btn,
             .floating-whatsapp-btn {
                 width: 56px;
                 height: 56px;
             }
+
             .floating-call-btn svg,
             .floating-whatsapp-btn svg {
                 width: 28px;
                 height: 28px;
             }
+
             .nav-item {
                 padding: 12px 0;
             }
+
             .nav-item svg {
                 width: 24px;
                 height: 24px;
             }
+
             .nav-item span {
                 font-size: 12px;
             }
+
             .custom-list-header h2 {
                 font-size: 24px;
             }
+
             .custom-list-textarea,
             .custom-list-submit {
                 font-size: 16px;
@@ -2340,6 +2766,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="preloader" id="preloader">
         <div class="preloader-logo">
@@ -2815,7 +3242,8 @@
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
-                    <p>Kanak Smart City, Shankheshwar Crossroad,<br>Bhawrasla, Indore, Madhya Pradesh 452001<br>Phone: +91 9993910204</p>
+                    <p>Kanak Smart City, Shankheshwar Crossroad,<br>Bhawrasla, Indore, Madhya Pradesh 452001<br>Phone:
+                        +91 9993910204</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -2885,10 +3313,6 @@
                 <textarea class="order-notes-textarea" id="orderNotes"
                     placeholder="Write any additional items you need or special instructions...&#10;Example:&#10;- 2kg Toor Dal&#10;- 1 packet Parle-G&#10;- Please deliver after 5 PM"></textarea>
             </div>
-            <div class="cart-total">
-                <span>Total Amount</span>
-                <span id="cartTotal">₹0</span>
-            </div>
             <button class="checkout-btn" onclick="placeOrder()">Place Order via WhatsApp</button>
         </div>
     </div>
@@ -2899,191 +3323,191 @@
                 id: 1,
                 name: '🍚 Chawal (Rice)',
                 products: [
-                    { id: 1, name: 'Basmati Rice', price: 210, weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/k1iVRlPKiNr37EpRUs5iaGpAvGSvFiX1yp5R3iRHuHk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFxeGlLeG04ekwu/anBn' },
-                    { id: 2, name: 'Dubar Basmati Rice', price: 155, weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/yUR5yuZ856_cHO3TfjaDzH-Xe1brVX9MqtBajp886e0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jcGlt/Zy50aXN0YXRpYy5j/b20vMDg3NDY2NzMv/Yi80LzFrZy1EdWJh/ci1CYXNtYXRpLVJp/Y2UuanBn' },
-                    { id: 3, name: 'Sona Masoori Rice', price: 78, weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/X_QwIn_iu59W667mFu5a6rFgwb9f6Vc4lt73AE4TGCA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFzVE9Vam9mckwu/anBn' },
-                    { id: 4, name: 'Kolam Rice', price: 70, weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/uw4Dw59ix6n-eEAw52HzbVULkI0SggyfGjgPmS0CtNQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFFaXZ0TCtiYkwu/anBn' },
-                    { id: 5, name: 'Indrayani Rice', price: 82, weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/G6bC398xA49NF9Jx8nfON91oqVSTUluwatjKrFekafs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFuZXdQcTJzekwu/anBn' },
-                    { id: 6, name: 'Jeera Rice', price: 185, weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/JV54_rmj3Qmg3IXGWDDS4KUdh4XLKSWdZmJhkleIAco/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDI1LzQv/NTA2NDkyNTkxL09Z/L0JFL1BTLzQ5NzU3/MTQ4L2dyYWlua2Et/amVlcmEtcmljZS01/MDB4NTAwLnBuZw' },
-                    { id: 7, name: 'Poha Rice (Thin)', price: 68, weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/DeF8CdCfH9PZwkbEvIiAi2fVB4-H2JAIFE7IbVA-e6w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFxMHpnMGJRUUwu/anBn' },
-                    { id: 8, name: 'Poha Rice (Thick)', price: 65, weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/WiEzEkP9Ez6WBm-18vxtHAnJ1lvlV2jwVuN7yXE_0oM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kcmVh/bWJhemFhci5pbi9p/bWFnZXMvMTY5Mzk4/OTY4Ny5qcGc' }
+                    { id: 1, name: 'Basmati Rice', weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/k1iVRlPKiNr37EpRUs5iaGpAvGSvFiX1yp5R3iRHuHk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFxeGlLeG04ekwu/anBn' },
+                    { id: 2, name: 'Dubar Basmati Rice', weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/yUR5yuZ856_cHO3TfjaDzH-Xe1brVX9MqtBajp886e0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jcGlt/Zy50aXN0YXRpYy5j/b20vMDg3NDY2NzMv/Yi80LzFrZy1EdWJh/ci1CYXNtYXRpLVJp/Y2UuanBn' },
+                    { id: 3, name: 'Sona Masoori Rice', weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/X_QwIn_iu59W667mFu5a6rFgwb9f6Vc4lt73AE4TGCA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFzVE9Vam9mckwu/anBn' },
+                    { id: 4, name: 'Kolam Rice', weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/uw4Dw59ix6n-eEAw52HzbVULkI0SggyfGjgPmS0CtNQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFFaXZ0TCtiYkwu/anBn' },
+                    { id: 5, name: 'Indrayani Rice', weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/G6bC398xA49NF9Jx8nfON91oqVSTUluwatjKrFekafs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFuZXdQcTJzekwu/anBn' },
+                    { id: 6, name: 'Jeera Rice', weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/JV54_rmj3Qmg3IXGWDDS4KUdh4XLKSWdZmJhkleIAco/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDI1LzQv/NTA2NDkyNTkxL09Z/L0JFL1BTLzQ5NzU3/MTQ4L2dyYWlua2Et/amVlcmEtcmljZS01/MDB4NTAwLnBuZw' },
+                    { id: 7, name: 'Poha Rice (Thin)', weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/DeF8CdCfH9PZwkbEvIiAi2fVB4-H2JAIFE7IbVA-e6w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFxMHpnMGJRUUwu/anBn' },
+                    { id: 8, name: 'Poha Rice (Thick)', weight: '1 kg', brand: 'Fortune', image: 'https://imgs.search.brave.com/WiEzEkP9Ez6WBm-18vxtHAnJ1lvlV2jwVuN7yXE_0oM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kcmVh/bWJhemFhci5pbi9p/bWFnZXMvMTY5Mzk4/OTY4Ny5qcGc' }
                 ]
             },
             {
                 id: 2,
                 name: '🌾 Aata, Maida & Suji',
                 products: [
-                    { id: 9, name: 'Gehu Aata', price: 375, weight: '5 kg', brand: 'Aashirvaad', image: 'https://imgs.search.brave.com/xDAIG5SUiVDoCjWJbwCBNcwZ0OhaRssMZHa59MAINgk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y2VzdGFhLmNvbS9j/ZG4vc2hvcC9wcm9k/dWN0cy8xNjUxNzQz/ODIxMDMwLmpwZz92/PTE2NTE3NDM5MTcm/d2lkdGg9MTQ0NQ' },
-                    { id: 10, name: 'Multigrain Aata', price: 95, weight: '1 kg', brand: 'Aashirvaad', image: 'https://imgs.search.brave.com/VxISz_ZrMSodTvSKimeiR7JAj-6ALPJkN9B_9ZP_nsE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzQxNi80MTYva2w2/d3gzazAvZmxvdXIv/Zy9sL2kvNS1hc2hp/cnZhYWQtYXR0YS13/aXRoLW11bHRpZ3Jh/aW5zLTVrZy0xLW11/bHRpZ3JhaW4tZmxv/dXItb3JpZ2luYWwt/aW1hZ3lkZGd5eGMy/Y3J6Zy5qcGVnP3E9/NzAmY3JvcD1mYWxz/ZQ' },
-                    { id: 11, name: 'Maida', price: 55, weight: '1 kg', brand: 'Aashirvaad', image: 'https://imgs.search.brave.com/VMOqhC4xyVJwdARc7MpWSxjI1_FcAM1G3Hfopo338r4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcml0/aHZpZW50ZXJwcmlz/ZXMuY28uaW4vY2Ru/L3Nob3AvZmlsZXMv/bGFyZ2VfaW1hZ2Vz/XzA5MDQyZjRjX2I1/MjRfNDczMV9iYjMy/XzBmM2UyNDdmZjA2/ZWpwZ3RzMTczMDg5/NDU2N19kNmU2NWE4/Yi1jNzU4LTQzZGUt/OGE2Yi1iMGVkZTk1/MzBhMDEuanBnP3Y9/MTc0Njg3OTU4OCZ3/aWR0aD0xNDQ1' },
-                    { id: 12, name: 'Suji / Rava', price: 54, weight: '1 kg', brand: 'Aashirvaad', image: 'https://imgs.search.brave.com/swxFl-7rLfB7z-2HD-hkwYUVKLgwbI0giu_IDZojEtU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFxWHctdzVJMkwu/anBn' },
-                    { id: 13, name: 'Besan', price: 125, weight: '1 kg', brand: 'Aashirvaad', image: 'https://imgs.search.brave.com/7bivq9Yya4arArL_1lkNnfLKrH_btXUVmtHH05yj-pk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTE5TlRobzZGQkwu/anBn' },
-                    { id: 14, name: 'Jowar Aata', price: 112, weight: '1 kg', brand: 'Aashirvaad', image: 'https://imgs.search.brave.com/pkRfp6rgZJ-mMX4oromVvRsRZNWdbOEw2TEf48tOaC4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFuaGMzSEROOUwu/anBn' },
-                    { id: 15, name: 'Bajra Aata', price: 105, weight: '1 kg', brand: 'Aashirvaad', image: 'https://imgs.search.brave.com/Km3XbyZY2tIiZ7lLm1XB31DZXva7TfMXj0tP_GetOXo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzE4d0dzRzNmbUwu/anBn' }
+                    { id: 9, name: 'Gehu Aata', weight: '5 kg', brand: 'Aashirvaad', image: 'https://imgs.search.brave.com/xDAIG5SUiVDoCjWJbwCBNcwZ0OhaRssMZHa59MAINgk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y2VzdGFhLmNvbS9j/ZG4vc2hvcC9wcm9k/dWN0cy8xNjUxNzQz/ODIxMDMwLmpwZz92/PTE2NTE3NDM5MTcm/d2lkdGg9MTQ0NQ' },
+                    { id: 10, name: 'Multigrain Aata', weight: '1 kg', brand: 'Aashirvaad', image: 'https://imgs.search.brave.com/VxISz_ZrMSodTvSKimeiR7JAj-6ALPJkN9B_9ZP_nsE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzQxNi80MTYva2w2/d3gzazAvZmxvdXIv/Zy9sL2kvNS1hc2hp/cnZhYWQtYXR0YS13/aXRoLW11bHRpZ3Jh/aW5zLTVrZy0xLW11/bHRpZ3JhaW4tZmxv/dXItb3JpZ2luYWwt/aW1hZ3lkZGd5eGMy/Y3J6Zy5qcGVnP3E9/NzAmY3JvcD1mYWxz/ZQ' },
+                    { id: 11, name: 'Maida', weight: '1 kg', brand: 'Aashirvaad', image: 'https://imgs.search.brave.com/VMOqhC4xyVJwdARc7MpWSxjI1_FcAM1G3Hfopo338r4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcml0/aHZpZW50ZXJwcmlz/ZXMuY28uaW4vY2Ru/L3Nob3AvZmlsZXMv/bGFyZ2VfaW1hZ2Vz/XzA5MDQyZjRjX2I1/MjRfNDczMV9iYjMy/XzBmM2UyNDdmZjA2/ZWpwZ3RzMTczMDg5/NDU2N19kNmU2NWE4/Yi1jNzU4LTQzZGUt/OGE2Yi1iMGVkZTk1/MzBhMDEuanBnP3Y9/MTc0Njg3OTU4OCZ3/aWR0aD0xNDQ1' },
+                    { id: 12, name: 'Suji / Rava', weight: '1 kg', brand: 'Aashirvaad', image: 'https://imgs.search.brave.com/swxFl-7rLfB7z-2HD-hkwYUVKLgwbI0giu_IDZojEtU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFxWHctdzVJMkwu/anBn' },
+                    { id: 13, name: 'Besan', weight: '1 kg', brand: 'Aashirvaad', image: 'https://imgs.search.brave.com/7bivq9Yya4arArL_1lkNnfLKrH_btXUVmtHH05yj-pk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTE5TlRobzZGQkwu/anBn' },
+                    { id: 14, name: 'Jowar Aata', weight: '1 kg', brand: 'Aashirvaad', image: 'https://imgs.search.brave.com/pkRfp6rgZJ-mMX4oromVvRsRZNWdbOEw2TEf48tOaC4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFuaGMzSEROOUwu/anBn' },
+                    { id: 15, name: 'Bajra Aata', weight: '1 kg', brand: 'Aashirvaad', image: 'https://imgs.search.brave.com/Km3XbyZY2tIiZ7lLm1XB31DZXva7TfMXj0tP_GetOXo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzE4d0dzRzNmbUwu/anBn' }
                 ]
             },
             {
                 id: 3,
                 name: '🌶️ Masale (Spices)',
                 products: [
-                    { id: 16, name: 'Haldi Powder', price: 42, weight: '200 g', brand: 'MDH', image: 'https://imgs.search.brave.com/-TFkPTl2tyiaD6DSg10CyvR-FoCiIZfgcajQv08hveQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDIzLzIv/WkEvSUQvSVAvMjUw/MjIxMjUvcmwtMjAw/Zy1oYWxkaS1wb3dk/ZXItMjUweDI1MC5q/cGc' },
-                    { id: 17, name: 'Lal Mirch Powder', price: 68, weight: '200 g', brand: 'MDH', image: 'https://imgs.search.brave.com/OqlNolqfKUzQ6a0-0ZFDEpMGR9NfNh0t07QZXPsBfrE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFPR2NVWFhXU0wu/anBn' },
-                    { id: 18, name: 'Dhaniya Powder', price: 58, weight: '200 g', brand: 'MDH', image: 'https://imgs.search.brave.com/5FZ9YWRgCwW7iKR56FBDw819aQvHT-f3viZRqXJt1c8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFYajAzRnJXRkwu/anBn' },
-                    { id: 19, name: 'Garam Masala', price: 98, weight: '100 g', brand: 'MDH', image: 'https://imgs.search.brave.com/FI798HMAluk7nk3nA--Dg3S5Yjcing1f_I9NHbJkIzg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtZXUuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxYS1GSWYrR0dM/Ll9BQ19VTDMwMF9T/UjMwMCwyMDBfLmpw/Zw' },
-                    { id: 20, name: 'Chaat Masala', price: 78, weight: '100 g', brand: 'MDH', image: 'https://imgs.search.brave.com/1w8xGIHmNb21oSRKmE7U51qDg1gw6uJWAiSUljPd7Uk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFncnpua3A2V0wu/anBn' },
-                    { id: 21, name: 'Kitchen King Masala', price: 98, weight: '100 g', brand: 'MDH', image: 'https://imgs.search.brave.com/NtZiFu-IX3LPlde5TVQ6LBVzUgAWoUst_tzMI_8O_oA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9vcmdh/bmljdGF0dHZhLmNv/bS9jZG4vc2hvcC9m/aWxlcy9LaXRjaGVu/X0tpbmdfTWFzYWxh/XzEwMGdfdGlsbGlu/Z180XzE4ODRiZGU4/LWVkYTYtNDZiOS05/NjExLTkzMWIyY2M4/MDkyNS5qcGc_dj0x/NzY1ODc1MTYwJndp/ZHRoPTE3ODA' },
-                    { id: 22, name: 'Jeera', price: 155, weight: '200 g', brand: 'MDH', image: 'https://imgs.search.brave.com/JwvhEK-ddW1Y2fPf5s6jD3Rk2N4aaXe09i_Xwza3SI4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF0STM2dzMtWEwu/anBn' },
-                    { id: 23, name: 'Rai', price: 58, weight: '200 g', brand: 'MDH', image: 'https://imgs.search.brave.com/1vynCOFRszjqv6WeunKF1NTt0-d9XG-htk8n2h7wVSI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFjSXpxR2Fuakwu/anBn' },
-                    { id: 24, name: 'Sabut Dhaniya', price: 72, weight: '200 g', brand: 'MDH', image: 'https://imgs.search.brave.com/U8LIJdn1PiE0zfmZOqUgUdC_638tVRs97y59KyX2LUM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF6RXN0N1Atbkwu/anBn' },
-                    { id: 25, name: 'Tej Patta', price: 28, weight: '20 g', brand: 'MDH', image: 'https://imgs.search.brave.com/a4R4eUgB7avDVAGdAKhGNc9KzvQItC4N27Eay1fpCQs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtZXUuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzYxalhZLVd0dFhM/Ll9BQ19VTDMwMF9T/UjMwMCwyMDBfLmpw/Zw' },
-                    { id: 26, name: 'Laung', price: 170, weight: '50 g', brand: 'MDH', image: 'https://imgs.search.brave.com/UVqOwv3z0QNYh5rEo95nSfdEsPcwyxdt95J1m2YVQ1E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9vbmxp/bmVncm9jZXJ5bmFz/aGlrLmNvbS9pbWFn/ZS9jYWNoZS9jYXRh/bG9nLzEyODglMjBD/bG92ZXMlMjAlMjBM/YXZhbmclMjAlMjBM/YXVuZyUyMDUwJTIw/Zy01NTB4NTUwLmpw/Zy53ZWJw' },
-                    { id: 27, name: 'Elaichi', price: 360, weight: '50 g', brand: 'MDH', image: 'https://imgs.search.brave.com/P0Hefx1jNDPdVFuFyzsSE-TjpScebupyiFgnmKn6wHk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFsS002U1ZBZkwu/anBn' }
+                    { id: 16, name: 'Haldi Powder', weight: '200 g', brand: 'MDH', image: 'https://imgs.search.brave.com/-TFkPTl2tyiaD6DSg10CyvR-FoCiIZfgcajQv08hveQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDIzLzIv/WkEvSUQvSVAvMjUw/MjIxMjUvcmwtMjAw/Zy1oYWxkaS1wb3dk/ZXItMjUweDI1MC5q/cGc' },
+                    { id: 17, name: 'Lal Mirch Powder', weight: '200 g', brand: 'MDH', image: 'https://imgs.search.brave.com/OqlNolqfKUzQ6a0-0ZFDEpMGR9NfNh0t07QZXPsBfrE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFPR2NVWFhXU0wu/anBn' },
+                    { id: 18, name: 'Dhaniya Powder', weight: '200 g', brand: 'MDH', image: 'https://imgs.search.brave.com/5FZ9YWRgCwW7iKR56FBDw819aQvHT-f3viZRqXJt1c8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFYajAzRnJXRkwu/anBn' },
+                    { id: 19, name: 'Garam Masala', weight: '100 g', brand: 'MDH', image: 'https://imgs.search.brave.com/FI798HMAluk7nk3nA--Dg3S5Yjcing1f_I9NHbJkIzg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtZXUuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxYS1GSWYrR0dM/Ll9BQ19VTDMwMF9T/UjMwMCwyMDBfLmpw/Zw' },
+                    { id: 20, name: 'Chaat Masala', weight: '100 g', brand: 'MDH', image: 'https://imgs.search.brave.com/1w8xGIHmNb21oSRKmE7U51qDg1gw6uJWAiSUljPd7Uk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFncnpua3A2V0wu/anBn' },
+                    { id: 21, name: 'Kitchen King Masala', weight: '100 g', brand: 'MDH', image: 'https://imgs.search.brave.com/NtZiFu-IX3LPlde5TVQ6LBVzUgAWoUst_tzMI_8O_oA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9vcmdh/bmljdGF0dHZhLmNv/bS9jZG4vc2hvcC9m/aWxlcy9LaXRjaGVu/X0tpbmdfTWFzYWxh/XzEwMGdfdGlsbGlu/Z180XzE4ODRiZGU4/LWVkYTYtNDZiOS05/NjExLTkzMWIyY2M4/MDkyNS5qcGc_dj0x/NzY1ODc1MTYwJndp/ZHRoPTE3ODA' },
+                    { id: 22, name: 'Jeera', weight: '200 g', brand: 'MDH', image: 'https://imgs.search.brave.com/JwvhEK-ddW1Y2fPf5s6jD3Rk2N4aaXe09i_Xwza3SI4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF0STM2dzMtWEwu/anBn' },
+                    { id: 23, name: 'Rai', weight: '200 g', brand: 'MDH', image: 'https://imgs.search.brave.com/1vynCOFRszjqv6WeunKF1NTt0-d9XG-htk8n2h7wVSI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFjSXpxR2Fuakwu/anBn' },
+                    { id: 24, name: 'Sabut Dhaniya', weight: '200 g', brand: 'MDH', image: 'https://imgs.search.brave.com/U8LIJdn1PiE0zfmZOqUgUdC_638tVRs97y59KyX2LUM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF6RXN0N1Atbkwu/anBn' },
+                    { id: 25, name: 'Tej Patta', weight: '20 g', brand: 'MDH', image: 'https://imgs.search.brave.com/a4R4eUgB7avDVAGdAKhGNc9KzvQItC4N27Eay1fpCQs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtZXUuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzYxalhZLVd0dFhM/Ll9BQ19VTDMwMF9T/UjMwMCwyMDBfLmpw/Zw' },
+                    { id: 26, name: 'Laung', weight: '50 g', brand: 'MDH', image: 'https://imgs.search.brave.com/UVqOwv3z0QNYh5rEo95nSfdEsPcwyxdt95J1m2YVQ1E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9vbmxp/bmVncm9jZXJ5bmFz/aGlrLmNvbS9pbWFn/ZS9jYWNoZS9jYXRh/bG9nLzEyODglMjBD/bG92ZXMlMjAlMjBM/YXZhbmclMjAlMjBM/YXVuZyUyMDUwJTIw/Zy01NTB4NTUwLmpw/Zy53ZWJw' },
+                    { id: 27, name: 'Elaichi', weight: '50 g', brand: 'MDH', image: 'https://imgs.search.brave.com/P0Hefx1jNDPdVFuFyzsSE-TjpScebupyiFgnmKn6wHk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFsS002U1ZBZkwu/anBn' }
                 ]
             },
             {
                 id: 4,
                 name: '🫘 Daal & Pulses',
                 products: [
-                    { id: 28, name: 'Toor Daal', price: 182, weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/y8ojo_LIB7rvPUeFnelBxFiOLwKKT2zZxDBC3KeQZ6s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ncmVl/bnBvc2hhbi5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjMv/MTAvMEw4QTc0MjIt/VG9vci1EYWwtNDMw/eDI4Ny53ZWJw' },
-                    { id: 29, name: 'Moong Daal', price: 140, weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/aO05J-sFMbBQKFUkHGZCNhussQMHndXzXMH_LuVpkUE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjF5QVJuMnpBckwu/anBn' },
-                    { id: 30, name: 'Masoor Daal', price: 106, weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/Np_H47H6WG8G1JAwBod6iC-LMUsdcKePxDzRNBtKk2U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFkZ09wZUp2UEwu/anBn' },
-                    { id: 31, name: 'Chana Daal', price: 110, weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/MWhGc0sgK8B5NP_DeHxD1xH0FgKJRAbWJv6oBQKeYaI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzErUnFTeG5aNUwu/anBn' },
-                    { id: 32, name: 'Urad Daal', price: 176, weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/M6qzkErjcLMa9SH6XYOlC-K8TB3B3ojZ8gfD6RCDr3o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFvNXJQSFMydEwu/anBn' },
-                    { id: 33, name: 'Kabuli Chana', price: 142, weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/gDcKe69OOwWv2zKqgGkxOE7xJhdKK_1W8pJL8kS70VI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFLQkQySGVPQ0wu/anBn' },
-                    { id: 34, name: 'Desi Chana', price: 92, weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/MnGZDBp-28S1Vlad-j6ZwZ2roZb8paqlX7zZ5ulCxzg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFyUUtHbEE1Tkwu/anBn' },
-                    { id: 35, name: 'Rajma', price: 178, weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/uLTysLpZIC3WwyjD8Kjdhq1CSd-CdNeCsMNxRLgv3qc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFwM1VVUjVPRUwu/anBn' },
-                    { id: 36, name: 'Lobhiya', price: 132, weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/ROsG4tWxIyQH1zkCUN-RfFy6YEMbEW633O-rM7bdIDw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFLQUF1cjVVVUwu/anBn' }
+                    { id: 28, name: 'Toor Daal', weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/y8ojo_LIB7rvPUeFnelBxFiOLwKKT2zZxDBC3KeQZ6s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ncmVl/bnBvc2hhbi5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjMv/MTAvMEw4QTc0MjIt/VG9vci1EYWwtNDMw/eDI4Ny53ZWJw' },
+                    { id: 29, name: 'Moong Daal', weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/aO05J-sFMbBQKFUkHGZCNhussQMHndXzXMH_LuVpkUE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjF5QVJuMnpBckwu/anBn' },
+                    { id: 30, name: 'Masoor Daal', weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/Np_H47H6WG8G1JAwBod6iC-LMUsdcKePxDzRNBtKk2U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFkZ09wZUp2UEwu/anBn' },
+                    { id: 31, name: 'Chana Daal', weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/MWhGc0sgK8B5NP_DeHxD1xH0FgKJRAbWJv6oBQKeYaI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzErUnFTeG5aNUwu/anBn' },
+                    { id: 32, name: 'Urad Daal', weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/M6qzkErjcLMa9SH6XYOlC-K8TB3B3ojZ8gfD6RCDr3o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFvNXJQSFMydEwu/anBn' },
+                    { id: 33, name: 'Kabuli Chana', weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/gDcKe69OOwWv2zKqgGkxOE7xJhdKK_1W8pJL8kS70VI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFLQkQySGVPQ0wu/anBn' },
+                    { id: 34, name: 'Desi Chana', weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/MnGZDBp-28S1Vlad-j6ZwZ2roZb8paqlX7zZ5ulCxzg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFyUUtHbEE1Tkwu/anBn' },
+                    { id: 35, name: 'Rajma', weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/uLTysLpZIC3WwyjD8Kjdhq1CSd-CdNeCsMNxRLgv3qc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFwM1VVUjVPRUwu/anBn' },
+                    { id: 36, name: 'Lobhiya', weight: '1 kg', brand: 'Tata Sampann', image: 'https://imgs.search.brave.com/ROsG4tWxIyQH1zkCUN-RfFy6YEMbEW633O-rM7bdIDw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFLQUF1cjVVVUwu/anBn' }
                 ]
             },
             {
                 id: 5,
                 name: '🧈 Tel, Ghee & Butter',
                 products: [
-                    { id: 37, name: 'Soyabean Oil', price: 158, weight: '1 L', brand: 'Amul', image: 'https://imgs.search.brave.com/A6UyNBnAl04tlh-UKLUz-Dlgt-vZ31FtrCWxO8z5PwQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aWlt/Zy50aXN0YXRpYy5j/b20vZnAvMS8wMDcv/NTg2L2hlYWx0aHkt/cmljaC1uYXR1cmFs/LXRhc3RlLWZvcnR1/bmUtcmVmaW5lZC1z/b3lhYmVhbi1vaWwt/Zm9yLWNvb2tpbmct/MS1saXRyZS0zMTAu/anBn' },
-                    { id: 38, name: 'Sarso Oil', price: 198, weight: '1 L', brand: 'Amul', image: 'https://imgs.search.brave.com/im1iCl8xk8wQToAUdL4YA38oL_vr_n5QkDPNQjSc1SE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzQxNi80MTYva2Yy/djN3dzAvZWRpYmxl/LW9pbC9hLzkvZy81/LW11c3RhcmQtb2ls/LXNhcnNvLW9pbC01/LWxpdHJlLWZvci1m/b29kLWNvb2tpbmct/NWx0ci1jYW4tY2Fu/LW9yaWdpbmFsLWlt/YWZ2bThwenczemFy/YWsuanBlZz9xPTcw/JmNyb3A9ZmFsc2U' },
-                    { id: 39, name: 'Sunflower Oil', price: 168, weight: '1 L', brand: 'Amul', image: 'https://imgs.search.brave.com/rk5sMdkSDzRh99HNbOoJkBSfRpf7ZyLvbYVCx_PysaM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFvUTc4bDRjSkwu/anBn' },
-                    { id: 40, name: 'Groundnut Oil', price: 205, weight: '1 L', brand: 'Amul', image: 'https://imgs.search.brave.com/1lmDn56-gCos68g0UublxKUlq303wt5J-Bbm593ypDc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFaNWpJelBsc0wu/anBn' },
-                    { id: 41, name: 'Desi Ghee', price: 620, weight: '1 kg', brand: 'Amul', image: 'https://imgs.search.brave.com/mkI5A2-VOG0PxUbtVd5K2RrxagQXhAS8SM7TCMmgpWw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9uYXR1/dXIuaW4vY2RuL3No/b3AvZmlsZXMvODkw/NjEzMDkzMTI2NF82/XzExem9uLVBob3Rv/cm9vbS5wbmc_dj0x/NzYyNDE3NjA5Jndp/ZHRoPTE5NDY' },
-                    { id: 42, name: 'Vanaspati Ghee', price: 198, weight: '1 kg', brand: 'Amul', image: 'https://imgs.search.brave.com/FWov0J4SgC2kLX1kUZ_awX7HP_xnGxDLOqd7twRqLEs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hcG5h/Zm9vZG1hcmtldC5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjAvMDQvZGFsZGEt/Mi5qcGc' },
-                    { id: 43, name: 'Butter', price: 62, weight: '100 g', brand: 'Amul', image: 'https://imgs.search.brave.com/nkbOmDyxwilXhCkODbfGkZzwsvRYuhjz-uKRX5b6Y7A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFvV0duWE50RUwu/anBn' }
+                    { id: 37, name: 'Soyabean Oil', weight: '1 L', brand: 'Amul', image: 'https://imgs.search.brave.com/A6UyNBnAl04tlh-UKLUz-Dlgt-vZ31FtrCWxO8z5PwQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aWlt/Zy50aXN0YXRpYy5j/b20vZnAvMS8wMDcv/NTg2L2hlYWx0aHkt/cmljaC1uYXR1cmFs/LXRhc3RlLWZvcnR1/bmUtcmVmaW5lZC1z/b3lhYmVhbi1vaWwt/Zm9yLWNvb2tpbmct/MS1saXRyZS0zMTAu/anBn' },
+                    { id: 38, name: 'Sarso Oil', weight: '1 L', brand: 'Amul', image: 'https://imgs.search.brave.com/im1iCl8xk8wQToAUdL4YA38oL_vr_n5QkDPNQjSc1SE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzQxNi80MTYva2Yy/djN3dzAvZWRpYmxl/LW9pbC9hLzkvZy81/LW11c3RhcmQtb2ls/LXNhcnNvLW9pbC01/LWxpdHJlLWZvci1m/b29kLWNvb2tpbmct/NWx0ci1jYW4tY2Fu/LW9yaWdpbmFsLWlt/YWZ2bThwenczemFy/YWsuanBlZz9xPTcw/JmNyb3A9ZmFsc2U' },
+                    { id: 39, name: 'Sunflower Oil', weight: '1 L', brand: 'Amul', image: 'https://imgs.search.brave.com/rk5sMdkSDzRh99HNbOoJkBSfRpf7ZyLvbYVCx_PysaM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFvUTc4bDRjSkwu/anBn' },
+                    { id: 40, name: 'Groundnut Oil', weight: '1 L', brand: 'Amul', image: 'https://imgs.search.brave.com/1lmDn56-gCos68g0UublxKUlq303wt5J-Bbm593ypDc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFaNWpJelBsc0wu/anBn' },
+                    { id: 41, name: 'Desi Ghee', weight: '1 kg', brand: 'Amul', image: 'https://imgs.search.brave.com/mkI5A2-VOG0PxUbtVd5K2RrxagQXhAS8SM7TCMmgpWw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9uYXR1/dXIuaW4vY2RuL3No/b3AvZmlsZXMvODkw/NjEzMDkzMTI2NF82/XzExem9uLVBob3Rv/cm9vbS5wbmc_dj0x/NzYyNDE3NjA5Jndp/ZHRoPTE5NDY' },
+                    { id: 42, name: 'Vanaspati Ghee', weight: '1 kg', brand: 'Amul', image: 'https://imgs.search.brave.com/FWov0J4SgC2kLX1kUZ_awX7HP_xnGxDLOqd7twRqLEs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hcG5h/Zm9vZG1hcmtldC5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjAvMDQvZGFsZGEt/Mi5qcGc' },
+                    { id: 43, name: 'Butter', weight: '100 g', brand: 'Amul', image: 'https://imgs.search.brave.com/nkbOmDyxwilXhCkODbfGkZzwsvRYuhjz-uKRX5b6Y7A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFvV0duWE50RUwu/anBn' }
                 ]
             },
             {
                 id: 6,
                 name: '🍪 Biscuits & Snacks',
                 products: [
-                    { id: 44, name: 'Marie Biscuit', price: 28, weight: '200 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/pLPxz0wUB6rt3o73S8V_M_3DcwkUtCezWy04JPv2V7A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zaW1w/cGxpZXIuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8xMDQ5MDFf/bWFyaWVfYmlzY3Vp/dHNfcm9sbF9wYWNr/XzIwMGdfbW9udGVh/Z2xlX2JyYW5kX3Np/bXBwbGllci5wbmc' },
-                    { id: 45, name: 'Glucose Biscuit', price: 28, weight: '200 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/01SLnGRGSpB_lCH8Ky96j_yEotX_LZqjox-4ioLeVmU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/emVwdG9ub3cuY29t/L3Byb2R1Y3Rpb24v/aWstc2VvL3RyOnct/NDcwLGFyLTEwMDAt/MTAwMCxwci10cnVl/LGYtYXV0byxxLTQw/LGRwci0yL2ludmVu/dG9yeS9wcm9kdWN0/L2MyYWFjNTZhLTlj/ZmEtNDgxYS05YTdk/LWExZmIyMWYxNTQ0/Yi0wMTc3ZjYwNS1k/ODQxLTRjYjgtOTIw/OS03ZGJmZWQ2OTlj/MTUvQnJpdGFubmlh/LVRpZ2VyLUdsdWNv/c2UtQmlzY3VpdC5q/cGVn' },
-                    { id: 46, name: 'Cream Biscuit', price: 32, weight: '150 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/d9uCUum-c2zqTj_PWPXopvSohdLJ3EdgmIFvhhL39VY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFTWGhmZkQwakwu/anBn' },
-                    { id: 47, name: 'Chocolate Biscuit', price: 42, weight: '150 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/uSvK4yfoCvk8W43R4Kq4WcYNvOHFjVRX18rnQKEBTho/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sZXBy/bzE2MDAuY29tL2Nk/bi9zaG9wL2ZpbGVz/L21pbGthLWNob2Nv/LWJpc2N1aXQtbWls/ay0xNTBnXzBlZjdh/NDJhLTk5OTktNGNm/Yy04OTcyLTY2NThm/MjNlMzViYV8xMDI0/eDEwMjQud2VicD92/PTE3NTU2MzE4MjM' },
-                    { id: 48, name: 'Namkeen Mixture', price: 78, weight: '200 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/GFzGn0lEzh62iW4Fr_AucZHHI2h5tvAuBuI7KHsdZls/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtZXUuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxQUNaOXdCLVFM/Ll9BQ19VTDMwMF9T/UjMwMCwyMDBfLmpw/Zw' },
-                    { id: 49, name: 'Bhujia', price: 78, weight: '200 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/DDS02hNICJDhM_mOOs0UR48mWIKpQ-GfuWUB6VFrDmk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ldS5k/b29rYW4uY29tL2Nk/bi9zaG9wL3Byb2R1/Y3RzLzFLZlBXekQz/SFowdG9WSEVGWko2/LWRIQlB6eHl3NURq/Q18zMWQzODdhYS0x/YmFlLTQ0ZDQtOTZm/Yi02Y2JmZGMzNjBk/NDcucG5nP2Zvcm1h/dD13ZWJwJnY9MTY1/MTgyNjk0OCZ3aWR0/aD0xOTQ2' },
-                    { id: 50, name: 'Aloo Chips', price: 25, weight: '78 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/U4B3GnrRRitoMXVsdXBISTrRM6RSBC8U0rVwuZ9X9jU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ob21l/ZGVsaXZlcnkucmFt/YWNoYW5kcmFuLmlu/L21lZGlhL2NhdGFs/b2cvcHJvZHVjdC9j/YWNoZS8zYjRiNTFm/YTgzMGJlMTBiM2E4/MDVlOWZmNDA4ZWVj/My83LzEvNzFjY21z/dXRhbmwuX3NsMTUw/MF8uanBn' },
-                    { id: 51, name: 'Kurkure Type Snacks', price: 18, weight: '60 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/faeLhHarQyR7QbOj6r3UK3-Xzc5W9Gh1ZexHEkGMZ1I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9za3Uu/YW55Y2FydC5jb20v/bS9pL3dlZWUtLTI3/NzQ4PXMzNjAtYz1j/di1hdXRvYXdzLndl/YnA' },
-                    { id: 52, name: 'Toast / Rusk', price: 36, weight: '200 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/Aw8Hmh2EiFYpORvxSS8U4Dve2wDjtfj6nJhQr5Y0isQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTE4d1V3UnlpNkwu/anBn' }
+                    { id: 44, name: 'Marie Biscuit', weight: '200 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/pLPxz0wUB6rt3o73S8V_M_3DcwkUtCezWy04JPv2V7A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zaW1w/cGxpZXIuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8xMDQ5MDFf/bWFyaWVfYmlzY3Vp/dHNfcm9sbF9wYWNr/XzIwMGdfbW9udGVh/Z2xlX2JyYW5kX3Np/bXBwbGllci5wbmc' },
+                    { id: 45, name: 'Glucose Biscuit', weight: '200 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/01SLnGRGSpB_lCH8Ky96j_yEotX_LZqjox-4ioLeVmU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/emVwdG9ub3cuY29t/L3Byb2R1Y3Rpb24v/aWstc2VvL3RyOnct/NDcwLGFyLTEwMDAt/MTAwMCxwci10cnVl/LGYtYXV0byxxLTQw/LGRwci0yL2ludmVu/dG9yeS9wcm9kdWN0/L2MyYWFjNTZhLTlj/ZmEtNDgxYS05YTdk/LWExZmIyMWYxNTQ0/Yi0wMTc3ZjYwNS1k/ODQxLTRjYjgtOTIw/OS03ZGJmZWQ2OTlj/MTUvQnJpdGFubmlh/LVRpZ2VyLUdsdWNv/c2UtQmlzY3VpdC5q/cGVn' },
+                    { id: 46, name: 'Cream Biscuit', weight: '150 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/d9uCUum-c2zqTj_PWPXopvSohdLJ3EdgmIFvhhL39VY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFTWGhmZkQwakwu/anBn' },
+                    { id: 47, name: 'Chocolate Biscuit', weight: '150 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/uSvK4yfoCvk8W43R4Kq4WcYNvOHFjVRX18rnQKEBTho/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sZXBy/bzE2MDAuY29tL2Nk/bi9zaG9wL2ZpbGVz/L21pbGthLWNob2Nv/LWJpc2N1aXQtbWls/ay0xNTBnXzBlZjdh/NDJhLTk5OTktNGNm/Yy04OTcyLTY2NThm/MjNlMzViYV8xMDI0/eDEwMjQud2VicD92/PTE3NTU2MzE4MjM' },
+                    { id: 48, name: 'Namkeen Mixture', weight: '200 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/GFzGn0lEzh62iW4Fr_AucZHHI2h5tvAuBuI7KHsdZls/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtZXUuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxQUNaOXdCLVFM/Ll9BQ19VTDMwMF9T/UjMwMCwyMDBfLmpw/Zw' },
+                    { id: 49, name: 'Bhujia', weight: '200 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/DDS02hNICJDhM_mOOs0UR48mWIKpQ-GfuWUB6VFrDmk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ldS5k/b29rYW4uY29tL2Nk/bi9zaG9wL3Byb2R1/Y3RzLzFLZlBXekQz/SFowdG9WSEVGWko2/LWRIQlB6eHl3NURq/Q18zMWQzODdhYS0x/YmFlLTQ0ZDQtOTZm/Yi02Y2JmZGMzNjBk/NDcucG5nP2Zvcm1h/dD13ZWJwJnY9MTY1/MTgyNjk0OCZ3aWR0/aD0xOTQ2' },
+                    { id: 50, name: 'Aloo Chips', weight: '78 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/U4B3GnrRRitoMXVsdXBISTrRM6RSBC8U0rVwuZ9X9jU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ob21l/ZGVsaXZlcnkucmFt/YWNoYW5kcmFuLmlu/L21lZGlhL2NhdGFs/b2cvcHJvZHVjdC9j/YWNoZS8zYjRiNTFm/YTgzMGJlMTBiM2E4/MDVlOWZmNDA4ZWVj/My83LzEvNzFjY21z/dXRhbmwuX3NsMTUw/MF8uanBn' },
+                    { id: 51, name: 'Kurkure Type Snacks', weight: '60 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/faeLhHarQyR7QbOj6r3UK3-Xzc5W9Gh1ZexHEkGMZ1I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9za3Uu/YW55Y2FydC5jb20v/bS9pL3dlZWUtLTI3/NzQ4PXMzNjAtYz1j/di1hdXRvYXdzLndl/YnA' },
+                    { id: 52, name: 'Toast / Rusk', weight: '200 g', brand: 'Britannia', image: 'https://imgs.search.brave.com/Aw8Hmh2EiFYpORvxSS8U4Dve2wDjtfj6nJhQr5Y0isQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTE4d1V3UnlpNkwu/anBn' }
                 ]
             },
             {
                 id: 7,
                 name: '🍫 Chocolate & Kids',
                 products: [
-                    { id: 53, name: 'Dairy Chocolate', price: 45, weight: '60 g', brand: 'Cadbury', image: 'https://imgs.search.brave.com/7zRgBmFAr90eP9u9V6EHQmUFkuRUceokRnfdPABAyk0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcml0/aHZpZW50ZXJwcmlz/ZXMuY28uaW4vY2Ru/L3Nob3AvZmlsZXMv/aHR0cHNfX19jZG5n/cm9mZXJzY29tX2Rh/X2Ntc19hc3NldHNf/Y21zX3Byb2R1Y3Rf/dmlkZW9zX3RodW1i/bmFpbHNfZjI5MTVm/YzBfYmY3Nl80M2Mz/XzkzNzVfZTZkYjQ4/MjhjNmQxanBndHMx/NzM3NzAzNzgyXzMz/NGJhNjlkLTU0Mjkt/NGFjZi05Y2E3LTk5/Yzc1Mjg4ZGI5Mi5q/cGc_dj0xNzQ1Nzcx/NTg4JndpZHRoPTE0/NDU' },
-                    { id: 54, name: 'Wafer Chocolate', price: 30, weight: '32 g', brand: 'Cadbury', image: 'https://imgs.search.brave.com/rntETpJxCfOIm7ZPpq1ZJpNXJiuFCabosq72abxd6GU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vU19RX05QXzJY/XzgwNTUxOS1NTFU3/NDExNjA5NjYzMl8w/MTIwMjQtVi53ZWJw' },
-                    { id: 55, name: 'Protein Biscuit', price: 120, weight: '150 g', brand: 'Cadbury', image: 'https://imgs.search.brave.com/Bl9FcFy7I0UjXWXoN8P2TSNbmBk1YAjkw2RECAkxNj4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzQxNi80MTYva3Mw/b25tODAvdml0YW1p/bi1zdXBwbGVtZW50/L2Qvdi9pLzI1MC1i/aXgtY2hvY29sYXRl/LWZsYXZvdXJlZC1o/aWdoLXByb3RlaW4t/YmlzY3VpdHMtd2l0/aC1pbW11bm8tb3Jp/Z2luYWwtaW1hZzV6/aHl1cnZ3cnU5eS5q/cGVnP3E9NzAmY3Jv/cD1mYWxzZQ' },
-                    { id: 56, name: 'Energy Chocolate', price: 45, weight: '50 g', brand: 'Cadbury', image: 'https://imgs.search.brave.com/osUFgXeyqDTPOBZlcaMrziM_6QKfgBdRNIWAk0dCCSE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zaG9w/LnBlZXBhbGZhcm0u/b3JnL2Nkbi9zaG9w/L2ZpbGVzL2Nob2Nv/bGF0ZS1iYXIyLmpw/Zz92PTE3MDUwNTE2/OTgmd2lkdGg9MTQ0/NQ' },
-                    { id: 57, name: 'Toffee', price: 30, weight: '20 pcs', brand: 'Cadbury', image: 'https://imgs.search.brave.com/zAwc5K1pRhZD7YQVjxMeHMVSmoBlhDDhljL9RqQmvtE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtZXUuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzgxZTRSeFpJYnlM/Ll9BQ19VTDMwMF9T/UjMwMCwyMDBfLmpw/Zw' },
-                    { id: 58, name: 'Lollipop', price: 75, weight: '10 pcs', brand: 'Cadbury', image: 'https://imgs.search.brave.com/h7A7t91ipZIHaa5MV08IDhmdcFcdc2PHI5yzBQ2q3uw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFZZTB5ejhiaUwu/anBn' }
+                    { id: 53, name: 'Dairy Chocolate', weight: '60 g', brand: 'Cadbury', image: 'https://imgs.search.brave.com/7zRgBmFAr90eP9u9V6EHQmUFkuRUceokRnfdPABAyk0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcml0/aHZpZW50ZXJwcmlz/ZXMuY28uaW4vY2Ru/L3Nob3AvZmlsZXMv/aHR0cHNfX19jZG5n/cm9mZXJzY29tX2Rh/X2Ntc19hc3NldHNf/Y21zX3Byb2R1Y3Rf/dmlkZW9zX3RodW1i/bmFpbHNfZjI5MTVm/YzBfYmY3Nl80M2Mz/XzkzNzVfZTZkYjQ4/MjhjNmQxanBndHMx/NzM3NzAzNzgyXzMz/NGJhNjlkLTU0Mjkt/NGFjZi05Y2E3LTk5/Yzc1Mjg4ZGI5Mi5q/cGc_dj0xNzQ1Nzcx/NTg4JndpZHRoPTE0/NDU' },
+                    { id: 54, name: 'Wafer Chocolate', weight: '32 g', brand: 'Cadbury', image: 'https://imgs.search.brave.com/rntETpJxCfOIm7ZPpq1ZJpNXJiuFCabosq72abxd6GU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vU19RX05QXzJY/XzgwNTUxOS1NTFU3/NDExNjA5NjYzMl8w/MTIwMjQtVi53ZWJw' },
+                    { id: 55, name: 'Protein Biscuit', weight: '150 g', brand: 'Cadbury', image: 'https://imgs.search.brave.com/Bl9FcFy7I0UjXWXoN8P2TSNbmBk1YAjkw2RECAkxNj4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzQxNi80MTYva3Mw/b25tODAvdml0YW1p/bi1zdXBwbGVtZW50/L2Qvdi9pLzI1MC1i/aXgtY2hvY29sYXRl/LWZsYXZvdXJlZC1o/aWdoLXByb3RlaW4t/YmlzY3VpdHMtd2l0/aC1pbW11bm8tb3Jp/Z2luYWwtaW1hZzV6/aHl1cnZ3cnU5eS5q/cGVnP3E9NzAmY3Jv/cD1mYWxzZQ' },
+                    { id: 56, name: 'Energy Chocolate', weight: '50 g', brand: 'Cadbury', image: 'https://imgs.search.brave.com/osUFgXeyqDTPOBZlcaMrziM_6QKfgBdRNIWAk0dCCSE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zaG9w/LnBlZXBhbGZhcm0u/b3JnL2Nkbi9zaG9w/L2ZpbGVzL2Nob2Nv/bGF0ZS1iYXIyLmpw/Zz92PTE3MDUwNTE2/OTgmd2lkdGg9MTQ0/NQ' },
+                    { id: 57, name: 'Toffee', weight: '20 pcs', brand: 'Cadbury', image: 'https://imgs.search.brave.com/zAwc5K1pRhZD7YQVjxMeHMVSmoBlhDDhljL9RqQmvtE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtZXUuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzgxZTRSeFpJYnlM/Ll9BQ19VTDMwMF9T/UjMwMCwyMDBfLmpw/Zw' },
+                    { id: 58, name: 'Lollipop', weight: '10 pcs', brand: 'Cadbury', image: 'https://imgs.search.brave.com/h7A7t91ipZIHaa5MV08IDhmdcFcdc2PHI5yzBQ2q3uw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFZZTB5ejhiaUwu/anBn' }
                 ]
             },
             {
                 id: 8,
                 name: '☕ Chai & Beverages',
                 products: [
-                    { id: 59, name: 'Tea (Loose)', price: 260, weight: '500 g', brand: 'Tata Consumer Products', image: 'https://imgs.search.brave.com/CRWPV4PMmobAx8SJ6ww5m3uC2axjZ-d1JfavZUOoPMw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9nb29k/cmlja2V0ZWEuaW4v/Y2RuL3Nob3AvZmls/ZXMvUm9hc3RlZF8y/NTBnX0phci0wMV81/MzN4LmpwZz92PTE3/MjA3NjU0Mjg' },
-                    { id: 60, name: 'Tea (Packet)', price: 135, weight: '250 g', brand: 'Tata Consumer Products', image: 'https://imgs.search.brave.com/TXiH9fwQg0TG_Bl9WKGVpy3Qhiueppzjt-iKxF7Hxdg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDIyLzQv/RlcvU0svQUkvMTk0/ODQ2Ni9wcmVtaXVt/LXF1YWxpdHktY2l0/eS1nb2xkLXRlYS1w/b2x5LXBhY2stMTAw/MHgxMDAwLmpwZWc' },
-                    { id: 61, name: 'Green Tea', price: 118, weight: '25 bags', brand: 'Tata Consumer Products', image: 'https://imgs.search.brave.com/FoqKSxtMNMv_4eZI0WnL5ECrDEdMmgDFb38g2ij_Hu8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9nb29k/cmlja2V0ZWEuaW4v/Y2RuL3Nob3AvZmls/ZXMvU3ltcGhvbnlH/VF9QdXJlTmF0dXJh/bC1GX1NfMTE0N2Ux/YjctMDhhOS00NzY0/LWE3ZTAtNTAwYTE0/OTVhYjA4XzUzM3gu/cG5nP3Y9MTc0NTU2/MDU4Ng' },
-                    { id: 62, name: 'Coffee', price: 390, weight: '200 g', brand: 'Tata Consumer Products', image: 'https://imgs.search.brave.com/qLp-vnZdvQmw4UkERJLO19CyKLNALl6B4sH49vsd07o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wb3Vu/ZHN0cmV0Y2hlci5j/by51ay9jZG4vc2hv/cC9maWxlcy8zNDQ5/MzUtbmVzY2FmZS1v/cmlnaW5hbC0yMDBn/LmpwZz92PTE3NDc2/NzY4NzYmd2lkdGg9/MTIxNA' },
-                    { id: 63, name: 'Cold Drink', price: 110, weight: '2 L', brand: 'Tata Consumer Products', image: 'https://imgs.search.brave.com/G8i_moPDwvGx7aUcH4w279_P-akvamvwnVJsK0EZG5k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFtUVpSNXE0OEwu/anBn' },
-                    { id: 64, name: 'Fruit Juice', price: 118, weight: '1 L', brand: 'Tata Consumer Products', image: 'https://imgs.search.brave.com/apHOXPJtnLacTIIOWukKC-i5q7wUfsbmiiI5OPsz3y4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuaHlwZXJwdXJl/LmNvbS9kYXRhL2lt/YWdlcy9wcm9kdWN0/cy8zM2E5MzRkZTQz/M2VhNDBjNDZmZTAz/ZWIyZTA4MGU1Mi5q/cGc' },
-                    { id: 65, name: 'Energy Drink', price: 195, weight: '250 ml', brand: 'Tata Consumer Products', image: 'https://imgs.search.brave.com/5fkfFQf29dGCIU9CX24nstyGTy5V0vw53s-UYp7nYC0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFlNEV3dGFEYkwu/anBn' }
+                    { id: 59, name: 'Tea (Loose)', weight: '500 g', brand: 'Tata Consumer Products', image: 'https://imgs.search.brave.com/CRWPV4PMmobAx8SJ6ww5m3uC2axjZ-d1JfavZUOoPMw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9nb29k/cmlja2V0ZWEuaW4v/Y2RuL3Nob3AvZmls/ZXMvUm9hc3RlZF8y/NTBnX0phci0wMV81/MzN4LmpwZz92PTE3/MjA3NjU0Mjg' },
+                    { id: 60, name: 'Tea (Packet)', weight: '250 g', brand: 'Tata Consumer Products', image: 'https://imgs.search.brave.com/TXiH9fwQg0TG_Bl9WKGVpy3Qhiueppzjt-iKxF7Hxdg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDIyLzQv/RlcvU0svQUkvMTk0/ODQ2Ni9wcmVtaXVt/LXF1YWxpdHktY2l0/eS1nb2xkLXRlYS1w/b2x5LXBhY2stMTAw/MHgxMDAwLmpwZWc' },
+                    { id: 61, name: 'Green Tea', weight: '25 bags', brand: 'Tata Consumer Products', image: 'https://imgs.search.brave.com/FoqKSxtMNMv_4eZI0WnL5ECrDEdMmgDFb38g2ij_Hu8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9nb29k/cmlja2V0ZWEuaW4v/Y2RuL3Nob3AvZmls/ZXMvU3ltcGhvbnlH/VF9QdXJlTmF0dXJh/bC1GX1NfMTE0N2Ux/YjctMDhhOS00NzY0/LWE3ZTAtNTAwYTE0/OTVhYjA4XzUzM3gu/cG5nP3Y9MTc0NTU2/MDU4Ng' },
+                    { id: 62, name: 'Coffee', weight: '200 g', brand: 'Tata Consumer Products', image: 'https://imgs.search.brave.com/qLp-vnZdvQmw4UkERJLO19CyKLNALl6B4sH49vsd07o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wb3Vu/ZHN0cmV0Y2hlci5j/by51ay9jZG4vc2hv/cC9maWxlcy8zNDQ5/MzUtbmVzY2FmZS1v/cmlnaW5hbC0yMDBn/LmpwZz92PTE3NDc2/NzY4NzYmd2lkdGg9/MTIxNA' },
+                    { id: 63, name: 'Cold Drink', weight: '2 L', brand: 'Tata Consumer Products', image: 'https://imgs.search.brave.com/G8i_moPDwvGx7aUcH4w279_P-akvamvwnVJsK0EZG5k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFtUVpSNXE0OEwu/anBn' },
+                    { id: 64, name: 'Fruit Juice', weight: '1 L', brand: 'Tata Consumer Products', image: 'https://imgs.search.brave.com/apHOXPJtnLacTIIOWukKC-i5q7wUfsbmiiI5OPsz3y4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuaHlwZXJwdXJl/LmNvbS9kYXRhL2lt/YWdlcy9wcm9kdWN0/cy8zM2E5MzRkZTQz/M2VhNDBjNDZmZTAz/ZWIyZTA4MGU1Mi5q/cGc' },
+                    { id: 65, name: 'Energy Drink', weight: '250 ml', brand: 'Tata Consumer Products', image: 'https://imgs.search.brave.com/5fkfFQf29dGCIU9CX24nstyGTy5V0vw53s-UYp7nYC0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFlNEV3dGFEYkwu/anBn' }
                 ]
             },
             {
                 id: 9,
                 name: '🧂 Namak & Sugar',
                 products: [
-                    { id: 66, name: 'Iodized Salt', price: 28, weight: '1 kg', brand: 'Tata Salt', image: 'https://imgs.search.brave.com/9wl-nxNs5vJq-cKYoj8zKlXUxHiD9w0nFaVWjmvx7Qw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFJQ0JYTnE2ZUwu/anBn' },
-                    { id: 67, name: 'Rock Salt', price: 75, weight: '1 kg', brand: 'Tata Salt', image: 'https://imgs.search.brave.com/InQby4_sz_0mBuB6bZYCM8x5qJG7mqHTwubai0prdMw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oZXJi/YWwuYmFwcy5vcmcv/bWVkaWEvY2F0YWxv/Zy9wcm9kdWN0L2Nh/Y2hlLzFlNDY0MGYz/MTgyYjI3MDI5M2Q4/YzAxOWU0MDQ3MjA4/L3Ivby9yb2NrLXNh/bHRfMWtnXzEuanBn' },
-                    { id: 68, name: 'Sugar', price: 42, weight: '1 kg', brand: 'Tata Salt', image: 'https://imgs.search.brave.com/dNnc9L9nVZIdPvPzqNcv8Q5i91Emilyqf2_klen8nEc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjEyNWFLOGs3TEwu/anBn' },
-                    { id: 69, name: 'Jaggery (Gud)', price: 68, weight: '1 kg', brand: 'Tata Salt', image: 'https://imgs.search.brave.com/4n6ysM03ZmtRvmBH3jMMePOC-4HSQK3S6MM_oET7lww/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFZK1hoZVVkV0wu/anBn' },
-                    { id: 70, name: 'Mishri', price: 58, weight: '500 g', brand: 'Tata Salt', image: 'https://imgs.search.brave.com/06MDKOLksMwPxlio_Kw4RTbkrJKD3bHBatQQsMe4_7w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF3LUN3WHV2T0wu/anBn' }
+                    { id: 66, name: 'Iodized Salt', weight: '1 kg', brand: 'Tata Salt', image: 'https://imgs.search.brave.com/9wl-nxNs5vJq-cKYoj8zKlXUxHiD9w0nFaVWjmvx7Qw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFJQ0JYTnE2ZUwu/anBn' },
+                    { id: 67, name: 'Rock Salt', weight: '1 kg', brand: 'Tata Salt', image: 'https://imgs.search.brave.com/InQby4_sz_0mBuB6bZYCM8x5qJG7mqHTwubai0prdMw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oZXJi/YWwuYmFwcy5vcmcv/bWVkaWEvY2F0YWxv/Zy9wcm9kdWN0L2Nh/Y2hlLzFlNDY0MGYz/MTgyYjI3MDI5M2Q4/YzAxOWU0MDQ3MjA4/L3Ivby9yb2NrLXNh/bHRfMWtnXzEuanBn' },
+                    { id: 68, name: 'Sugar', weight: '1 kg', brand: 'Tata Salt', image: 'https://imgs.search.brave.com/dNnc9L9nVZIdPvPzqNcv8Q5i91Emilyqf2_klen8nEc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjEyNWFLOGs3TEwu/anBn' },
+                    { id: 69, name: 'Jaggery (Gud)', weight: '1 kg', brand: 'Tata Salt', image: 'https://imgs.search.brave.com/4n6ysM03ZmtRvmBH3jMMePOC-4HSQK3S6MM_oET7lww/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFZK1hoZVVkV0wu/anBn' },
+                    { id: 70, name: 'Mishri', weight: '500 g', brand: 'Tata Salt', image: 'https://imgs.search.brave.com/06MDKOLksMwPxlio_Kw4RTbkrJKD3bHBatQQsMe4_7w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF3LUN3WHV2T0wu/anBn' }
                 ]
             },
             {
                 id: 10,
                 name: '💄 Personal Care',
                 products: [
-                    { id: 71, name: 'Bath Soap', price: 180, weight: '135 g', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/S3SAGzIKiToLsNQ3s3pKvFA-5Q_g-9EaOWGdJPXNxyg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ib2xh/bmRsYXVyYS5zYS9p/bWFnZS9jYWNoZS9j/YXRhbG9nL3Byb2R1/Y3RzLzMzMDAvNDgw/MDExOTEyMDk0My0x/LTUwMHg1MDAuanBn' },
-                    { id: 72, name: 'Shampoo', price: 150, weight: '340 ml', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/a4yhLxNLq0nqtfYELuIJbLdZcz5Ii7VXHRNQ5SdM7zA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90ZWtp/ZWxhci52dGV4YXNz/ZXRzLmNvbS9hcnF1/aXZvcy9pZHMvMTYy/NDkxLTgwMC1hdXRv/P3Y9NjM3ODQ3MDEy/MjEyMzAwMDAwJndp/ZHRoPTgwMCZoZWln/aHQ9YXV0byZhc3Bl/Y3Q9dHJ1ZQ' },
-                    { id: 73, name: 'Hair Oil', price: 258, weight: '500 ml', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/0xXkGNzC1SPYtl5OtvnjXUAhzZP2iLz7l_MopRYjdcA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFLc1VtOVpqZEwu/anBn' },
-                    { id: 74, name: 'Face Wash', price: 185, weight: '100 ml', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/rVkSpKZ5MFP5GusN652p1zaVNdZ2J5V4NjqwAwekoiI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2ltcGxlc2tpbmNh/cmUuaW4vY2RuL3No/b3AvZmlsZXMvMV9l/Njk4ZjhkOS0yNmRi/LTRjOTMtODNhNi02/ZjU2MTVkZmM5MWVf/MTAwMHgxMDAwLnBu/Zz92PTE2ODk3MDIw/MDE' },
-                    { id: 75, name: 'Toothpaste', price: 95, weight: '150 g', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/fhBCg3zwS7_0qM11OMTUhqTDqgtSji4Omt2VA_ekgzM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF4a011NnVKdEwu/anBn' },
-                    { id: 76, name: 'Toothbrush', price: 115, weight: '1 pc', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/RdzpBSTSgQfEtiIQKWIM3MIqUt9XBMhrnUQ38TT3rIM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9jbG9zZS11cC10/b290aGJydXNoLWFn/YWluc3QtcGluay1i/YWNrZ3JvdW5kXzEw/NDg5NDQtMjgyMzIy/NDAuanBnP3NlbXQ9/YWlzX2h5YnJpZCZ3/PTc0MCZxPTgw' },
-                    { id: 77, name: 'Lipstick', price: 350, weight: '1 pc', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/5EraQfjCdgLMUdI61Dh0tK0deyWzLySuUM69BbrtzNA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9o/aWdoLWFuZ2xlLWxp/cHN0aWNrcy1hcnJh/bmdlbWVudF8yMy0y/MTQ5MDk2NjY5Lmpw/Zz9zZW10PWFpc19o/eWJyaWQmdz03NDAm/cT04MA' },
-                    { id: 78, name: 'Nail Polish', price: 210, weight: '1 pc', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/wdLAItbnmeLqH1BHBVclV8foirpgoV7p6IBYpR1-lP4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMjIv/MDA5LzAzNC9zbWFs/bC90cmVuZHktZGVz/aWduLXRlbXBsYXRl/LXdpdGgtbmFpbC1w/b2xpc2gtZ2xhc3Mt/Ym90dGxlcy1pbGx1/c3RyYXRpb24tYWkt/Z2VuZXJhdGl2ZS1m/cmVlLXBob3RvLmpw/Zw' },
-                    { id: 79, name: 'Kajal', price: 210, weight: '1 pc', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/lUkwkmYZMVAZL16DpUZw-n5VqUjw067abKsjoh8Odl0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zaG9w/LnJlY29kZXN0dWRp/b3MuY29tL2Nkbi9z/aG9wL3Byb2R1Y3Rz/L2dyZWVucGVuY2ls/LmpwZz92PTE2NzYw/MDYyMDMmd2lkdGg9/MTEwMA' },
-                    { id: 80, name: 'Face Cream', price: 370, weight: '50 g', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/8ot4Bh5tkn9TahOGi-ExzyX6dpH5AtmQolLhqvbl5iQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtZXUuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzQxUkZjRVhoSUdM/Ll9BQ19VTDMwMF9T/UjMwMCwyMDBfLmpw/Zw' },
-                    { id: 81, name: 'Deodorant', price: 230, weight: '150 ml', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/_D_9vJvSN6QOVlUBy3YrYYOnNL0jZM4OI7lXfh3leDI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjExK09meHpRUkwu/anBn' }
+                    { id: 71, name: 'Bath Soap', weight: '135 g', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/S3SAGzIKiToLsNQ3s3pKvFA-5Q_g-9EaOWGdJPXNxyg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ib2xh/bmRsYXVyYS5zYS9p/bWFnZS9jYWNoZS9j/YXRhbG9nL3Byb2R1/Y3RzLzMzMDAvNDgw/MDExOTEyMDk0My0x/LTUwMHg1MDAuanBn' },
+                    { id: 72, name: 'Shampoo', weight: '340 ml', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/a4yhLxNLq0nqtfYELuIJbLdZcz5Ii7VXHRNQ5SdM7zA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90ZWtp/ZWxhci52dGV4YXNz/ZXRzLmNvbS9hcnF1/aXZvcy9pZHMvMTYy/NDkxLTgwMC1hdXRv/P3Y9NjM3ODQ3MDEy/MjEyMzAwMDAwJndp/ZHRoPTgwMCZoZWln/aHQ9YXV0byZhc3Bl/Y3Q9dHJ1ZQ' },
+                    { id: 73, name: 'Hair Oil', weight: '500 ml', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/0xXkGNzC1SPYtl5OtvnjXUAhzZP2iLz7l_MopRYjdcA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFLc1VtOVpqZEwu/anBn' },
+                    { id: 74, name: 'Face Wash', weight: '100 ml', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/rVkSpKZ5MFP5GusN652p1zaVNdZ2J5V4NjqwAwekoiI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2ltcGxlc2tpbmNh/cmUuaW4vY2RuL3No/b3AvZmlsZXMvMV9l/Njk4ZjhkOS0yNmRi/LTRjOTMtODNhNi02/ZjU2MTVkZmM5MWVf/MTAwMHgxMDAwLnBu/Zz92PTE2ODk3MDIw/MDE' },
+                    { id: 75, name: 'Toothpaste', weight: '150 g', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/fhBCg3zwS7_0qM11OMTUhqTDqgtSji4Omt2VA_ekgzM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF4a011NnVKdEwu/anBn' },
+                    { id: 76, name: 'Toothbrush', weight: '1 pc', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/RdzpBSTSgQfEtiIQKWIM3MIqUt9XBMhrnUQ38TT3rIM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9jbG9zZS11cC10/b290aGJydXNoLWFn/YWluc3QtcGluay1i/YWNrZ3JvdW5kXzEw/NDg5NDQtMjgyMzIy/NDAuanBnP3NlbXQ9/YWlzX2h5YnJpZCZ3/PTc0MCZxPTgw' },
+                    { id: 77, name: 'Lipstick', weight: '1 pc', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/5EraQfjCdgLMUdI61Dh0tK0deyWzLySuUM69BbrtzNA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9o/aWdoLWFuZ2xlLWxp/cHN0aWNrcy1hcnJh/bmdlbWVudF8yMy0y/MTQ5MDk2NjY5Lmpw/Zz9zZW10PWFpc19o/eWJyaWQmdz03NDAm/cT04MA' },
+                    { id: 78, name: 'Nail Polish', weight: '1 pc', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/wdLAItbnmeLqH1BHBVclV8foirpgoV7p6IBYpR1-lP4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMjIv/MDA5LzAzNC9zbWFs/bC90cmVuZHktZGVz/aWduLXRlbXBsYXRl/LXdpdGgtbmFpbC1w/b2xpc2gtZ2xhc3Mt/Ym90dGxlcy1pbGx1/c3RyYXRpb24tYWkt/Z2VuZXJhdGl2ZS1m/cmVlLXBob3RvLmpw/Zw' },
+                    { id: 79, name: 'Kajal', weight: '1 pc', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/lUkwkmYZMVAZL16DpUZw-n5VqUjw067abKsjoh8Odl0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zaG9w/LnJlY29kZXN0dWRp/b3MuY29tL2Nkbi9z/aG9wL3Byb2R1Y3Rz/L2dyZWVucGVuY2ls/LmpwZz92PTE2NzYw/MDYyMDMmd2lkdGg9/MTEwMA' },
+                    { id: 80, name: 'Face Cream', weight: '50 g', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/8ot4Bh5tkn9TahOGi-ExzyX6dpH5AtmQolLhqvbl5iQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtZXUuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzQxUkZjRVhoSUdM/Ll9BQ19VTDMwMF9T/UjMwMCwyMDBfLmpw/Zw' },
+                    { id: 81, name: 'Deodorant', weight: '150 ml', brand: 'Hindustan Unilever', image: 'https://imgs.search.brave.com/_D_9vJvSN6QOVlUBy3YrYYOnNL0jZM4OI7lXfh3leDI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjExK09meHpRUkwu/anBn' }
                 ]
             },
             {
                 id: 11,
                 name: '👶 Baby Care',
                 products: [
-                    { id: 82, name: 'Baby Soap', price: 68, weight: '75 g', brand: 'Johnson & Johnson', image: 'https://imgs.search.brave.com/uNmIFd-bIQJTAO7BpF3zdBqikg4d4gRxBz3Z_KYmmPY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90MjBh/dWN0aW9ucy5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjQv/MTEvSGltYWxheWEt/QmFieS1Tb2FwLUdl/bnRsZS0yLmpwZw' },
-                    { id: 83, name: 'Baby Shampoo', price: 145, weight: '200 ml', brand: 'Johnson & Johnson', image: 'https://imgs.search.brave.com/fTN9kDzuzQzZKBnQQJ7I_RGLBq6P4Uf6EYxwyBCeKFQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTMuZmxpeGNh/cnQuY29tL2ltYWdl/LzU0Ni81NjQva2l1/bHh1ODAtMC9zaGFt/cG9vL2cvdS91LzIw/MC1iYWJ5LWNhcmUt/Z2VudGxlLWJhYnkt/c2hhbXBvby0yMDBt/bC1wYWNrLW9mLTIt/aGltYWxheWEtb3Jp/Z2luYWwtaW1hZnlq/dHk5YnloempqaC5q/cGVnP3E9NjA' },
-                    { id: 84, name: 'Baby Powder', price: 98, weight: '100 g', brand: 'Johnson & Johnson', image: 'https://imgs.search.brave.com/9QCr2QtvLsA0-cNUlmH0ezOpsji3wXZenrL438ozUnc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDIyLzEy/L0NIL1NVL1ZDLzE2/Mjg2NzYvNTFtdnlm/Nndncmwtc3k4Nzkt/LTI1MHgyNTAuanBn' },
-                    { id: 85, name: 'Baby Cream', price: 118, weight: '50 g', brand: 'Johnson & Johnson', image: 'https://imgs.search.brave.com/PbCTnWiQRt9WCHU6WKNTEpU4R_bNlufyqTSJy8ES-PI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDI1Lzkv/NTQ4NzI5NjQwL1dN/L0JQL0ZSLzI1MTg5/Njg2MC9qb2huc29u/LWJhYnktY3JlYW0t/MjUweDI1MC5qcGc' },
-                    { id: 86, name: 'Baby Diapers', price: 580, weight: 'Pack', brand: 'Johnson & Johnson', image: 'https://imgs.search.brave.com/ypgbk4c784bFys7P8rc185CWIx27JudcFY_ZQPyotU0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuaGViLmNvbS9p/cy9pbWFnZS9IRUJH/cm9jZXJ5LzAwNTU2/NDA3NC0yP2hlaT0z/NjAmd2lkPTM2MA' }
+                    { id: 82, name: 'Baby Soap', weight: '75 g', brand: 'Johnson & Johnson', image: 'https://imgs.search.brave.com/uNmIFd-bIQJTAO7BpF3zdBqikg4d4gRxBz3Z_KYmmPY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90MjBh/dWN0aW9ucy5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjQv/MTEvSGltYWxheWEt/QmFieS1Tb2FwLUdl/bnRsZS0yLmpwZw' },
+                    { id: 83, name: 'Baby Shampoo', weight: '200 ml', brand: 'Johnson & Johnson', image: 'https://imgs.search.brave.com/fTN9kDzuzQzZKBnQQJ7I_RGLBq6P4Uf6EYxwyBCeKFQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTMuZmxpeGNh/cnQuY29tL2ltYWdl/LzU0Ni81NjQva2l1/bHh1ODAtMC9zaGFt/cG9vL2cvdS91LzIw/MC1iYWJ5LWNhcmUt/Z2VudGxlLWJhYnkt/c2hhbXBvby0yMDBt/bC1wYWNrLW9mLTIt/aGltYWxheWEtb3Jp/Z2luYWwtaW1hZnlq/dHk5YnloempqaC5q/cGVnP3E9NjA' },
+                    { id: 84, name: 'Baby Powder', weight: '100 g', brand: 'Johnson & Johnson', image: 'https://imgs.search.brave.com/9QCr2QtvLsA0-cNUlmH0ezOpsji3wXZenrL438ozUnc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDIyLzEy/L0NIL1NVL1ZDLzE2/Mjg2NzYvNTFtdnlm/Nndncmwtc3k4Nzkt/LTI1MHgyNTAuanBn' },
+                    { id: 85, name: 'Baby Cream', weight: '50 g', brand: 'Johnson & Johnson', image: 'https://imgs.search.brave.com/PbCTnWiQRt9WCHU6WKNTEpU4R_bNlufyqTSJy8ES-PI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDI1Lzkv/NTQ4NzI5NjQwL1dN/L0JQL0ZSLzI1MTg5/Njg2MC9qb2huc29u/LWJhYnktY3JlYW0t/MjUweDI1MC5qcGc' },
+                    { id: 86, name: 'Baby Diapers', weight: 'Pack', brand: 'Johnson & Johnson', image: 'https://imgs.search.brave.com/ypgbk4c784bFys7P8rc185CWIx27JudcFY_ZQPyotU0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuaGViLmNvbS9p/cy9pbWFnZS9IRUJH/cm9jZXJ5LzAwNTU2/NDA3NC0yP2hlaT0z/NjAmd2lkPTM2MA' }
                 ]
             },
             {
                 id: 12,
                 name: '🧹 Home Cleaning',
                 products: [
-                    { id: 87, name: 'Washing Powder', price: 220, weight: '1 kg', brand: 'Reckitt', image: 'https://imgs.search.brave.com/8r4equlzAiqH3l004JFrV5BcgyY0QWdHJrl3n255zAo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFoWkN5cEZndkwu/anBn' },
-                    { id: 88, name: 'Washing Liquid', price: 270, weight: '1 L', brand: 'Reckitt', image: 'https://imgs.search.brave.com/-zpjURvzb6MXQrPvwddl5a7smKvE0_ziteQ4187rVdk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTMuZmxpeGNh/cnQuY29tL2ltYWdl/LzU0Ni81NjQveGlm/MHEvc2hvcHN5LWxp/cXVpZC1kZXRlcmdl/bnQvYS8wL3ovMTAw/MDAtd2FzaGluZy1t/YWNoaW5lLWxpcXVp/ZC1kZXRlcmdlbnQt/dG9wLWxvYWQtYW5k/LWZyb250LWxvYWQt/b3JpZ2luYWwtaW1h/aDRuN3l6aDdlZ2dn/ay5qcGVnP3E9NjA' },
-                    { id: 89, name: 'Dishwash Bar', price: 45, weight: '250 g', brand: 'Reckitt', image: 'https://imgs.search.brave.com/9M3qnwUXjbj2PSWryKE8pV3ksgjkGDwjpCHIER0bmYo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzMxMi8zMTIvam45/N2ZyazAvZGlzaC13/YXNoaW5nLWJhci9w/L3cvay9kaXNod2Fz/aC1iYXItMjUwZy1w/YWNrLW9mLTUtMS0y/NTAtdmltLW9yaWdp/bmFsLWltYWY5aDM2/Z2I1eWJocWguanBl/Zz9xPTcw' },
-                    { id: 90, name: 'Dishwash Liquid', price: 95, weight: '500 ml', brand: 'Reckitt', image: 'https://imgs.search.brave.com/jArbc_5361oBxGmbg6qlSJ__ASySTDz37ptCWTrK9ko/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oaWJh/Y2FydC5jb20vY2Ru/L3Nob3AvZmlsZXMv/MjY2OTYyLTJfNS12/aW0tZGlzaHdhc2gt/bGlxdWlkLWdlbC1s/ZW1vbi53ZWJwP3Y9/MTcxMTQ4MjU1OSZ3/aWR0aD01MDA' },
-                    { id: 91, name: 'Phenyl', price: 85, weight: '1 L', brand: 'Reckitt', image: 'https://imgs.search.brave.com/-MzxIoa3nYUm_Qzn_7HGWAeQNfVslj9qi2yb9fKB4S8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFrVEU0Mk4rbUwu/anBn' },
-                    { id: 92, name: 'Floor Cleaner', price: 95, weight: '1 L', brand: 'Reckitt', image: 'https://imgs.search.brave.com/yh5tWegFOzDvRZoH0n9NQKVXihMXv-La77AKGwP4QF0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFXOTdVUlZYY0wu/anBn' },
-                    { id: 93, name: 'Toilet Cleaner', price: 105, weight: '500 ml', brand: 'Reckitt', image: 'https://imgs.search.brave.com/T3q7es-zcjfZDejnngRbIg3Ttxmn9pLXkjNkFbCRjjk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDIzLzgv/MzMyMzYxNTExL1BF/L01EL0FLLzEzMTAy/NTgzOS9mZWNkZmJl/Yy1hMzY1LTQ3ZjMt/ODZmZi02ZWI2M2Y0/M2RhYjAtMjUweDI1/MC5qcGc' }
+                    { id: 87, name: 'Washing Powder', weight: '1 kg', brand: 'Reckitt', image: 'https://imgs.search.brave.com/8r4equlzAiqH3l004JFrV5BcgyY0QWdHJrl3n255zAo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFoWkN5cEZndkwu/anBn' },
+                    { id: 88, name: 'Washing Liquid', weight: '1 L', brand: 'Reckitt', image: 'https://imgs.search.brave.com/-zpjURvzb6MXQrPvwddl5a7smKvE0_ziteQ4187rVdk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTMuZmxpeGNh/cnQuY29tL2ltYWdl/LzU0Ni81NjQveGlm/MHEvc2hvcHN5LWxp/cXVpZC1kZXRlcmdl/bnQvYS8wL3ovMTAw/MDAtd2FzaGluZy1t/YWNoaW5lLWxpcXVp/ZC1kZXRlcmdlbnQt/dG9wLWxvYWQtYW5k/LWZyb250LWxvYWQt/b3JpZ2luYWwtaW1h/aDRuN3l6aDdlZ2dn/ay5qcGVnP3E9NjA' },
+                    { id: 89, name: 'Dishwash Bar', weight: '250 g', brand: 'Reckitt', image: 'https://imgs.search.brave.com/9M3qnwUXjbj2PSWryKE8pV3ksgjkGDwjpCHIER0bmYo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzMxMi8zMTIvam45/N2ZyazAvZGlzaC13/YXNoaW5nLWJhci9w/L3cvay9kaXNod2Fz/aC1iYXItMjUwZy1w/YWNrLW9mLTUtMS0y/NTAtdmltLW9yaWdp/bmFsLWltYWY5aDM2/Z2I1eWJocWguanBl/Zz9xPTcw' },
+                    { id: 90, name: 'Dishwash Liquid', weight: '500 ml', brand: 'Reckitt', image: 'https://imgs.search.brave.com/jArbc_5361oBxGmbg6qlSJ__ASySTDz37ptCWTrK9ko/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oaWJh/Y2FydC5jb20vY2Ru/L3Nob3AvZmlsZXMv/MjY2OTYyLTJfNS12/aW0tZGlzaHdhc2gt/bGlxdWlkLWdlbC1s/ZW1vbi53ZWJwP3Y9/MTcxMTQ4MjU1OSZ3/aWR0aD01MDA' },
+                    { id: 91, name: 'Phenyl', weight: '1 L', brand: 'Reckitt', image: 'https://imgs.search.brave.com/-MzxIoa3nYUm_Qzn_7HGWAeQNfVslj9qi2yb9fKB4S8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFrVEU0Mk4rbUwu/anBn' },
+                    { id: 92, name: 'Floor Cleaner', weight: '1 L', brand: 'Reckitt', image: 'https://imgs.search.brave.com/yh5tWegFOzDvRZoH0n9NQKVXihMXv-La77AKGwP4QF0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFXOTdVUlZYY0wu/anBn' },
+                    { id: 93, name: 'Toilet Cleaner', weight: '500 ml', brand: 'Reckitt', image: 'https://imgs.search.brave.com/T3q7es-zcjfZDejnngRbIg3Ttxmn9pLXkjNkFbCRjjk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDIzLzgv/MzMyMzYxNTExL1BF/L01EL0FLLzEzMTAy/NTgzOS9mZWNkZmJl/Yy1hMzY1LTQ3ZjMt/ODZmZi02ZWI2M2Y0/M2RhYjAtMjUweDI1/MC5qcGc' }
                 ]
             },
             {
                 id: 13,
                 name: '🪔 Puja Samagri',
                 products: [
-                    { id: 94, name: 'Agarbatti', price: 28, weight: '1 pack', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/QmuDimO0FN2WmZR8AHY913rnLpm1JTu2HH4fHB5GDXI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YWdhcmJhdHRpc2hv/cC5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjMvMDgvUGFy/bmFtaS1Hb2xkLTIw/MGctQWdhcmJhdHRp/LUVjby1Cb3gtMi01/MTB4NTEwLmpwZw' },
-                    { id: 95, name: 'Dhoop', price: 35, weight: '1 pack', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/h20lxxCD9akljB2G5_32FUB80HDgHDbBE7Wnp6fMaGI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFNck1XMWF4dkwu/anBn' },
-                    { id: 96, name: 'Kapoor', price: 28, weight: '50 g', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/XPZfwvcgFxRK2qeMhSL5v744i27tLlqzvxOlTN6jhNs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFJVWVOSmJURkwu/anBn' },
-                    { id: 97, name: 'Puja Oil', price: 65, weight: '200 ml', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/TwLZnC7_8m17oU8LXwuhxcaXQ4QbnHza6kYhh96MCl0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODF3RGlKUVBBcUwu/anBn' },
-                    { id: 98, name: 'Cotton Batti', price: 15, weight: 'pack', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/Yomps8yoow6coCRL-S0GZRLiNoqVc5miml6Waufx7vA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFxYVdzRWZMQ0wu/anBn' },
-                    { id: 99, name: 'Kumkum', price: 48, weight: '50 g', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/2mcQDQeKP-Yv5mCRWT3aWziVdFXmCKBbAweiNlTohl4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDI0Lzkv/NDUwMzM5ODgxL1ZY/L0RYL0tOLzIyMzE5/NzAvdG90YS1kYXJr/LWt1bWt1bS1yb2xp/LTI1Zy01MDB4NTAw/LmpwZw' },
-                    { id: 100, name: 'Chandan', price: 85, weight: '50 g', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/3C_LsBd6F0bZoktUIdyZ6CiW4hICxFZA7GO-nr0uDmU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzQxNi80MTYvbDMz/Y2lhODAvZmFjZS1w/YWNrL2wvaC9mLzUw/LTEwMC1uYXR1cmFs/LXNhbmRhbHdvb2Qt/Y2hhbmRhbi1wb3dk/ZXItZm9yLWZhY2Ut/cGFjay1mYWNpYWwt/b3JpZ2luYWwtaW1h/Z2VhZDZqZXVqZ3l6/cC5qcGVnP3E9NzAm/Y3JvcD1mYWxzZQ' },
-                    { id: 101, name: 'Camphor Tablets', price: 52, weight: '50 g', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/HdZ4kT_d4V-5i7G477E_rygFkTWFLkp5qzZcmpZcifg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jeWNs/ZS5pbi9jZG4vc2hv/cC9maWxlcy9BaXIt/S2FycHVyZS1CaGlt/c2VuaS1LYXJwdXIt/NTAwZ20uanBnP3Y9/MTcxMzk0OTQ1NiZ3/aWR0aD00ODA' }
+                    { id: 94, name: 'Agarbatti', weight: '1 pack', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/QmuDimO0FN2WmZR8AHY913rnLpm1JTu2HH4fHB5GDXI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YWdhcmJhdHRpc2hv/cC5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjMvMDgvUGFy/bmFtaS1Hb2xkLTIw/MGctQWdhcmJhdHRp/LUVjby1Cb3gtMi01/MTB4NTEwLmpwZw' },
+                    { id: 95, name: 'Dhoop', weight: '1 pack', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/h20lxxCD9akljB2G5_32FUB80HDgHDbBE7Wnp6fMaGI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFNck1XMWF4dkwu/anBn' },
+                    { id: 96, name: 'Kapoor', weight: '50 g', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/XPZfwvcgFxRK2qeMhSL5v744i27tLlqzvxOlTN6jhNs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFJVWVOSmJURkwu/anBn' },
+                    { id: 97, name: 'Puja Oil', weight: '200 ml', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/TwLZnC7_8m17oU8LXwuhxcaXQ4QbnHza6kYhh96MCl0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODF3RGlKUVBBcUwu/anBn' },
+                    { id: 98, name: 'Cotton Batti', weight: 'pack', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/Yomps8yoow6coCRL-S0GZRLiNoqVc5miml6Waufx7vA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFxYVdzRWZMQ0wu/anBn' },
+                    { id: 99, name: 'Kumkum', weight: '50 g', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/2mcQDQeKP-Yv5mCRWT3aWziVdFXmCKBbAweiNlTohl4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDI0Lzkv/NDUwMzM5ODgxL1ZY/L0RYL0tOLzIyMzE5/NzAvdG90YS1kYXJr/LWt1bWt1bS1yb2xp/LTI1Zy01MDB4NTAw/LmpwZw' },
+                    { id: 100, name: 'Chandan', weight: '50 g', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/3C_LsBd6F0bZoktUIdyZ6CiW4hICxFZA7GO-nr0uDmU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzQxNi80MTYvbDMz/Y2lhODAvZmFjZS1w/YWNrL2wvaC9mLzUw/LTEwMC1uYXR1cmFs/LXNhbmRhbHdvb2Qt/Y2hhbmRhbi1wb3dk/ZXItZm9yLWZhY2Ut/cGFjay1mYWNpYWwt/b3JpZ2luYWwtaW1h/Z2VhZDZqZXVqZ3l6/cC5qcGVnP3E9NzAm/Y3JvcD1mYWxzZQ' },
+                    { id: 101, name: 'Camphor Tablets', weight: '50 g', brand: 'Cycle Pure Agarbathi', image: 'https://imgs.search.brave.com/HdZ4kT_d4V-5i7G477E_rygFkTWFLkp5qzZcmpZcifg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jeWNs/ZS5pbi9jZG4vc2hv/cC9maWxlcy9BaXIt/S2FycHVyZS1CaGlt/c2VuaS1LYXJwdXIt/NTAwZ20uanBnP3Y9/MTcxMzk0OTQ1NiZ3/aWR0aD00ODA' }
                 ]
             },
             {
                 id: 14,
                 name: '🏠 Kitchen & Household',
                 products: [
-                    { id: 102, name: 'Matchbox', price: 28, weight: '12 pcs', brand: 'Milton', image: 'https://imgs.search.brave.com/pmfmuoTdIkjFhY9lgZM-iQvC1Tu87_zl9PUQjTUhyYY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFKMUQya0trY0wu/anBn' },
-                    { id: 103, name: 'Gas Lighter', price: 110, weight: '1 pc', brand: 'Milton', image: 'https://imgs.search.brave.com/poqpioUmR24dVePPWl1DMyg4J6oH203Pa-rrd2EtlVM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/emVwdG9ub3cuY29t/L3Byb2R1Y3Rpb24v/dHI6dy00MDMsYXIt/MTEwMC0xMTAwLHBy/LXRydWUsZi1hdXRv/LHEtNDAsZHByLTIv/Y21zL3Byb2R1Y3Rf/dmFyaWFudC82OGFi/NjM0OS1kNGI5LTQ1/YjMtOWJjMi1iNTYz/NDQ5MTcwNTcuanBl/Zw' },
-                    { id: 104, name: 'Aluminum Foil', price: 78, weight: '10 m', brand: 'Milton', image: 'https://imgs.search.brave.com/PjgzMS-DBac64zTlGMh1k40yb2ejYo1U26jkVNd5xaM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9zZW8vMTBN/LUFsdW1pbnVtLUZv/aWwtSGVhdnktRHV0/eS1SZXN0YXVyYW50/LVRoaWNrZW5lZC1B/bHVtaW51bS1Gb2ls/LVBhcGVyXzM4ZWE2/NzRjLTgwYzgtNDY3/NC04ZDlkLTJhMTgw/NDc4YTA5NS4xOTkx/YmQ1YzU0NTBiYzIw/NjU5NzJjMTZiZjA4/NDU2OS5qcGVnP29k/bkhlaWdodD02NDAm/b2RuV2lkdGg9NjQw/Jm9kbkJnPUZGRkZG/Rg' },
-                    { id: 105, name: 'Plastic Containers', price: 195, weight: 'set', brand: 'Milton', image: 'https://imgs.search.brave.com/tHukQbjb-iyIAzLJD2HmpgEyciDS2r9cUqLOUccjKxM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cy4x/MjNyZi5jb20vNDUw/d20vc2VyZXpuaXkv/c2VyZXpuaXkxMjA4/L3NlcmV6bml5MTIw/ODAzNTI3LzE0ODM1/OTAyLXBsYXN0aWMt/Y29udGFpbmVycy1m/b3ItZm9vZC1vbi13/b29kZW4tdGFibGUt/b24tZ3JlZW4tYmFj/a2dyb3VuZC5qcGc_/dmVyPTY' },
-                    { id: 106, name: 'Paper Napkins', price: 45, weight: '100 pcs', brand: 'Milton', image: 'https://imgs.search.brave.com/HJ2Uu8vtfTO4oktPk-p8ZRb3uregaLh0qbPdJcTB2gI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtZXUuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxVGxjaTd4UndM/Ll9BQ19VTDMwMF9T/UjMwMCwyMDBfLmpw/Zw' },
-                    { id: 107, name: 'Tissue Roll', price: 72, weight: '4 rolls', brand: 'Milton', image: 'https://imgs.search.brave.com/nOUv9MG48XtgyhjAUUpON_7r-ND07tcKZqyTkcc59PU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODE4VE53aXgzTEwu/anBn' }
+                    { id: 102, name: 'Matchbox', weight: '12 pcs', brand: 'Milton', image: 'https://imgs.search.brave.com/pmfmuoTdIkjFhY9lgZM-iQvC1Tu87_zl9PUQjTUhyYY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFKMUQya0trY0wu/anBn' },
+                    { id: 103, name: 'Gas Lighter', weight: '1 pc', brand: 'Milton', image: 'https://imgs.search.brave.com/poqpioUmR24dVePPWl1DMyg4J6oH203Pa-rrd2EtlVM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/emVwdG9ub3cuY29t/L3Byb2R1Y3Rpb24v/dHI6dy00MDMsYXIt/MTEwMC0xMTAwLHBy/LXRydWUsZi1hdXRv/LHEtNDAsZHByLTIv/Y21zL3Byb2R1Y3Rf/dmFyaWFudC82OGFi/NjM0OS1kNGI5LTQ1/YjMtOWJjMi1iNTYz/NDQ5MTcwNTcuanBl/Zw' },
+                    { id: 104, name: 'Aluminum Foil', weight: '10 m', brand: 'Milton', image: 'https://imgs.search.brave.com/PjgzMS-DBac64zTlGMh1k40yb2ejYo1U26jkVNd5xaM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9zZW8vMTBN/LUFsdW1pbnVtLUZv/aWwtSGVhdnktRHV0/eS1SZXN0YXVyYW50/LVRoaWNrZW5lZC1B/bHVtaW51bS1Gb2ls/LVBhcGVyXzM4ZWE2/NzRjLTgwYzgtNDY3/NC04ZDlkLTJhMTgw/NDc4YTA5NS4xOTkx/YmQ1YzU0NTBiYzIw/NjU5NzJjMTZiZjA4/NDU2OS5qcGVnP29k/bkhlaWdodD02NDAm/b2RuV2lkdGg9NjQw/Jm9kbkJnPUZGRkZG/Rg' },
+                    { id: 105, name: 'Plastic Containers', weight: 'set', brand: 'Milton', image: 'https://imgs.search.brave.com/tHukQbjb-iyIAzLJD2HmpgEyciDS2r9cUqLOUccjKxM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cy4x/MjNyZi5jb20vNDUw/d20vc2VyZXpuaXkv/c2VyZXpuaXkxMjA4/L3NlcmV6bml5MTIw/ODAzNTI3LzE0ODM1/OTAyLXBsYXN0aWMt/Y29udGFpbmVycy1m/b3ItZm9vZC1vbi13/b29kZW4tdGFibGUt/b24tZ3JlZW4tYmFj/a2dyb3VuZC5qcGc_/dmVyPTY' },
+                    { id: 106, name: 'Paper Napkins', weight: '100 pcs', brand: 'Milton', image: 'https://imgs.search.brave.com/HJ2Uu8vtfTO4oktPk-p8ZRb3uregaLh0qbPdJcTB2gI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtZXUuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxVGxjaTd4UndM/Ll9BQ19VTDMwMF9T/UjMwMCwyMDBfLmpw/Zw' },
+                    { id: 107, name: 'Tissue Roll', weight: '4 rolls', brand: 'Milton', image: 'https://imgs.search.brave.com/nOUv9MG48XtgyhjAUUpON_7r-ND07tcKZqyTkcc59PU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODE4VE53aXgzTEwu/anBn' }
                 ]
             }
         ];
@@ -3146,9 +3570,6 @@
                         <div class="product-brand">${product.brand}</div>
                         <div class="product-name">${product.name}</div>
                         <div class="product-weight">${product.weight}</div>
-                        <div class="product-price-row">
-                            <div class="product-price">₹${product.price}</div>
-                        </div>
                         <div class="product-actions">
                             ${isInCart ? `
                                 <div class="product-qty-controls">
@@ -3284,7 +3705,7 @@
                         </div>
                         <div class="cart-item-details">
                             <div class="cart-item-name">${item.name}</div>
-                            <div class="cart-item-price">₹${item.price * item.quantity}</div>
+                            <div class="cart-item-weight">${item.weight}</div>
                             <div class="cart-item-controls">
                                 <button class="qty-btn" onclick="updateCartQuantity(${item.id}, -1)">−</button>
                                 <span class="qty-display">${item.quantity}</span>
@@ -3299,8 +3720,6 @@
                     </div>
                 `).join('');
                 cartItems.innerHTML = cartHTML;
-                const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-                cartTotal.textContent = `₹${total}`;
                 cartFooter.style.display = 'block';
             }
         }
@@ -3336,7 +3755,7 @@
         }
         function buyNow(productId) {
             const product = getAllProducts().find(p => p.id === productId);
-            const message = `Hello! I want to order:\n\n${product.name} (${product.brand})\nQty: 1\nPrice: ₹${product.price}\n\nPlease confirm availability.`;
+            const message = `Hello! I want to order:\n\n${product.name} (${product.brand})\nWeight: ${product.weight}\nQty: 1\n\nPlease confirm availability and price.`;
             window.open(`https://wa.me/919993910204?text=${encodeURIComponent(message)}`, '_blank');
         }
         function placeOrder() {
@@ -3349,10 +3768,8 @@
             if (cart.length > 0) {
                 message += `📦 CART ITEMS:\n`;
                 cart.forEach((item, i) => {
-                    message += `${i + 1}. ${item.name} (${item.brand})\n   ${item.weight} × ${item.quantity} = ₹${item.price * item.quantity}\n\n`;
+                    message += `${i + 1}. ${item.name} (${item.brand})\n   ${item.weight} × ${item.quantity}\n\n`;
                 });
-                const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-                message += `💰 Cart Total: ₹${total}\n\n`;
             }
             if (orderNotes) {
                 message += `📝 ADDITIONAL ITEMS/NOTES:\n${orderNotes}\n\n`;
@@ -3404,5 +3821,5 @@
         });
     </script>
 </body>
-</html>
 
+</html>
